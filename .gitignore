@@ -1,0 +1,9 @@
+# Datos (No se suben porque son pesados y dinámicos)
+*.csv
+!partidos_hoy.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
