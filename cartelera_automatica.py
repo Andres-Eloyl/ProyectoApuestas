@@ -2,6 +2,7 @@ import pandas as pd
 import requests
 import logging
 import os
+from datetime import datetime, timezone
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 
@@ -86,7 +87,10 @@ def generar_cartelera_diaria():
     partidos_hoy = []
     
     logging.info("3. Cruzando datos y generando Machine Learning Features...")
+    hoy = datetime.now(timezone.utc).strftime('%Y-%m-%d')
     for partido in datos_api:
+        if not partido['commence_time'].startswith(hoy):
+            continue
         eq_local_api = partido['home_team']
         eq_visita_api = partido['away_team']
         
