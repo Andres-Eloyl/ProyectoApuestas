@@ -5,7 +5,7 @@ import os
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 
-API_KEY = os.environ.get("5749c8a9d8882209e480dba0c542e21f")
+API_KEY = os.environ.get("ODDS_API_KEY")
 SPORT = "soccer_spain_la_liga" 
 REGIONS = "eu"
 MARKETS = "h2h"
