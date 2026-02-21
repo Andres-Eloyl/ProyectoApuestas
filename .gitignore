@@ -1,9 +1,7 @@
-# Datos (No se suben porque son pesados y dinámicos)
-*.csv
+# Datos (Permitimos los necesarios para el entrenamiento)
+!dataset_final_ml.csv
+!partidos_procesados.csv
 !partidos_hoy.csv
 
-# Python
-__pycache__/
-*.pyc
-.venv/
-.env
+# Ignorar otros posibles temporales
+*.csv.tmp
