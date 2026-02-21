@@ -72,9 +72,15 @@ def generar_cartelera_diaria():
     url = f"https://api.the-odds-api.com/v4/sports/{SPORT}/odds/?apiKey={API_KEY}&regions={REGIONS}&markets={MARKETS}"
     
     try:
-        datos_api = requests.get(url).json()
+        respuesta = requests.get(url)
+        datos_api = respuesta.json()
+        
+        if not isinstance(datos_api, list):
+            logging.error(f"❌ La API no devolvió una lista. Respuesta del servidor: {datos_api}")
+            return
+        
     except Exception as e:
-        logging.error(f"Error en la API: {e}")
+        logging.error(f"Error en la petición: {e}")
         return
         
     partidos_hoy = []
