@@ -47,7 +47,6 @@ def sistema_alertas_produccion():
             nivel_confianza = "🔴 RIESGO (BUSCANDO LA SORPRESA)"
             texto_apuesta = f"Te recomendamos apostar a la **Victoria de {equipo_l} (1X2)** porque las casas de apuestas subestimaron sus probabilidades reales. Apuesta de alto riesgo."
 
-        
         mensaje = f"""🔥 ALERTA DE INVERSIÓN: PREDICTSCORE 🔥
 
 ⚽ {equipo_l} vs {equipo_v}
@@ -58,7 +57,12 @@ def sistema_alertas_produccion():
 
 💡 Recomendación del día: {texto_apuesta}"""
 
-        print(mensaje)
+        if ev > 1.0:
+            print(f"🔥 [ALERTA DE VALOR] Enviando {equipo_l} a Telegram...")
+            
+            bot_telegram.enviar_mensaje(mensaje) 
+        else:
+            print(f"❌ [SIN VALOR] {equipo_l} descartado (EV: {ev:.2f})")
 
 if __name__ == "__main__":
     sistema_alertas_produccion()
