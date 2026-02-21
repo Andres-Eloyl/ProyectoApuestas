@@ -7,28 +7,20 @@ class BotPredictscore:
         self.chat_id = os.environ.get("TELEGRAM_CHAT_ID")
         self.url = f"https://api.telegram.org/bot{self.token}/sendMessage"
 
-    def enviar_alerta_valor(self, local, visita, prob_local, cuota, ev):
-        """Formatea y envía una predicción real a Telegram"""
-        mensaje = (
-            f"🚨 <b>ALERTA DE VALOR: PREDICTSCORE</b> 🚨\n\n"
-            f"⚽ <b>{local} vs {visita}</b>\n"
-            f"📊 Probabilidad IA (Local): <b>{prob_local:.1%}</b>\n"
-            f"🏦 Cuota Casa de Apuestas: <b>{cuota}</b>\n"
-            f"📈 <b>Valor Esperado (EV): {ev:.2f}</b>\n\n"
-            f"💡 <i>Recomendación: Cuota ineficiente detectada. Oportunidad de inversión a largo plazo.</i>"
-        )
-
+    # --- NUEVA FUNCIÓN UNIVERSAL ---
+    def enviar_mensaje(self, mensaje_texto):
+        """Recibe cualquier texto ya formateado y lo dispara a Telegram"""
         payload = {
             "chat_id": self.chat_id,
-            "text": mensaje,
-            "parse_mode": "HTML"
+            "text": mensaje_texto
+            # Nota: Quitamos el parse_mode="HTML" para que no dé error con los asteriscos **
         }
         
         try:
             respuesta = requests.post(self.url, data=payload)
             
             if respuesta.status_code == 200:
-                print(f"✅ Notificación enviada a Telegram: {local} vs {visita}")
+                print(f"✅ Notificación enviada a Telegram con éxito.")
             else:
                 print(f"❌ Telegram rebotó el mensaje. Razón: {respuesta.text}")
                 
