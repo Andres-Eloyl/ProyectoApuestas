@@ -1,6 +1,6 @@
 import requests
 
-API_KEY = "LLAVE_OCULTA_POR_SEGURIDAD"
+API_KEY = "5749c8a9d8882209e480dba0c542e21f"
 
 SPORT = "soccer_spain_la_liga" 
 REGIONS = "eu" 

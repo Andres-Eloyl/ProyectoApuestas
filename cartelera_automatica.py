@@ -1,10 +1,11 @@
 import pandas as pd
 import requests
 import logging
+import os
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 
-API_KEY = "TOKEN_OCULTO_POR_SEGURIDAD"
+API_KEY = os.environ.get("5749c8a9d8882209e480dba0c542e21f")
 SPORT = "soccer_spain_la_liga" 
 REGIONS = "eu"
 MARKETS = "h2h"

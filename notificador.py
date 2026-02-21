@@ -1,9 +1,10 @@
 import requests
+import os
 
 class BotPredictscore:
     def __init__(self):
-        self.token = "LLAVE_OCULTA_POR_SEGURIDAD"
-        self.chat_id = "TOKEN_OCULTO_POR_SEGURIDAD"
+        self.token = os.environ.get("8117852326:AAFaZAf2rQkDbPWsBVlvHpwi_vQ31AcrJaQ")
+        self.chat_id = os.environ.get("6275073288")
         self.url = f"https://api.telegram.org/bot{self.token}/sendMessage"
 
     def enviar_alerta_valor(self, local, visita, prob_local, cuota, ev):
