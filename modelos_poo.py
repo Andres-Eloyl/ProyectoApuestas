@@ -4,10 +4,8 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.calibration import CalibratedClassifierCV
 
-# Configuración de logging para ver qué hace el bot en tiempo real
 logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 
-# --- CLASE PADRE (Debe ir primero) ---
 class PredictorDeportivoBase:
     """Clase base que define el esqueleto de cualquier modelo predictivo."""
     
@@ -15,7 +13,6 @@ class PredictorDeportivoBase:
         self.ruta_csv = ruta_csv
         self.df = None
         self.modelo_calibrado = None
-        # Definimos las variables que el modelo usará para aprender
         self.features = ['Racha_Local', 'Racha_Visita', 'Dif_Goles_Local', 
                          'Dif_Goles_Visita', 'Pts_Totales_Local', 'Pts_Totales_Visita']
 
@@ -40,21 +37,18 @@ class PredictorDeportivoBase:
         logging.info(f"Datos divididos en punto de corte: {corte}")
         return X.iloc[:corte], X.iloc[corte:], y.iloc[:corte], y.iloc[corte:]
 
-# --- CLASE HIJA (Hereda de la anterior) ---
 class PredictorRandomForest(PredictorDeportivoBase):
     """Modelo especializado en Random Forest con optimización de parámetros."""
     
     def entrenar(self, X_train, y_train):
         logging.info("Iniciando búsqueda de hiperparámetros óptimos (GridSearch)...")
         
-        # Definimos qué combinaciones de 'perillas' queremos que el bot pruebe
         param_grid = {
             'n_estimators': [50, 100],
             'max_depth': [None, 5, 10],
             'min_samples_split': [2, 5]
         }
         
-        # 1. Creamos el buscador que probará todas las combinaciones
         grid_search = GridSearchCV(
             RandomForestClassifier(random_state=42), 
             param_grid, 
@@ -65,7 +59,6 @@ class PredictorRandomForest(PredictorDeportivoBase):
         
         logging.info(f"Mejores parámetros encontrados: {grid_search.best_params_}")
 
-        # 2. CALIBRACIÓN: Envolvemos el mejor modelo encontrado para que sea honesto con las probabilidades
         logging.info("Calibrando probabilidades (Escalamiento de Platt)...")
         self.modelo_calibrado = CalibratedClassifierCV(
             grid_search.best_estimator_, 
@@ -86,7 +79,6 @@ class PredictorRandomForest(PredictorDeportivoBase):
         """Retorna el orden de las etiquetas (ej. ['A', 'D', 'H'])."""
         return self.modelo_calibrado.classes_
 
-# --- PRUEBA DE FUNCIONAMIENTO ---
 if __name__ == "__main__":
     bot = PredictorRandomForest(ruta_csv='dataset_final_ml.csv')
     bot.cargar_datos()

@@ -10,36 +10,27 @@ def simular_apuestas_xgboost():
         print("Error: No se encontró 'dataset_final_ml.csv'.")
         return
 
-    # 1. PREPARACIÓN DE DATOS
     features = ['Racha_Local', 'Racha_Visita', 'Dif_Goles_Local', 'Dif_Goles_Visita', 'Pts_Totales_Local', 'Pts_Totales_Visita']
     X = df[features]
     y = df['FTR']
 
-    # XGBoost requiere que las etiquetas de texto sean numéricas (H=2, D=1, A=0)
     codificador = LabelEncoder()
     y_numerico = codificador.fit_transform(y)
 
-    # División Cronológica 80/20
     punto_corte = int(len(df) * 0.8)
     X_train, X_test = X.iloc[:punto_corte], X.iloc[punto_corte:]
     y_train, y_test = y_numerico[:punto_corte], y_numerico[punto_corte:]
     
-    # Separamos las cuotas para simular las ganancias
     cuotas_test = df[['B365H', 'B365D', 'B365A']].iloc[punto_corte:]
 
-    # 2. ENTRENAMIENTO DEL CEREBRO (XGBoost)
-    # eval_metric='mlogloss' es la función matemática que minimiza el error en predicciones múltiples
     modelo_xgb = XGBClassifier(n_estimators=100, learning_rate=0.1, eval_metric='mlogloss', random_state=42)
     modelo_xgb.fit(X_train, y_train)
     
-    # Hacemos las predicciones y las volvemos a convertir a texto ('H', 'D', 'A') para leerlas fácil
     predicciones_numericas = modelo_xgb.predict(X_test)
     predicciones = codificador.inverse_transform(predicciones_numericas)
     
-    # Restauramos y_test a texto para la comparación
     y_test_texto = codificador.inverse_transform(y_test)
 
-    # 3. SIMULACIÓN DE APUESTAS REALES
     capital_inicial = 1000.0
     capital_actual = capital_inicial
     apuesta_por_partido = 10.0 

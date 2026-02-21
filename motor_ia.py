@@ -18,12 +18,10 @@ class PredictorDeportivo:
         X = df_historico[self.features]
         y = df_historico['FTR']
         
-        # 1. Buscamos la mejor configuración
         param_grid = {'n_estimators': [100, 200], 'max_depth': [5, 10, None]}
         gs = GridSearchCV(RandomForestClassifier(random_state=42), param_grid, cv=3)
         gs.fit(X, y)
         
-        # 2. Calibramos para tener probabilidades reales (Platt Scaling)
         self.modelo_calibrado = CalibratedClassifierCV(gs.best_estimator_, method='sigmoid', cv=5)
         self.modelo_calibrado.fit(X, y)
         self.clases = list(self.modelo_calibrado.classes_)
@@ -40,4 +38,4 @@ class GestorFinanciero:
         b = cuota - 1
         q = 1 - prob
         f_star = prob - (q / b)
-        return max(0, f_star * multiplicador) # Nunca apostar si el valor es negativo
+        return max(0, f_star * multiplicador) 
