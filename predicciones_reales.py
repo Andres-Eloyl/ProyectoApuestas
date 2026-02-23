@@ -59,8 +59,10 @@ def sistema_alertas_produccion():
         if ev > 1.0:
             print(f"🔥 [ALERTA DE VALOR] Enviando {equipo_l} a Telegram...")
             bot_telegram.enviar_mensaje(mensaje)  # <--- EXACTAMENTE ASÍ
+            
         else:
             print(f"❌ [SIN VALOR] {equipo_l} descartado (EV: {ev:.2f})")
-            
-            if __name__ == "__main__":
-                sistema_alertas_produccion()
+
+# ¡FUERA DE LA FUNCIÓN, PEGADO A LA IZQUIERDA!
+if __name__ == "__main__":
+    sistema_alertas_produccion()
