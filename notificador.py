@@ -2,12 +2,11 @@ import os
 import requests
 from dotenv import load_dotenv
 
-# 1. Cargamos el archivo .env apenas arranca el script
+# Carga las claves secretas desde tu archivo .env
 load_dotenv()
 
 class BotPredictscore:
     def __init__(self):
-        # 2. Ahora sí tomará tus claves reales de forma segura
         self.token = os.environ.get("TELEGRAM_TOKEN")
         self.chat_id = os.environ.get("TELEGRAM_CHAT_ID")
         self.url = f"https://api.telegram.org/bot{self.token}/sendMessage"
