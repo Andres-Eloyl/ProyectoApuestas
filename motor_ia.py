@@ -9,7 +9,8 @@ logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 class PredictorDeportivo:
     def __init__(self):
         self.features = ['Racha_Local', 'Racha_Visita', 'Dif_Goles_Local', 
-                         'Dif_Goles_Visita', 'Pts_Totales_Local', 'Pts_Totales_Visita']
+                         'Dif_Goles_Visita', 'Pts_Totales_Local', 'Pts_Totales_Visita',
+                         'xG_Favor_Local', 'xG_Contra_Local', 'xG_Favor_Visita', 'xG_Contra_Visita']
         self.modelo_calibrado = None
         self.clases = None
 

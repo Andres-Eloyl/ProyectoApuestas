@@ -9,8 +9,15 @@ def descargar_y_limpiar_datos():
     las combina y realiza una limpieza profunda.
     """
     urls = [
+        # La Liga (España)
         "https://www.football-data.co.uk/mmz4281/2425/SP1.csv", 
-        "https://www.football-data.co.uk/mmz4281/2526/SP1.csv"  
+        "https://www.football-data.co.uk/mmz4281/2526/SP1.csv",
+        # Premier League (Inglaterra)
+        "https://www.football-data.co.uk/mmz4281/2425/E0.csv",
+        "https://www.football-data.co.uk/mmz4281/2526/E0.csv",
+        # Serie A (Italia)
+        "https://www.football-data.co.uk/mmz4281/2425/I1.csv",
+        "https://www.football-data.co.uk/mmz4281/2526/I1.csv"
     ]
     
     datasets = []
@@ -33,6 +40,7 @@ def descargar_y_limpiar_datos():
     columnas_clave = [
         'Date', 'HomeTeam', 'AwayTeam', 
         'FTHG', 'FTAG', 'FTR', 
+        'HS', 'AS', 'HST', 'AST',
         'B365H', 'B365D', 'B365A'
     ]
     

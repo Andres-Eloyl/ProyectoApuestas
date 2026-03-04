@@ -1,6 +1,8 @@
 import pandas as pd
 import logging
-from sklearn.ensemble import RandomForestClassifier
+import numpy as np
+from scipy.stats import poisson
+from sklearn.ensemble import RandomForestClassifier, HistGradientBoostingClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.calibration import CalibratedClassifierCV
 
@@ -79,11 +81,68 @@ class PredictorRandomForest(PredictorDeportivoBase):
         """Retorna el orden de las etiquetas (ej. ['A', 'D', 'H'])."""
         return self.modelo_calibrado.classes_
 
+class PredictorGradientBoosting(PredictorDeportivoBase):
+    """Modelo avanzado usando Gradient Boosting para mayor precisión ante relaciones no lineales."""
+    
+    def entrenar(self, X_train, y_train):
+        logging.info("Entrenando motor avanzado (HistGradientBoosting)...")
+        
+        modelo_base = HistGradientBoostingClassifier(
+            max_iter=150,
+            learning_rate=0.05,
+            max_depth=7,
+            min_samples_leaf=10,
+            random_state=42
+        )
+        
+        logging.info("Calibrando probabilidades...")
+        self.modelo_calibrado = CalibratedClassifierCV(
+            modelo_base,
+            method='sigmoid',
+            cv=5
+        )
+        self.modelo_calibrado.fit(X_train, y_train)
+        logging.info("¡Motor HistGradient calibrado con éxito!")
+
+    def predecir_probabilidades(self, X_test):
+        if self.modelo_calibrado is None:
+            logging.error("El modelo no ha sido entrenado.")
+            return None
+        return self.modelo_calibrado.predict_proba(X_test)
+
+    def obtener_clases(self):
+        return self.modelo_calibrado.classes_
+
+class PredictorGolesPoisson:
+    """Calcula resultados exactos basados en la distribución matemática de Poisson y Expectativa de Goles."""
+    
+    @staticmethod
+    def predecir_marcador(xg_local: float, xg_visita: float, max_goles=5):
+        """Genera una matriz bivariada de poisson y retorna el marcador más probable y expectativas."""
+        # Se añade un leve factor multiplicativo/ajuste casa-fuera implícito si el xG lo requiere 
+        # (Acá asumimos que el xG ya viene ponderado, pero podemos darle al local un x1.1 clásico de fútbol)
+        lambda_local = max(0.1, xg_local * 1.05)
+        lambda_visita = max(0.1, xg_visita * 0.95)
+        
+        max_prob = 0.0
+        mejor_marcador = "0-0"
+        
+        # GridSearch 5x5 para encontrar el marcador exacto más probable
+        for goles_l in range(max_goles + 1):
+            for goles_v in range(max_goles + 1):
+                # Asumimos independencia (Poisson simple)
+                prob = poisson.pmf(goles_l, lambda_local) * poisson.pmf(goles_v, lambda_visita)
+                if prob > max_prob:
+                    max_prob = prob
+                    mejor_marcador = f"{goles_l}-{goles_v}"
+                    
+        return round(lambda_local, 2), round(lambda_visita, 2), mejor_marcador
+
 if __name__ == "__main__":
-    bot = PredictorRandomForest(ruta_csv='dataset_final_ml.csv')
+    bot = PredictorGradientBoosting(ruta_csv='dataset_final_ml.csv')
     bot.cargar_datos()
     X_tr, X_te, y_tr, y_te = bot.preparar_datos_entrenamiento()
     
     if X_tr is not None:
         bot.entrenar(X_tr, y_tr)
-        print("\n✅ El modelo está listo y calibrado.")
+        print("\n✅ El nuevo modelo de Gradient Boosting está listo y calibrado.")

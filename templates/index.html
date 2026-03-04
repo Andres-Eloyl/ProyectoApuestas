@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PredictScore - Sports AI Engine</title>
+    <!-- Google Fonts: Inter (Basics) & Outfit (Headers) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="app-layout">
+
+        <!-- SIDEBAR MINIMALISTA -->
+        <aside class="sidebar">
+            <div class="brand">
+                <!-- Usar el Logo 2D Generado -->
+                <img src="/static/img/logo.png" alt="PredictScore Logo" class="brand-logo" id="main-logo"
+                    onerror="this.src='https://via.placeholder.com/40x40/0E8E42/FFFFFF?text=PS'">
+                <span class="brand-text">PredictScore</span>
+            </div>
+
+            <nav class="nav-menu">
+                <span class="nav-heading">Principal</span>
+                <a href="#" class="nav-item active" data-target="view-home">
+                    <i class="fa-solid fa-house icon"></i> Inicio
+                </a>
+                <a href="#" class="nav-item" data-target="view-financial">
+                    <i class="fa-solid fa-chart-line icon"></i> Rendimiento
+                </a>
+                <a href="#" class="nav-item" data-target="view-predictions">
+                    <i class="fa-solid fa-bolt icon"></i> Alertas de Valor
+                </a>
+
+                <span class="nav-heading mt-1">Inteligencia</span>
+                <a href="#" class="nav-item" data-target="view-xg">
+                    <i class="fa-solid fa-crosshairs icon"></i> xG Analytics
+                </a>
+                <!-- NUEVO TABLÓN -->
+                <a href="#" class="nav-item" data-target="view-insights">
+                    <i class="fa-solid fa-lightbulb icon"></i> Recomendaciones
+                </a>
+
+                <span class="nav-heading mt-1">Soporte</span>
+                <a href="#" class="nav-item" data-target="view-guide">
+                    <i class="fa-solid fa-book icon"></i> Guía EV+
+                </a>
+            </nav>
+
+            <div class="data-status-box">
+                <div class="status-indicator"></div>
+                <div class="status-text">
+                    <p class="status-title" id="data-status-title">Conectando...</p>
+                    <p class="status-desc">Predictive Motor v3</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN LAYOUT -->
+        <main class="main-content">
+            <!-- TOPBAR EDITORIAL -->
+            <header class="topbar">
+                <div class="search-container">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="search" id="global-search" class="search-input"
+                        placeholder="Buscar equipo o partido...">
+                </div>
+
+                <div class="topbar-actions">
+                    <div class="date-badge" id="currentDate">--</div>
+                </div>
+            </header>
+
+            <!-- VISTAS DE CONTENIDO -->
+
+            <!-- 1. INICIO -->
+            <section id="view-home" class="view-section active">
+                <div class="hero-card">
+                    <div class="hero-content">
+                        <h2>Ventaja Matemática.</h2>
+                        <p>Filtramos el ruido del mercado local e internacional. Nuestra IA cruza rachas, goles
+                            esperados (`xG`) y diferenciales de puntos para encontrar la rentabilidad oculta.</p>
+                        <div class="hero-buttons">
+                            <button class="btn-primary"
+                                onclick="document.querySelector('[data-target=\'view-predictions\']').click()">Descubrir
+                                Filtros</button>
+                        </div>
+                    </div>
+                    <div class="hero-graphics">
+                        <!-- Mascota/Ilustración Minimalista Dummy o Placeholder si no hay logo IA en webpath -->
+                        <i class="fa-solid fa-robot" style="font-size: 8rem; color: var(--brand-color);"></i>
+                    </div>
+                </div>
+
+                <div class="flex-grid">
+                    <div class="glass-panel micro-card">
+                        <h4>Ligas Procesadas</h4>
+                        <div class="leagues-badges">
+                            <span class="badge">ESP La Liga</span>
+                            <span class="badge">ENG Premier League</span>
+                            <span class="badge">ITA Serie A</span>
+                        </div>
+                    </div>
+                    <div class="glass-panel micro-card">
+                        <h4>Motor Principal</h4>
+                        <p class="big-text">HistGradient Boosting</p>
+                        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem">Variables Cruzadas
+                            No-Lineales</p>
+                    </div>
+                    <div class="glass-panel micro-card">
+                        <h4>Proyección Goles</h4>
+                        <p class="big-text">Multivariable Poisson</p>
+                        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem">Probabilidad de
+                            Marcador</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. RENDIMIENTO -->
+            <section id="view-financial" class="view-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Rendimiento Global</h2>
+                        <p>Seguimiento de las proyecciones del motor sobre picks EV+</p>
+                    </div>
+                </div>
+
+                <div class="metrics-grid">
+                    <div class="metric-card">
+                        <div class="metric-label">Beneficio Acumulado</div>
+                        <div class="metric-value" id="g-beneficio">$0.00</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Yield (Retorno Real)</div>
+                        <div class="metric-value" id="g-yield">0.00%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Win Rate IA</div>
+                        <div class="metric-value" id="g-winrate">0.0%</div>
+                    </div>
+                    <div class="metric-card">
+                        <div class="metric-label">Aciertos vs Fallos</div>
+                        <div class="metric-value text-dark" id="g-balance">0 W - 0 L</div>
+                    </div>
+                </div>
+
+                <div class="glass-panel text-center">
+                    <div class="chart-container">
+                        <h4
+                            style="color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; font-size:0.85rem;">
+                            Crecimiento del Bankroll</h4>
+                        <div class="canvas-wrapper">
+                            <canvas id="bankrollChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. PREVISIONES Y ALERTAS -->
+            <section id="view-predictions" class="view-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Alertas de Valor</h2>
+                        <p>Partidos analizados en la jornada y posibles picks matemáticos.</p>
+                    </div>
+
+                    <!-- NUEVOS FILTROS -->
+                    <div class="filters-bar">
+                        <select id="filter-market" class="filter-select">
+                            <option value="all">Todas las Alertas</option>
+                            <option value="value">Solo EV+ (Invertir)</option>
+                            <option value="pass">Sin Valor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="glass-panel table-panel">
+                    <div style="overflow-x:auto;">
+                        <table class="modern-table" id="predictions-table">
+                            <thead>
+                                <tr>
+                                    <th>Partido</th>
+                                    <th>Cuota (1)</th>
+                                    <th>% Real IA</th>
+                                    <th>Valor (EV)</th>
+                                    <th>Sim. Goles</th>
+                                    <th>Marcador Sugerido</th>
+                                    <th>Acción Sugerida</th>
+                                </tr>
+                            </thead>
+                            <tbody id="predictions-body">
+                                <tr>
+                                    <td colspan="7" class="text-center text-muted">Cargando oráculo...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 4. INSIGHTS / RECOMENDACIONES -->
+            <section id="view-insights" class="view-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Insights y Recomendaciones</h2>
+                        <p>Interpretación algorítmica de los datos filtrados más importantes a tomar en cuenta.</p>
+                    </div>
+                </div>
+
+                <div class="insights-grid" id="insights-container">
+                    <!-- JS Injection -->
+                    <div class="insight-card">
+                        <div class="insight-icon"><i class="fa-solid fa-circle-notch fa-spin"></i></div>
+                        <div class="insight-body">
+                            <h3>Calculando Recomendaciones...</h3>
+                            <p>Esperando la ingesta de los datos del backend.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. XG STATS -->
+            <section id="view-xg" class="view-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Monitor xG & Forma</h2>
+                        <p>Tabla dinámica de Expectativa de Goles (Ofensiva/Defensiva) por equipo.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel table-panel">
+                    <div style="overflow-x:auto;">
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>Equipo</th>
+                                    <th>Puntos Acum.</th>
+                                    <th>Momento (Forma)</th>
+                                    <th>Poder Ofensivo (xG F)</th>
+                                    <th>Debilidad Defensa (xG C)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="stats-body">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 6. GUÍA -->
+            <section id="view-guide" class="view-section">
+                <div class="glass-panel text-content">
+                    <h2 style="font-size:2.5rem; margin-bottom:1rem">Diccionario de Apuestas Inteligentes</h2>
+                    <p>Comprende la terminología detrás del modelo matemático y úsalo a tu favor.</p>
+
+                    <h3>1. Value Betting (EV+)</h3>
+                    <p>El Valor Esperado (EV) ocurre cuando el cálculo de probabilidad del modelo IA sobrepasa el
+                        porcentaje implícito marcado por la Casa de Apuestas. Si la casa paga @2.00 (50% de prob), pero
+                        la IA dicta que el Local gana el 60% de las veces, tienes un valor a largo plazo y una ventaja
+                        matemática ineludible.</p>
+
+                    <h3>2. Criterio de Kelly Multiplicador</h3>
+                    <p>Incluso la mejor apuesta no debe llevarte a la bancarrota. La fórmula de Kelly especifica qué %
+                        de tu Bankroll destinar a una cuota EV+ acorde a su riesgo. El sistema la multiplica
+                        artificialmente por 0.1 (Kelly Fraccional Conservador) bajando tu varianza y maximizando la
+                        supervivencia.</p>
+
+                    <h3>3. Expected Goals (xG)</h3>
+                    <p>A diferencia de los goles reales que dependen mucho de la suerte o el rendimiento de un portero
+                        estrella, los xG miden la "calidad real" y asiduidad de los tiros generados. Nuestro motor
+                        penaliza o bonifica si percibe que un equipo anota por suerte o si genera sin premio.</p>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/static/js/dashboard.js"></script>
+    <script>
+        // Set fallback custom logo
+        window.addEventListener('load', function () {
+            var img = document.getElementById('main-logo');
+            // If local path doesn't resolve via Flask normally, we catch the error inside the img tag
+            // But if it's running via python app.py, the absolute C:/ path might not be served by flask
+            // let's attempt to load it, else fall back visually
+        });
+    </script>
+</body>
+
+</html>
