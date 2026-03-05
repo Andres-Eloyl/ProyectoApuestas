@@ -3,12 +3,19 @@ import logging
 
 logging.basicConfig(level=logging.INFO, format='%(levelname)s - %(message)s')
 
+import sqlite3
+
 def generar_dataset_ml():
-    logging.info("Iniciando ingeniería de características...")
+    logging.info("Iniciando ingeniería de características desde SQLite...")
     try:
-        df = pd.read_csv('partidos_procesados.csv')
-    except FileNotFoundError:
-        logging.error("No se encontró 'partidos_procesados.csv'. Ejecuta la ingesta primero.")
+        conn = sqlite3.connect('apuestas.db')
+        df = pd.read_sql('SELECT * FROM historico_partidos ORDER BY Date ASC', conn)
+        conn.close()
+        if df.empty:
+            logging.error("La base de datos está vacía. Ejecuta ingesta_datos.py primero.")
+            return
+    except sqlite3.Error as e:
+        logging.error(f"Error conectando a la BD: {e}")
         return
 
     stats = {}

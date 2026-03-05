@@ -1,9 +1,13 @@
-name: Ejecutar Predictscore Diario
+name: Ejecutar Predictscore Diario (3 veces al día)
 
 on:
   schedule:
-    
-    - cron: '0 12 * * *'
+    # ☀️ Resumen Matutino — 8:00 AM UTC (4:00 AM EST / 12:00 PM VET)
+    - cron: '0 8 * * *'
+    # 🌤️ Resumen de Tarde — 14:00 UTC (10:00 AM EST / 2:00 PM VET)  
+    - cron: '0 14 * * *'
+    # 🌙 Resumen Nocturno — 20:00 UTC (4:00 PM EST / 8:00 PM VET)
+    - cron: '0 20 * * *'
   workflow_dispatch:
 
 jobs:
@@ -28,8 +32,14 @@ jobs:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: python cartelera_automatica.py
 
-      - name: 2. Entrenar IA y Enviar Telegram
+      - name: 2. Entrenar IA y Predecir
         env:
-          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python predicciones_reales.py
+
+      - name: 3. Enviar Alerta Telegram (Mañana / Tarde / Noche)
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python alerta_telegram.py

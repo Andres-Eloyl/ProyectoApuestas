@@ -117,5 +117,13 @@ def api_insights():
         
     return jsonify(insights)
 
+@app.route('/api/dashboard_resultados')
+def api_dashboard_resultados():
+    if not os.path.exists('historial_apuestas.csv'):
+        return jsonify([])
+    df = pd.read_csv('historial_apuestas.csv')
+    df = df.fillna("-")
+    return jsonify(df.to_dict(orient='records'))
+
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

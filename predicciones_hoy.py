@@ -89,7 +89,9 @@ def predecir_jornada_actual():
         else:
             print(f"   ❌ NO APOSTAR: No hay valor suficiente en la cuota.")
             
-        fecha_partido = pd.Timestamp.now().strftime('%Y-%m-%d')
+        from datetime import timedelta
+        # Asignamos la fecha del partido a mañana
+        fecha_partido = (pd.Timestamp.now() + pd.Timedelta(days=1)).strftime('%Y-%m-%d')
         EvaluadorResultados.registrar_prediccion(
             fecha=fecha_partido, local=home, visita=away, cuota=c_h, 
             prob=p_h, ev=ev_h, kelly=kelly_frac, recomendacion=recomendacion,

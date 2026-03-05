@@ -31,9 +31,32 @@ def procesar_caracteristicas(df):
     return df
 
 def ejecutar_sistema():
-    url = "https://www.football-data.co.uk/mmz4281/2526/SP1.csv"
-    logging.info(f"Descargando temporada actual: 20/02/2026")
-    df_raw = pd.read_csv(url)
+    # Descargamos las 5 grandes ligas europeas (antes solo se descargaba La Liga SP1)
+    LIGAS = {
+        'Premier League': 'E0',
+        'La Liga': 'SP1',
+        'Serie A': 'I1',
+        'Bundesliga': 'D1',
+        'Ligue 1': 'F1'
+    }
+    
+    frames = []
+    for nombre, codigo in LIGAS.items():
+        url = f"https://www.football-data.co.uk/mmz4281/2526/{codigo}.csv"
+        logging.info(f"Descargando {nombre} ({codigo})...")
+        try:
+            df_liga = pd.read_csv(url)
+            df_liga['Liga'] = nombre
+            frames.append(df_liga)
+        except Exception as e:
+            logging.warning(f"No se pudo descargar {nombre}: {e}")
+    
+    if not frames:
+        logging.error("No se pudo descargar ninguna liga. Abortando.")
+        return
+        
+    df_raw = pd.concat(frames, ignore_index=True)
+    logging.info(f"Total de partidos descargados: {len(df_raw)} de {len(frames)} ligas")
     df_hist = procesar_caracteristicas(df_raw)
 
     ia = PredictorDeportivo()

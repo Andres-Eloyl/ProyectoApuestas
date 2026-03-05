@@ -20,9 +20,8 @@
         <!-- SIDEBAR MINIMALISTA -->
         <aside class="sidebar">
             <div class="brand">
-                <!-- Usar el Logo 2D Generado -->
-                <img src="/static/img/logo.png" alt="PredictScore Logo" class="brand-logo" id="main-logo"
-                    onerror="this.src='https://via.placeholder.com/40x40/0E8E42/FFFFFF?text=PS'">
+                <!-- Usar el Logo 2D Referenciado Face -->
+                <img src="/static/img/logo_nuevo.png" alt="PredictScore Logo" class="brand-logo" id="main-logo">
                 <span class="brand-text">PredictScore</span>
             </div>
 
@@ -34,6 +33,9 @@
                 <a href="#" class="nav-item" data-target="view-financial">
                     <i class="fa-solid fa-chart-line icon"></i> Rendimiento
                 </a>
+                <a href="#" class="nav-item" data-target="view-results">
+                    <i class="fa-solid fa-table-list icon"></i> Historial (Auditoría)
+                </a>
                 <a href="#" class="nav-item" data-target="view-predictions">
                     <i class="fa-solid fa-bolt icon"></i> Alertas de Valor
                 </a>
@@ -42,22 +44,36 @@
                 <a href="#" class="nav-item" data-target="view-xg">
                     <i class="fa-solid fa-crosshairs icon"></i> xG Analytics
                 </a>
-                <!-- NUEVO TABLÓN -->
                 <a href="#" class="nav-item" data-target="view-insights">
                     <i class="fa-solid fa-lightbulb icon"></i> Recomendaciones
+                </a>
+
+                <span class="nav-heading mt-1">Documentación</span>
+                <a href="#" class="nav-item" data-target="view-manual-usuario">
+                    <i class="fa-solid fa-user-graduate icon"></i> Manual de Usuario
+                </a>
+                <a href="#" class="nav-item" data-target="view-manual-tecnico">
+                    <i class="fa-solid fa-gears icon"></i> Manual Técnico
                 </a>
 
                 <span class="nav-heading mt-1">Soporte</span>
                 <a href="#" class="nav-item" data-target="view-guide">
                     <i class="fa-solid fa-book icon"></i> Guía EV+
                 </a>
+                <a href="#" class="nav-item" data-target="view-support">
+                    <i class="fa-solid fa-headset icon"></i> Soporte Técnico
+                </a>
             </nav>
 
-            <div class="data-status-box">
-                <div class="status-indicator"></div>
-                <div class="status-text">
-                    <p class="status-title" id="data-status-title">Conectando...</p>
-                    <p class="status-desc">Predictive Motor v3</p>
+            <!-- DEVELOPER CREDITS -->
+            <div class="developer-info">
+                <p class="dev-title">Desarrollado por</p>
+                <p class="dev-name">Andres Lopez</p>
+                <div class="dev-links">
+                    <a href="https://github.com/Andres-Eloyl" target="_blank" title="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/andres-eloy-lopez" target="_blank" title="LinkedIn"><i
+                            class="fa-brands fa-linkedin"></i></a>
                 </div>
             </div>
         </aside>
@@ -93,31 +109,44 @@
                         </div>
                     </div>
                     <div class="hero-graphics">
-                        <!-- Mascota/Ilustración Minimalista Dummy o Placeholder si no hay logo IA en webpath -->
-                        <i class="fa-solid fa-robot" style="font-size: 8rem; color: var(--brand-color);"></i>
+                        <img src="/static/img/mascota_main.png" alt="Hero Logo" class="hero-logo-large"
+                            onmouseover="this.src='/static/img/mascota_hover.png'"
+                            onmouseout="this.src='/static/img/mascota_main.png'">
                     </div>
                 </div>
-
                 <div class="flex-grid">
                     <div class="glass-panel micro-card">
-                        <h4>Ligas Procesadas</h4>
+                        <h4>Cobertura IA (Torneos)</h4>
                         <div class="leagues-badges">
-                            <span class="badge">ESP La Liga</span>
-                            <span class="badge">ENG Premier League</span>
-                            <span class="badge">ITA Serie A</span>
+                            <!-- Agregamos todas las competiciones para que el usuario sepa el alcance del modelo -->
+                            <span class="badge filter-league" style="cursor: pointer;" data-league="La Liga">ESP La
+                                Liga</span>
+                            <span class="badge filter-league" style="cursor: pointer;" data-league="Premier League">ENG
+                                Premier League</span>
+                            <span class="badge filter-league" style="cursor: pointer;" data-league="Serie A">ITA Serie
+                                A</span>
+                            <span class="badge filter-league" style="cursor: pointer;" data-league="Bundesliga">GER
+                                Bundesliga</span>
+                            <span class="badge filter-league" style="cursor: pointer;" data-league="Ligue 1">FRA Ligue
+                                1</span>
+                            <span class="badge filter-league" style="cursor: pointer;" data-league="Champions League"
+                                style="background: linear-gradient(135deg, #1A1D20 0%, #000 100%); color: white; border: none;">UEFA
+                                Champions League</span>
+                            <span class="badge">Copas Locales</span>
                         </div>
                     </div>
                     <div class="glass-panel micro-card">
                         <h4>Motor Principal</h4>
                         <p class="big-text">HistGradient Boosting</p>
-                        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem">Variables Cruzadas
-                            No-Lineales</p>
+                        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem">Algoritmo de IA
+                            optimizado para analizar múltiples variables y detectar patrones ocultos de rentabilidad.
+                        </p>
                     </div>
                     <div class="glass-panel micro-card">
                         <h4>Proyección Goles</h4>
                         <p class="big-text">Multivariable Poisson</p>
-                        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem">Probabilidad de
-                            Marcador</p>
+                        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem">Distribución
+                            probabilística para sugerir el marcador exacto más factible matemáticamente.</p>
                     </div>
                 </div>
             </section>
@@ -167,7 +196,8 @@
                 <div class="section-header">
                     <div>
                         <h2>Alertas de Valor</h2>
-                        <p>Partidos analizados en la jornada y posibles picks matemáticos.</p>
+                        <p>Evaluación matemática de los partidos del día. El sistema busca cuotas sobrevaloradas para
+                            maximizar tus ganancias a largo plazo (Value Betting).</p>
                     </div>
 
                     <!-- NUEVOS FILTROS -->
@@ -230,11 +260,14 @@
                 <div class="section-header">
                     <div>
                         <h2>Monitor xG & Forma</h2>
-                        <p>Tabla dinámica de Expectativa de Goles (Ofensiva/Defensiva) por equipo.</p>
+                        <p>Explora la Calidad Esperada (xG) de los equipos. Un equipo puede tener pocos goles pero alto
+                            xG ofensivo, lo que indica buena generación de juego que pronto se traducirá en victorias.
+                        </p>
                     </div>
                 </div>
 
-                <div class="glass-panel table-panel">
+                <div class="glass-panel table-panel" id="xg-scroll-container"
+                    style="max-height: 60vh; overflow-y: auto;">
                     <div style="overflow-x:auto;">
                         <table class="modern-table">
                             <thead>
@@ -275,6 +308,297 @@
                     <p>A diferencia de los goles reales que dependen mucho de la suerte o el rendimiento de un portero
                         estrella, los xG miden la "calidad real" y asiduidad de los tiros generados. Nuestro motor
                         penaliza o bonifica si percibe que un equipo anota por suerte o si genera sin premio.</p>
+                </div>
+            </section>
+
+            <!-- MANUAL DE USUARIO -->
+            <section id="view-manual-usuario" class="view-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Manual de Usuario</h2>
+                        <p>Todo lo que necesitas saber para sacar el máximo provecho de PredictScore.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel text-content">
+                    <div class="manual-intro">
+                        <img src="/static/img/mascota_main.png" alt="Predicto" class="manual-mascot"
+                            onmouseover="this.src='/static/img/mascota_hover.png'"
+                            onmouseout="this.src='/static/img/mascota_main.png'">
+                        <div>
+                            <h3 style="margin-top:0">¡Bienvenido a PredictScore!</h3>
+                            <p>Soy <strong>Predicto</strong>, tu asistente de apuestas inteligentes. Te guiaré paso a
+                                paso para que entiendas cada función de la plataforma.</p>
+                        </div>
+                    </div>
+
+                    <h3>1. Panel de Inicio</h3>
+                    <p>El panel de inicio te muestra un resumen de las capacidades del motor IA: las ligas cubiertas
+                        (Premier League, La Liga, Serie A, Bundesliga, Ligue 1 y Champions League), el motor de
+                        predicción (HistGradient Boosting) y el modelo de proyección de goles (Poisson Multivariable).
+                    </p>
+
+                    <h3>2. Rendimiento</h3>
+                    <p>Aquí podrás ver las métricas globales del sistema: <strong>Beneficio Acumulado</strong>,
+                        <strong>Yield</strong> (retorno real), <strong>Win Rate</strong> y el balance de aciertos vs
+                        fallos. El gráfico muestra la evolución del bankroll a lo largo del tiempo.
+                    </p>
+
+                    <h3>3. Alertas de Valor</h3>
+                    <p>Esta sección muestra los partidos del día analizados por la IA. Puedes filtrar entre <em>"Solo
+                            EV+ (Invertir)"</em> para ver solo las oportunidades rentables, o <em>"Sin Valor"</em> para
+                        los partidos descartados. Cada fila muestra: cuota, probabilidad real calculada por IA, valor
+                        esperado (EV), simulación de goles y la acción sugerida con el porcentaje de stake recomendado
+                        (Kelly).</p>
+
+                    <h3>4. Historial (Real vs IA)</h3>
+                    <p>Auditoría completa de las predicciones anteriores comparadas con los resultados reales. Esto te
+                        permite verificar la confiabilidad del modelo visualizando ganancias y pérdidas reales.</p>
+
+                    <h3>5. xG Analytics</h3>
+                    <p>Monitor de Expected Goals (xG): tabla dinámica con la expectativa ofensiva y defensiva de cada
+                        equipo. Incluye puntos acumulados y la racha de forma reciente.</p>
+
+                    <h3>6. Recomendaciones Diarias</h3>
+                    <p>Resumen algorítmico de las 3 mejores oportunidades de inversión del día, con explicación
+                        detallada del
+                        razonamiento estadístico proporcionado por el modelo híbrido subyacente.</p>
+
+                    <h3>7. Servicio de Notificaciones (Telegram)</h3>
+                    <p>La plataforma cuenta con integración continua para emitir alertas automatizadas a través de un
+                        canal
+                        seguro de Telegram <strong>3 veces al día</strong>:
+                    </p>
+                    <ul
+                        style="padding-left: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem;">
+                        <li>☀️ <strong>Resumen Matutino</strong> — 8:00 AM UTC</li>
+                        <li>🌤️ <strong>Resumen de Tarde</strong> — 2:00 PM UTC</li>
+                        <li>🌙 <strong>Resumen Nocturno</strong> — 8:00 PM UTC</li>
+                    </ul>
+                    <p>Cada envío incluye los picks de mayor valor esperado del momento, con cuotas, probabilidades IA y
+                        marcadores proyectados.</p>
+
+                    <h3>8. Buscador Global</h3>
+                    <p>El campo de búsqueda en la barra superior te permite filtrar partidos y equipos en tiempo real en
+                        la tabla de predicciones y en el monitor xG.</p>
+                </div>
+            </section>
+
+            <!-- MANUAL TÉCNICO -->
+            <section id="view-manual-tecnico" class="view-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Manual Técnico</h2>
+                        <p>Arquitectura, flujos de datos y configuración del sistema PredictScore.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel text-content">
+                    <h3>Arquitectura General</h3>
+                    <p>PredictScore sigue una arquitectura ETL (Extracción-Transformación-Carga) automatizada con las
+                        siguientes capas:</p>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fa-solid fa-database" style="color: var(--brand-color);"></i>
+                            <div>
+                                <strong>Ingesta de Datos</strong>
+                                <p style="margin:0">Football-Data.co.uk (historial 5 años) + TheOddsAPI (cuotas en vivo)
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fa-solid fa-brain" style="color: var(--brand-color);"></i>
+                            <div>
+                                <strong>Motor IA</strong>
+                                <p style="margin:0">HistGradientBoosting + Poisson Multivariable (scikit-learn)</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fa-solid fa-server" style="color: var(--brand-color);"></i>
+                            <div>
+                                <strong>Backend</strong>
+                                <p style="margin:0">Flask + SQLite + Pandas para APIs REST del dashboard</p>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fa-solid fa-paper-plane" style="color: var(--brand-color);"></i>
+                            <div>
+                                <strong>Notificaciones</strong>
+                                <p style="margin:0">Telegram Bot API — 3 envíos diarios automatizados vía GitHub Actions
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3>Flujo de Ejecución Diaria</h3>
+                    <p>El pipeline se ejecuta automáticamente 3 veces al día mediante GitHub Actions
+                        (<code>bot_diario.yml</code>):</p>
+                    <ol
+                        style="padding-left: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; line-height: 2;">
+                        <li><strong>cartelera_automatica.py</strong> — Escanea la API de cuotas para partidos del día
+                            siguiente</li>
+                        <li><strong>predicciones_reales.py</strong> — Entrena el modelo y genera predicciones con EV,
+                            Poisson y Kelly</li>
+                        <li><strong>alerta_telegram.py</strong> — Envía el reporte formateado al canal de Telegram</li>
+                    </ol>
+
+                    <h3>Archivos Principales</h3>
+                    <div class="tech-files-grid">
+                        <div class="tech-file"><code>ingesta_datos.py</code><span>ETL: descarga histórico de 5 años de
+                                las Top 5 ligas + Champions</span></div>
+                        <div class="tech-file"><code>ingenieria_caracteristicas.py</code><span>Feature Engineering:
+                                genera xG, rachas, diferenciales</span></div>
+                        <div class="tech-file"><code>modelos_poo.py</code><span>Modelos ML: GradientBoosting,
+                                RandomForest, Poisson</span></div>
+                        <div class="tech-file"><code>cartelera_automatica.py</code><span>Genera la cartelera diaria
+                                cruzando cuotas con stats</span></div>
+                        <div class="tech-file"><code>predicciones_hoy.py</code><span>Predice resultados usando el motor
+                                entrenado</span></div>
+                        <div class="tech-file"><code>evaluacion_resultados.py</code><span>Concilia predicciones vs
+                                resultados reales</span></div>
+                        <div class="tech-file"><code>simulador_kelly.py</code><span>Simulador de gestión de riesgo con
+                                criterio Kelly</span></div>
+                        <div class="tech-file"><code>app.py</code><span>Servidor Flask que sirve el dashboard y
+                                APIs</span></div>
+                    </div>
+
+                    <h3>Variables de Entorno Requeridas</h3>
+                    <div
+                        style="background: #f8f9fa; border: 1px solid var(--border-color); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; font-family: monospace; font-size: 0.95rem; line-height: 2;">
+                        <div><strong>ODDS_API_KEY</strong> — Clave de TheOddsAPI para cuotas en tiempo real</div>
+                        <div><strong>TELEGRAM_BOT_TOKEN</strong> — Token del bot de Telegram</div>
+                        <div><strong>TELEGRAM_CHAT_ID</strong> — ID del chat/canal de destino</div>
+                    </div>
+
+                    <h3>Base de Datos</h3>
+                    <p>Se utiliza <strong>SQLite</strong> (<code>apuestas.db</code>) para almacenamiento estructurado.
+                        Las tablas principales son: <code>partidos_historicos</code> y <code>champions_league</code>. El
+                        cache JSON (<code>stats_actuales.json</code>) se genera para acceso rápido sin consultas SQL.
+                    </p>
+
+                    <h3>Requisitos del Sistema</h3>
+                    <p>Python 3.10+, Flask, Pandas, scikit-learn, requests, BeautifulSoup4, scipy. Instalar con
+                        <code>pip install -r requirements.txt</code>.
+                    </p>
+                </div>
+            </section>
+
+            <!-- 7. HISTORIAL RESULTADOS (REAL VS IA) -->
+            <section id="view-results" class="view-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Auditoría de Resultados (Real vs IA)</h2>
+                        <p>Comparación retrospectiva de las predicciones de Poisson y XGBoost contra los resultados
+                            oficiales emitidos.</p>
+                    </div>
+                </div>
+                <div class="glass-panel table-panel">
+                    <div style="overflow-x:auto;">
+                        <table class="modern-table">
+                            <thead>
+                                <tr>
+                                    <th>Fecha</th>
+                                    <th>Cruce (Local vs Visita)</th>
+                                    <th>Rec. Inicial</th>
+                                    <th>Prob. IA / Cuota</th>
+                                    <th>Resultado Real</th>
+                                    <th>Balance (Rendimiento)</th>
+                                </tr>
+                            </thead>
+                            <tbody id="results-body">
+                                <tr>
+                                    <td colspan="6" class="text-center text-muted">Auditoría cargando...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 8. SOPORTE TÉCNICO -->
+            <section id="view-support" class="view-section">
+                <div class="section-header">
+                    <div>
+                        <h2>Soporte Técnico</h2>
+                        <p>Estado del sistema, preguntas frecuentes y canal de soporte.</p>
+                    </div>
+                </div>
+
+                <div class="glass-panel text-content" style="max-width: 900px;">
+                    <div class="manual-intro">
+                        <img src="/static/img/mascota_main.png" alt="Predicto" class="manual-mascot"
+                            onmouseover="this.src='/static/img/mascota_hover.png'"
+                            onmouseout="this.src='/static/img/mascota_main.png'">
+                        <div>
+                            <h3 style="margin-top:0">¿Necesitas ayuda?</h3>
+                            <p>¡Estoy aquí para ayudarte! Revisa el estado de los servicios y las preguntas frecuentes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3><i class="fa-solid fa-server" style="color:var(--brand-color); margin-right:8px;"></i>Estado de
+                        los Servicios</h3>
+                    <div class="support-status-grid">
+                        <div class="support-status-item">
+                            <span class="status-dot online"></span>
+                            <strong>Motor HistGradient Boosting</strong>
+                            <span class="badge" style="margin-left:auto;">En línea</span>
+                        </div>
+                        <div class="support-status-item">
+                            <span class="status-dot online"></span>
+                            <strong>TheOddsAPI (Cuotas)</strong>
+                            <span class="badge" style="margin-left:auto;">Operativo</span>
+                        </div>
+                        <div class="support-status-item">
+                            <span class="status-dot online"></span>
+                            <strong>Canal Telegram (Alertas 3x/día)</strong>
+                            <div style="margin-left:auto; display:flex; gap:0.5rem; align-items:center;">
+                                <span style="font-size:0.8rem; color:var(--text-muted);">08:00, 14:00, 20:00</span>
+                                <span class="badge">Activo</span>
+                            </div>
+                        </div>
+                        <div class="support-status-item">
+                            <span class="status-dot warning"></span>
+                            <strong>Actualizador CSV</strong>
+                            <span class="badge" style="margin-left:auto;">Latencia baja</span>
+                        </div>
+                    </div>
+
+                    <h3><i class="fa-solid fa-circle-question"
+                            style="color:var(--brand-color); margin-right:8px;"></i>Preguntas
+                        Frecuentes</h3>
+                    <div class="faq-list">
+                        <details class="faq-item">
+                            <summary>¿Cuántas veces al día recibo alertas por Telegram?</summary>
+                            <p>El sistema envía <strong>3 alertas diarias</strong> automáticas: una matutina (8:00 AM
+                                UTC), una de tarde (2:00 PM UTC) y una nocturna (8:00 PM UTC). Cada envío incluye los
+                                picks de mayor valor esperado.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>¿Por qué aparecen solo partidos de La Liga?</summary>
+                            <p>El sistema cubre las 5 grandes ligas europeas + Champions League. Si solo ves La Liga,
+                                puede deberse a que la API de cuotas no tiene partidos programados de otras ligas ese
+                                día, o a que la clave de API necesita renovarse.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>¿Qué significa EV+ (Valor Esperado positivo)?</summary>
+                            <p>EV+ indica que la probabilidad real calculada por la IA es mayor que la implícita de la
+                                casa de apuestas. Un EV > 1.10 es una señal de inversión rentable a largo plazo.</p>
+                        </details>
+                        <details class="faq-item">
+                            <summary>¿Cómo reporto un error en las predicciones?</summary>
+                            <p>Si detectas un falso positivo o un equipo que no refresca sus estadísticas, puedes abrir
+                                un reclamo usando el botón de abajo. También puedes contactarnos directamente por el
+                                canal de Telegram.</p>
+                        </details>
+                    </div>
+
+                    <div style="text-align: center; margin-top: 2rem;">
+                        <button class="btn-primary"
+                            onclick="alert('📩 Ticket de soporte creado. Te responderemos en menos de 24 horas.')">
+                            <i class="fa-solid fa-envelope"></i> Abrir Ticket de Soporte
+                        </button>
+                    </div>
                 </div>
             </section>
 
