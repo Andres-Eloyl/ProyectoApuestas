@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PredictScore - Sports AI Engine</title>
-    <!-- Google Fonts: Inter (Basics) & Outfit (Headers) -->
+    <!-- Google Fonts: Nunito (Basics) & Poppins (Headers) -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/static/css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -99,9 +99,9 @@
             <section id="view-home" class="view-section active">
                 <div class="hero-card">
                     <div class="hero-content">
-                        <h2>Ventaja Matemática.</h2>
-                        <p>Filtramos el ruido del mercado local e internacional. Nuestra IA cruza rachas, goles
-                            esperados (`xG`) y diferenciales de puntos para encontrar la rentabilidad oculta.</p>
+                        <h2>Predicciones Inteligentes.</h2>
+                        <p>Toma decisiones informadas con análisis guiados por datos. Descubre las mejores oportunidades
+                            del mercado deportivo de una forma sencilla, clara y amigable.</p>
                         <div class="hero-buttons">
                             <button class="btn-primary"
                                 onclick="document.querySelector('[data-target=\'view-predictions\']').click()">Descubrir
@@ -136,17 +136,17 @@
                         </div>
                     </div>
                     <div class="glass-panel micro-card">
-                        <h4>Motor Principal</h4>
-                        <p class="big-text">HistGradient Boosting</p>
-                        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem">Algoritmo de IA
-                            optimizado para analizar múltiples variables y detectar patrones ocultos de rentabilidad.
+                        <h4>Motor de Análisis</h4>
+                        <p class="big-text">Algoritmo Avanzado</p>
+                        <p style="color:var(--text-muted); font-size:0.95rem; margin-top:0.5rem">Sistema optimizado
+                            para estudiar múltiples variables deportivas y encontrar oportunidades de alto valor.
                         </p>
                     </div>
                     <div class="glass-panel micro-card">
-                        <h4>Proyección Goles</h4>
-                        <p class="big-text">Multivariable Poisson</p>
-                        <p style="color:var(--text-muted); font-size:0.85rem; margin-top:0.5rem">Distribución
-                            probabilística para sugerir el marcador exacto más factible matemáticamente.</p>
+                        <h4>Proyección de Marcador</h4>
+                        <p class="big-text">Cálculo de Resultados</p>
+                        <p style="color:var(--text-muted); font-size:0.95rem; margin-top:0.5rem">Estimación técnica
+                            para sugerir los marcadores finales más factibles basándonos en el desempeño real.</p>
                     </div>
                 </div>
             </section>
@@ -327,7 +327,7 @@
                             onmouseout="this.src='/static/img/mascota_main.png'">
                         <div>
                             <h3 style="margin-top:0">¡Bienvenido a PredictScore!</h3>
-                            <p>Soy <strong>Predicto</strong>, tu asistente de apuestas inteligentes. Te guiaré paso a
+                            <p>Soy <strong>Predictoro</strong>, tu asistente deportivo. Te guiaré paso a
                                 paso para que entiendas cada función de la plataforma.</p>
                         </div>
                     </div>
@@ -371,9 +371,9 @@
                     </p>
                     <ul
                         style="padding-left: 2rem; margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem;">
-                        <li>☀️ <strong>Resumen Matutino</strong> — 8:00 AM UTC</li>
-                        <li>🌤️ <strong>Resumen de Tarde</strong> — 2:00 PM UTC</li>
-                        <li>🌙 <strong>Resumen Nocturno</strong> — 8:00 PM UTC</li>
+                        <li><strong>Resumen Matutino</strong> — 8:00 AM UTC</li>
+                        <li><strong>Resumen de Tarde</strong> — 2:00 PM UTC</li>
+                        <li><strong>Resumen Nocturno</strong> — 8:00 PM UTC</li>
                     </ul>
                     <p>Cada envío incluye los picks de mayor valor esperado del momento, con cuotas, probabilidades IA y
                         marcadores proyectados.</p>
@@ -593,11 +593,27 @@
                         </details>
                     </div>
 
-                    <div style="text-align: center; margin-top: 2rem;">
-                        <button class="btn-primary"
-                            onclick="alert('📩 Ticket de soporte creado. Te responderemos en menos de 24 horas.')">
-                            <i class="fa-solid fa-envelope"></i> Abrir Ticket de Soporte
-                        </button>
+                    <div class="contact-form"
+                        style="margin-top: 2rem; background: #F8F9FA; padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--border-color);">
+                        <h4 style="margin-bottom: 1rem; font-size: 1.2rem; margin-top: 0;">Solicitar Soporte Técnico
+                        </h4>
+                        <form
+                            onsubmit="event.preventDefault(); alert('Mensaje enviado. Nuestro equipo se pondrá en contacto pronto.');">
+                            <div style="margin-bottom: 1rem; text-align: left;">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Correo
+                                    Electrónico</label>
+                                <input type="email" required placeholder="tu@correo.com"
+                                    style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-family: 'Nunito', sans-serif; font-size: 1rem;">
+                            </div>
+                            <div style="margin-bottom: 1.5rem; text-align: left;">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Mensaje</label>
+                                <textarea required rows="4" placeholder="¿En qué te podemos ayudar?"
+                                    style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: var(--radius-sm); font-family: 'Nunito', sans-serif; resize: vertical; font-size: 1rem;"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary" style="width: 100%;">
+                                <i class="fa-solid fa-paper-plane"></i> Enviar Ticket de Soporte
+                            </button>
+                        </form>
                     </div>
                 </div>
             </section>
