@@ -53,7 +53,7 @@ def predecir_jornada_actual():
     clases = list(bot.obtener_clases())
     
     print("\n" + "="*50)
-    print("🎯 PREDICCIONES DEL MOTOR XGB/BOOST (PRODUCCIÓN)")
+    print("PREDICCIONES DEL MOTOR XGB/BOOST (PRODUCCIÓN)")
     print("="*50)
 
     for i in range(len(hoy_df)):
@@ -76,7 +76,7 @@ def predecir_jornada_actual():
         xg_v = hoy_df.iloc[i]['xG_Favor_Visita']
         g_l, g_v, marcador_exacto = PredictorGolesPoisson.predecir_marcador(xg_l, xg_v)
         
-        print(f"\n🏟️  {home} vs {away}")
+        print(f"\n  {home} vs {away}")
         print(f"   Probabilidades -> Local: {p_h:.1%} | Empate: {p_d:.1%} | Visita: {p_a:.1%}")
         print(f"   Cuota Local: {c_h} | Valor Esperado (EV): {ev_h:.2f}")
         print(f"   Simulación Goles -> Local: {g_l} | Visita: {g_v}")
@@ -84,10 +84,10 @@ def predecir_jornada_actual():
         
         recomendacion = "No Bet"
         if ev_h > 1.10:
-            print(f"   ✅ RECOMENDACIÓN: Apostar a {home} (Invertir {kelly_frac:.2%} del bank)")
+            print(f"   RECOMENDACIÓN: Apostar a {home} (Invertir {kelly_frac:.2%} del bank)")
             recomendacion = "H"
         else:
-            print(f"   ❌ NO APOSTAR: No hay valor suficiente en la cuota.")
+            print(f"   NO APOSTAR: No hay valor suficiente en la cuota.")
             
         from datetime import timedelta
         # Asignamos la fecha del partido a mañana
@@ -98,7 +98,7 @@ def predecir_jornada_actual():
             goles_l=g_l, goles_v=g_v, marcador=marcador_exacto
         )
         
-    print("\n📊 Estadísticas Generales Actualizadas:")
+    print("\n Estadísticas Generales Actualizadas:")
     EvaluadorResultados.conciliar_resultados()
     print(EvaluadorResultados.obtener_metricas())
 

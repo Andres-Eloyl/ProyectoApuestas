@@ -2,6 +2,8 @@ from flask import Flask, render_template, jsonify
 import pandas as pd
 import json
 import os
+import subprocess
+import sys
 from evaluacion_resultados import EvaluadorResultados
 
 app = Flask(__name__)
@@ -48,6 +50,25 @@ def api_predicciones_hoy():
     # Como estas columnas pueden arrojar NaN si leemos histórico muy antiguo, reemplazamos por strings vacíos.
     data = predicciones[cols].fillna('-').to_dict(orient='records')
     return jsonify(data)
+
+@app.route('/api/sync_predicciones')
+def api_sync_predicciones():
+    # 1. Ejecutar extractor de cuotas y fechas en vivo
+    try:
+        subprocess.run([sys.executable, "cartelera_automatica.py"], check=True)
+    except Exception as e:
+        print(f"Error sincronizando cartelera: {e}")
+        return jsonify({"error": "Fallo al descargar partidos en vivo."}), 500
+
+    # 2. Ejecutar la inferencia neuronal para los partidos extraídos
+    try:
+        subprocess.run([sys.executable, "predicciones_hoy.py"], check=True)
+    except Exception as e:
+        print(f"Error sincronizando predicciones: {e}")
+        return jsonify({"error": "Fallo al ejecutar modelo de IA."}), 500
+
+    # 3. Leer y devolver el JSON/CSV fresco recién creado
+    return api_predicciones_hoy()
 
 @app.route('/api/stats_equipos')
 def api_stats_equipos():
@@ -124,6 +145,14 @@ def api_dashboard_resultados():
     df = pd.read_csv('historial_apuestas.csv')
     df = df.fillna("-")
     return jsonify(df.to_dict(orient='records'))
+
+@app.route('/api/historial_evaluado')
+def api_historial_evaluado():
+    if not os.path.exists('historial_auditoria.json'):
+         return jsonify([])
+    with open('historial_auditoria.json', 'r', encoding='utf-8') as f:
+        datos = json.load(f)
+    return jsonify(datos)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)

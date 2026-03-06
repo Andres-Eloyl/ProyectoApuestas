@@ -1,0 +1,4025 @@
+[
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "28/02/2026",
+        "Partido": "Werder Bremen vs Heidenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.53) D(0.26) A(0.21) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "27/02/2026",
+        "Partido": "Augsburg vs FC Koln",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.46) D(0.22) A(0.32) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "21/02/2026",
+        "Partido": "Wolfsburg vs Augsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.26) A(0.25) | Cuota: 2.05"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "21/02/2026",
+        "Partido": "FC Koln vs Hoffenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.38) D(0.28) A(0.34) | Cuota: 3.3"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "15/02/2026",
+        "Partido": "RB Leipzig vs Wolfsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.28) A(0.17) | Cuota: 1.44"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "15/02/2026",
+        "Partido": "Augsburg vs Heidenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.61) D(0.22) A(0.17) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "14/02/2026",
+        "Partido": "Hoffenheim vs Freiburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.41) D(0.25) A(0.34) | Cuota: 1.73"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "08/02/2026",
+        "Partido": "FC Koln vs RB Leipzig",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.24) D(0.25) A(0.51) | Cuota: 3.25"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "07/02/2026",
+        "Partido": "Mainz vs Augsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.45) D(0.28) A(0.27) | Cuota: 2.05"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "07/02/2026",
+        "Partido": "Freiburg vs Werder Bremen",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.58) D(0.24) A(0.18) | Cuota: 1.83"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "31/01/2026",
+        "Partido": "RB Leipzig vs Mainz",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.48) D(0.25) A(0.27) | Cuota: 1.55"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "31/01/2026",
+        "Partido": "Hoffenheim vs Union Berlin",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.43) D(0.26) A(0.31) | Cuota: 1.8"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "30/01/2026",
+        "Partido": "FC Koln vs Wolfsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.37) D(0.29) A(0.35) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "27/01/2026",
+        "Partido": "Werder Bremen vs Hoffenheim",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.33) D(0.27) A(0.40) | Cuota: 3.7"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "25/01/2026",
+        "Partido": "Freiburg vs FC Koln",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.49) D(0.26) A(0.25) | Cuota: 1.9"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "24/01/2026",
+        "Partido": "Mainz vs Wolfsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.41) D(0.26) A(0.32) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "24/01/2026",
+        "Partido": "Heidenheim vs RB Leipzig",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.19) D(0.24) A(0.57) | Cuota: 5.0"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "18/01/2026",
+        "Partido": "Augsburg vs Freiburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.41) D(0.23) A(0.36) | Cuota: 2.9"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "17/01/2026",
+        "Partido": "Wolfsburg vs Heidenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.63) D(0.23) A(0.14) | Cuota: 1.67"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "17/01/2026",
+        "Partido": "FC Koln vs Mainz",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.37) D(0.26) A(0.37) | Cuota: 2.15"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "15/01/2026",
+        "Partido": "Augsburg vs Union Berlin",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.36) D(0.25) A(0.38) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "14/01/2026",
+        "Partido": "RB Leipzig vs Freiburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.53) D(0.30) A(0.17) | Cuota: 1.7"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "13/01/2026",
+        "Partido": "Mainz vs Heidenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.53) D(0.26) A(0.21) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "10/01/2026",
+        "Partido": "Union Berlin vs Mainz",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.42) D(0.24) A(0.34) | Cuota: 2.15"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "10/01/2026",
+        "Partido": "Heidenheim vs FC Koln",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.32) D(0.26) A(0.42) | Cuota: 2.9"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "20/12/2025",
+        "Partido": "Wolfsburg vs Freiburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.42) D(0.27) A(0.31) | Cuota: 2.5"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "20/12/2025",
+        "Partido": "FC Koln vs Union Berlin",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.37) D(0.29) A(0.35) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "20/12/2025",
+        "Partido": "Augsburg vs Werder Bremen",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.53) D(0.24) A(0.23) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "12/12/2025",
+        "Partido": "Union Berlin vs RB Leipzig",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.25) D(0.24) A(0.51) | Cuota: 3.2"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "06/12/2025",
+        "Partido": "Wolfsburg vs Union Berlin",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.42) D(0.27) A(0.30) | Cuota: 2.15"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "06/12/2025",
+        "Partido": "Heidenheim vs Freiburg",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.28) D(0.27) A(0.45) | Cuota: 3.9"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "30/11/2025",
+        "Partido": "Freiburg vs Mainz",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.46) D(0.24) A(0.30) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "29/11/2025",
+        "Partido": "Werder Bremen vs FC Koln",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.35) D(0.29) A(0.36) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "29/11/2025",
+        "Partido": "Union Berlin vs Heidenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.61) D(0.23) A(0.16) | Cuota: 1.67"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "29/11/2025",
+        "Partido": "Hoffenheim vs Augsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.49) D(0.25) A(0.26) | Cuota: 1.67"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "23/11/2025",
+        "Partido": "RB Leipzig vs Werder Bremen",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.61) D(0.25) A(0.14) | Cuota: 1.45"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "21/11/2025",
+        "Partido": "Mainz vs Hoffenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.25) A(0.25) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "08/11/2025",
+        "Partido": "Hoffenheim vs RB Leipzig",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.28) D(0.25) A(0.48) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "07/11/2025",
+        "Partido": "Werder Bremen vs Wolfsburg",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.32) D(0.25) A(0.43) | Cuota: 2.15"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "02/11/2025",
+        "Partido": "Wolfsburg vs Hoffenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.47) D(0.26) A(0.27) | Cuota: 2.75"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "01/11/2025",
+        "Partido": "Union Berlin vs Freiburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.43) D(0.26) A(0.32) | Cuota: 2.5"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "01/11/2025",
+        "Partido": "Mainz vs Werder Bremen",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.24) A(0.24) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "25/10/2025",
+        "Partido": "Hoffenheim vs Heidenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.60) D(0.23) A(0.17) | Cuota: 1.57"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "25/10/2025",
+        "Partido": "Augsburg vs RB Leipzig",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.26) D(0.24) A(0.50) | Cuota: 3.2"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "24/10/2025",
+        "Partido": "Werder Bremen vs Union Berlin",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.26) D(0.24) A(0.51) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "18/10/2025",
+        "Partido": "Heidenheim vs Werder Bremen",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.37) D(0.26) A(0.37) | Cuota: 2.88"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "18/10/2025",
+        "Partido": "FC Koln vs Augsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.45) D(0.26) A(0.29) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "04/10/2025",
+        "Partido": "Augsburg vs Wolfsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.43) D(0.23) A(0.35) | Cuota: 2.75"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "03/10/2025",
+        "Partido": "Hoffenheim vs FC Koln",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.48) D(0.27) A(0.25) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "28/09/2025",
+        "Partido": "Freiburg vs Hoffenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.47) D(0.27) A(0.26) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "27/09/2025",
+        "Partido": "Wolfsburg vs RB Leipzig",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.24) D(0.27) A(0.49) | Cuota: 2.55"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "27/09/2025",
+        "Partido": "Heidenheim vs Augsburg",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.24) A(0.47) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "20/09/2025",
+        "Partido": "RB Leipzig vs FC Koln",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.57) D(0.28) A(0.15) | Cuota: 1.65"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "20/09/2025",
+        "Partido": "Werder Bremen vs Freiburg",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.29) D(0.24) A(0.47) | Cuota: 2.38"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "20/09/2025",
+        "Partido": "Augsburg vs Mainz",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.39) D(0.22) A(0.39) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "13/09/2025",
+        "Partido": "Wolfsburg vs FC Koln",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.51) D(0.25) A(0.23) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "13/09/2025",
+        "Partido": "Union Berlin vs Hoffenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.41) D(0.27) A(0.32) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "13/09/2025",
+        "Partido": "Mainz vs RB Leipzig",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.24) D(0.28) A(0.48) | Cuota: 2.55"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "31/08/2025",
+        "Partido": "FC Koln vs Freiburg",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.36) D(0.26) A(0.38) | Cuota: 2.55"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "31/08/2025",
+        "Partido": "Wolfsburg vs Mainz",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.48) D(0.23) A(0.29) | Cuota: 2.0"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "30/08/2025",
+        "Partido": "RB Leipzig vs Heidenheim",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.24) A(0.12) | Cuota: 1.44"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "24/08/2025",
+        "Partido": "Mainz vs FC Koln",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.43) D(0.26) A(0.31) | Cuota: 1.9"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "23/08/2025",
+        "Partido": "Heidenheim vs Wolfsburg",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.20) D(0.27) A(0.53) | Cuota: 3.2"
+    },
+    {
+        "Liga": "Bundesliga",
+        "Fecha": "23/08/2025",
+        "Partido": "Freiburg vs Augsburg",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.46) D(0.24) A(0.29) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "02/03/2026",
+        "Partido": "Udinese vs Fiorentina",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.34) D(0.25) A(0.41) | Cuota: 3.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "01/03/2026",
+        "Partido": "Torino vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.25) D(0.24) A(0.51) | Cuota: 2.88"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "01/03/2026",
+        "Partido": "Sassuolo vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.24) A(0.47) | Cuota: 3.8"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "28/02/2026",
+        "Partido": "Verona vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.34) D(0.28) A(0.38) | Cuota: 7.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "27/02/2026",
+        "Partido": "Parma vs Cagliari",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.36) D(0.26) A(0.38) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "23/02/2026",
+        "Partido": "Bologna vs Udinese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.42) D(0.25) A(0.33) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "22/02/2026",
+        "Partido": "Atalanta vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.30) D(0.30) A(0.40) | Cuota: 2.45"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "22/02/2026",
+        "Partido": "Genoa vs Torino",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.31) D(0.25) A(0.43) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "21/02/2026",
+        "Partido": "Cagliari vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.23) D(0.25) A(0.51) | Cuota: 3.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "20/02/2026",
+        "Partido": "Sassuolo vs Verona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.42) D(0.25) A(0.32) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "16/02/2026",
+        "Partido": "Cagliari vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.27) A(0.23) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "15/02/2026",
+        "Partido": "Torino vs Bologna",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.37) D(0.24) A(0.39) | Cuota: 3.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "15/02/2026",
+        "Partido": "Parma vs Verona",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.34) D(0.28) A(0.38) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "15/02/2026",
+        "Partido": "Cremonese vs Genoa",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.30) D(0.26) A(0.44) | Cuota: 3.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "15/02/2026",
+        "Partido": "Udinese vs Sassuolo",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.42) D(0.24) A(0.34) | Cuota: 2.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "14/02/2026",
+        "Partido": "Lazio vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.33) D(0.31) A(0.36) | Cuota: 3.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "09/02/2026",
+        "Partido": "Atalanta vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.66) D(0.24) A(0.10) | Cuota: 1.36"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "08/02/2026",
+        "Partido": "Juventus vs Lazio",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.53) D(0.28) A(0.19) | Cuota: 1.48"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "08/02/2026",
+        "Partido": "Lecce vs Udinese",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.35) D(0.27) A(0.38) | Cuota: 3.1"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "08/02/2026",
+        "Partido": "Bologna vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.25) A(0.22) | Cuota: 1.6"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/02/2026",
+        "Partido": "Fiorentina vs Torino",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.25) A(0.25) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/02/2026",
+        "Partido": "Genoa vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.30) D(0.27) A(0.43) | Cuota: 4.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "01/02/2026",
+        "Partido": "Parma vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.17) D(0.25) A(0.58) | Cuota: 7.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "01/02/2026",
+        "Partido": "Torino vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.57) D(0.24) A(0.19) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "31/01/2026",
+        "Partido": "Cagliari vs Verona",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.27) A(0.39) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "31/01/2026",
+        "Partido": "Napoli vs Fiorentina",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.60) D(0.27) A(0.14) | Cuota: 1.8"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "30/01/2026",
+        "Partido": "Lazio vs Genoa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.55) D(0.23) A(0.22) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "26/01/2026",
+        "Partido": "Verona vs Udinese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.46) D(0.27) A(0.27) | Cuota: 2.8"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "25/01/2026",
+        "Partido": "Juventus vs Napoli",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.50) D(0.29) A(0.22) | Cuota: 2.05"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "25/01/2026",
+        "Partido": "Genoa vs Bologna",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.23) A(0.44) | Cuota: 3.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "25/01/2026",
+        "Partido": "Atalanta vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.61) D(0.23) A(0.17) | Cuota: 1.42"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "25/01/2026",
+        "Partido": "Sassuolo vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.61) D(0.23) A(0.16) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "24/01/2026",
+        "Partido": "Lecce vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.25) D(0.23) A(0.52) | Cuota: 4.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "24/01/2026",
+        "Partido": "Fiorentina vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.59) D(0.23) A(0.17) | Cuota: 1.62"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "19/01/2026",
+        "Partido": "Cremonese vs Verona",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.26) D(0.28) A(0.46) | Cuota: 2.63"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "18/01/2026",
+        "Partido": "Bologna vs Fiorentina",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.31) D(0.25) A(0.44) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "18/01/2026",
+        "Partido": "Parma vs Genoa",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.26) A(0.45) | Cuota: 2.9"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "17/01/2026",
+        "Partido": "Cagliari vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.22) D(0.22) A(0.56) | Cuota: 6.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "17/01/2026",
+        "Partido": "Napoli vs Sassuolo",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.57) D(0.25) A(0.17) | Cuota: 1.48"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "15/01/2026",
+        "Partido": "Verona vs Bologna",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.39) D(0.27) A(0.34) | Cuota: 3.6"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "14/01/2026",
+        "Partido": "Napoli vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.60) D(0.26) A(0.14) | Cuota: 1.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "12/01/2026",
+        "Partido": "Juventus vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.69) D(0.25) A(0.06) | Cuota: 1.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "12/01/2026",
+        "Partido": "Genoa vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.48) D(0.24) A(0.28) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "11/01/2026",
+        "Partido": "Verona vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.27) D(0.25) A(0.48) | Cuota: 3.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "11/01/2026",
+        "Partido": "Lecce vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.46) D(0.25) A(0.29) | Cuota: 2.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "10/01/2026",
+        "Partido": "Atalanta vs Torino",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.57) D(0.24) A(0.19) | Cuota: 1.6"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "08/01/2026",
+        "Partido": "Cremonese vs Cagliari",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.25) A(0.43) | Cuota: 2.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/01/2026",
+        "Partido": "Torino vs Udinese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.47) D(0.24) A(0.29) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/01/2026",
+        "Partido": "Lazio vs Fiorentina",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.27) A(0.17) | Cuota: 2.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/01/2026",
+        "Partido": "Napoli vs Verona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.32) A(0.18) | Cuota: 1.36"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/01/2026",
+        "Partido": "Bologna vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.24) D(0.23) A(0.52) | Cuota: 2.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "06/01/2026",
+        "Partido": "Sassuolo vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.29) D(0.20) A(0.52) | Cuota: 5.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "04/01/2026",
+        "Partido": "Verona vs Torino",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.41) D(0.25) A(0.33) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "04/01/2026",
+        "Partido": "Fiorentina vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.67) D(0.23) A(0.09) | Cuota: 1.8"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "04/01/2026",
+        "Partido": "Lazio vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.30) D(0.32) A(0.38) | Cuota: 3.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "03/01/2026",
+        "Partido": "Juventus vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.62) D(0.27) A(0.12) | Cuota: 1.27"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "03/01/2026",
+        "Partido": "Sassuolo vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.54) D(0.22) A(0.24) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "28/12/2025",
+        "Partido": "Bologna vs Sassuolo",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.38) D(0.24) A(0.38) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "28/12/2025",
+        "Partido": "Cremonese vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.20) D(0.21) A(0.58) | Cuota: 6.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "27/12/2025",
+        "Partido": "Udinese vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.26) D(0.24) A(0.50) | Cuota: 3.1"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "27/12/2025",
+        "Partido": "Torino vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.56) D(0.24) A(0.20) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "27/12/2025",
+        "Partido": "Parma vs Fiorentina",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.24) D(0.23) A(0.53) | Cuota: 3.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "21/12/2025",
+        "Partido": "Genoa vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.23) D(0.24) A(0.54) | Cuota: 4.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "21/12/2025",
+        "Partido": "Fiorentina vs Udinese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.51) D(0.24) A(0.25) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "21/12/2025",
+        "Partido": "Sassuolo vs Torino",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.42) D(0.23) A(0.34) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "20/12/2025",
+        "Partido": "Lazio vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.67) D(0.26) A(0.07) | Cuota: 1.62"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "14/12/2025",
+        "Partido": "Bologna vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.24) D(0.20) A(0.55) | Cuota: 2.88"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "14/12/2025",
+        "Partido": "Udinese vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.27) A(0.41) | Cuota: 4.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "14/12/2025",
+        "Partido": "Fiorentina vs Verona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.25) A(0.26) | Cuota: 1.8"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "13/12/2025",
+        "Partido": "Atalanta vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.22) A(0.15) | Cuota: 1.33"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "13/12/2025",
+        "Partido": "Parma vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.17) D(0.25) A(0.58) | Cuota: 3.6"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "13/12/2025",
+        "Partido": "Torino vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.24) A(0.12) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "08/12/2025",
+        "Partido": "Udinese vs Genoa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.51) D(0.24) A(0.24) | Cuota: 2.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/12/2025",
+        "Partido": "Napoli vs Juventus",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.50) D(0.25) A(0.25) | Cuota: 2.35"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/12/2025",
+        "Partido": "Lazio vs Bologna",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.54) D(0.28) A(0.18) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "07/12/2025",
+        "Partido": "Cremonese vs Lecce",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.25) A(0.43) | Cuota: 2.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "06/12/2025",
+        "Partido": "Verona vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.24) A(0.48) | Cuota: 5.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "06/12/2025",
+        "Partido": "Sassuolo vs Fiorentina",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.35) D(0.25) A(0.41) | Cuota: 2.88"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "01/12/2025",
+        "Partido": "Bologna vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.62) D(0.25) A(0.13) | Cuota: 1.48"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "30/11/2025",
+        "Partido": "Atalanta vs Fiorentina",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.25) A(0.21) | Cuota: 1.73"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "30/11/2025",
+        "Partido": "Lecce vs Torino",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.28) D(0.26) A(0.46) | Cuota: 3.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/11/2025",
+        "Partido": "Juventus vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.24) A(0.12) | Cuota: 1.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/11/2025",
+        "Partido": "Parma vs Udinese",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.36) D(0.28) A(0.36) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/11/2025",
+        "Partido": "Genoa vs Verona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.38) D(0.26) A(0.36) | Cuota: 2.05"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "23/11/2025",
+        "Partido": "Lazio vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.59) D(0.29) A(0.12) | Cuota: 1.62"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "23/11/2025",
+        "Partido": "Verona vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.24) A(0.27) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "22/11/2025",
+        "Partido": "Napoli vs Atalanta",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.52) D(0.27) A(0.21) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "22/11/2025",
+        "Partido": "Fiorentina vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.30) D(0.22) A(0.48) | Cuota: 3.9"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "22/11/2025",
+        "Partido": "Udinese vs Bologna",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.39) D(0.24) A(0.37) | Cuota: 3.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "22/11/2025",
+        "Partido": "Cagliari vs Genoa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.41) D(0.28) A(0.31) | Cuota: 2.88"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "09/11/2025",
+        "Partido": "Genoa vs Fiorentina",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.22) A(0.45) | Cuota: 2.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "09/11/2025",
+        "Partido": "Bologna vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.30) D(0.26) A(0.43) | Cuota: 3.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "09/11/2025",
+        "Partido": "Atalanta vs Sassuolo",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.53) D(0.25) A(0.22) | Cuota: 1.44"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "08/11/2025",
+        "Partido": "Juventus vs Torino",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.63) D(0.27) A(0.10) | Cuota: 1.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "08/11/2025",
+        "Partido": "Lecce vs Verona",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.32) D(0.27) A(0.41) | Cuota: 2.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "03/11/2025",
+        "Partido": "Lazio vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.24) A(0.12) | Cuota: 1.53"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "03/11/2025",
+        "Partido": "Sassuolo vs Genoa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.47) D(0.27) A(0.26) | Cuota: 2.45"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "02/11/2025",
+        "Partido": "Parma vs Bologna",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.25) D(0.23) A(0.52) | Cuota: 4.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "02/11/2025",
+        "Partido": "Fiorentina vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.58) D(0.24) A(0.18) | Cuota: 1.62"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "01/11/2025",
+        "Partido": "Cremonese vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.19) D(0.19) A(0.62) | Cuota: 6.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "01/11/2025",
+        "Partido": "Udinese vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.27) D(0.24) A(0.49) | Cuota: 4.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "30/10/2025",
+        "Partido": "Cagliari vs Sassuolo",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.32) D(0.24) A(0.44) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/10/2025",
+        "Partido": "Genoa vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.56) D(0.26) A(0.18) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/10/2025",
+        "Partido": "Bologna vs Torino",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.36) D(0.26) A(0.39) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/10/2025",
+        "Partido": "Juventus vs Udinese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.26) A(0.10) | Cuota: 1.44"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "28/10/2025",
+        "Partido": "Lecce vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.29) D(0.23) A(0.48) | Cuota: 6.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "26/10/2025",
+        "Partido": "Lazio vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.35) D(0.28) A(0.38) | Cuota: 3.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "26/10/2025",
+        "Partido": "Fiorentina vs Bologna",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.44) D(0.24) A(0.32) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "26/10/2025",
+        "Partido": "Verona vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.25) A(0.23) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "26/10/2025",
+        "Partido": "Torino vs Genoa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.48) D(0.27) A(0.25) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "25/10/2025",
+        "Partido": "Cremonese vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.18) D(0.22) A(0.60) | Cuota: 5.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "25/10/2025",
+        "Partido": "Udinese vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.58) D(0.23) A(0.18) | Cuota: 1.8"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "20/10/2025",
+        "Partido": "Cremonese vs Udinese",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.32) D(0.26) A(0.42) | Cuota: 3.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "19/10/2025",
+        "Partido": "Atalanta vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.34) D(0.26) A(0.40) | Cuota: 1.73"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "19/10/2025",
+        "Partido": "Genoa vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.51) D(0.24) A(0.26) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "19/10/2025",
+        "Partido": "Cagliari vs Bologna",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.30) D(0.24) A(0.46) | Cuota: 3.6"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "18/10/2025",
+        "Partido": "Torino vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.28) A(0.43) | Cuota: 5.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "18/10/2025",
+        "Partido": "Lecce vs Sassuolo",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.35) D(0.24) A(0.41) | Cuota: 2.9"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "05/10/2025",
+        "Partido": "Napoli vs Genoa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.60) D(0.25) A(0.15) | Cuota: 1.48"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "05/10/2025",
+        "Partido": "Udinese vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.59) D(0.23) A(0.19) | Cuota: 2.15"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "04/10/2025",
+        "Partido": "Parma vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.39) D(0.27) A(0.34) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "04/10/2025",
+        "Partido": "Lazio vs Torino",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.58) D(0.27) A(0.15) | Cuota: 1.7"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "03/10/2025",
+        "Partido": "Verona vs Sassuolo",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.35) D(0.28) A(0.37) | Cuota: 2.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/09/2025",
+        "Partido": "Genoa vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.24) D(0.24) A(0.52) | Cuota: 3.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/09/2025",
+        "Partido": "Parma vs Torino",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.26) D(0.26) A(0.48) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "28/09/2025",
+        "Partido": "Lecce vs Bologna",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.23) A(0.48) | Cuota: 4.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "28/09/2025",
+        "Partido": "Sassuolo vs Udinese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.46) D(0.26) A(0.28) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "27/09/2025",
+        "Partido": "Juventus vs Atalanta",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.28) A(0.22) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "21/09/2025",
+        "Partido": "Torino vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.22) D(0.24) A(0.54) | Cuota: 3.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "21/09/2025",
+        "Partido": "Cremonese vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.38) D(0.25) A(0.37) | Cuota: 2.55"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "20/09/2025",
+        "Partido": "Verona vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.25) D(0.24) A(0.51) | Cuota: 6.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "20/09/2025",
+        "Partido": "Bologna vs Genoa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.45) D(0.26) A(0.30) | Cuota: 1.83"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "19/09/2025",
+        "Partido": "Lecce vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.44) D(0.25) A(0.31) | Cuota: 2.88"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "15/09/2025",
+        "Partido": "Verona vs Cremonese",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.56) D(0.26) A(0.18) | Cuota: 2.38"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "14/09/2025",
+        "Partido": "Sassuolo vs Lazio",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.23) A(0.44) | Cuota: 3.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "14/09/2025",
+        "Partido": "Atalanta vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.58) D(0.25) A(0.16) | Cuota: 1.4"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "13/09/2025",
+        "Partido": "Fiorentina vs Napoli",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.31) D(0.28) A(0.41) | Cuota: 3.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "13/09/2025",
+        "Partido": "Cagliari vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.47) D(0.24) A(0.29) | Cuota: 2.15"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "31/08/2025",
+        "Partido": "Lazio vs Verona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.52) D(0.29) A(0.18) | Cuota: 1.48"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "31/08/2025",
+        "Partido": "Torino vs Fiorentina",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.38) D(0.23) A(0.39) | Cuota: 3.2"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "31/08/2025",
+        "Partido": "Genoa vs Juventus",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.22) D(0.21) A(0.57) | Cuota: 4.5"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "30/08/2025",
+        "Partido": "Napoli vs Cagliari",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.24) A(0.11) | Cuota: 1.3"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "30/08/2025",
+        "Partido": "Parma vs Atalanta",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.18) D(0.25) A(0.57) | Cuota: 4.1"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "29/08/2025",
+        "Partido": "Cremonese vs Sassuolo",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.26) D(0.25) A(0.49) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "25/08/2025",
+        "Partido": "Udinese vs Verona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.39) D(0.28) A(0.33) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "24/08/2025",
+        "Partido": "Juventus vs Parma",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.66) D(0.23) A(0.11) | Cuota: 1.42"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "24/08/2025",
+        "Partido": "Cagliari vs Fiorentina",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.25) A(0.46) | Cuota: 3.25"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "23/08/2025",
+        "Partido": "Sassuolo vs Napoli",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.37) D(0.27) A(0.36) | Cuota: 6.0"
+    },
+    {
+        "Liga": "Serie A",
+        "Fecha": "23/08/2025",
+        "Partido": "Genoa vs Lecce",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.25) A(0.23) | Cuota: 1.9"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "02/03/2026",
+        "Partido": "Real Madrid vs Getafe",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.66) D(0.25) A(0.09) | Cuota: 1.3"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "01/03/2026",
+        "Partido": "Elche vs Espanol",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.44) D(0.25) A(0.31) | Cuota: 2.38"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "28/02/2026",
+        "Partido": "Mallorca vs Real Sociedad",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.43) D(0.22) A(0.35) | Cuota: 3.0"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "22/02/2026",
+        "Partido": "Villarreal vs Valencia",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.28) A(0.18) | Cuota: 1.7"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "22/02/2026",
+        "Partido": "Getafe vs Sevilla",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.34) D(0.21) A(0.45) | Cuota: 2.35"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "18/02/2026",
+        "Partido": "Levante vs Villarreal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.37) D(0.25) A(0.38) | Cuota: 4.0"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "15/02/2026",
+        "Partido": "Levante vs Valencia",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.40) D(0.23) A(0.37) | Cuota: 2.63"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "14/02/2026",
+        "Partido": "Real Madrid vs Real Sociedad",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.68) D(0.20) A(0.11) | Cuota: 1.33"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "14/02/2026",
+        "Partido": "Getafe vs Villarreal",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.47) D(0.25) A(0.28) | Cuota: 3.25"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "09/02/2026",
+        "Partido": "Villarreal vs Espanol",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.55) D(0.29) A(0.16) | Cuota: 1.7"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "08/02/2026",
+        "Partido": "Valencia vs Real Madrid",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.37) D(0.23) A(0.40) | Cuota: 5.25"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "08/02/2026",
+        "Partido": "Sevilla vs Girona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.63) D(0.24) A(0.13) | Cuota: 2.15"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "07/02/2026",
+        "Partido": "Real Sociedad vs Elche",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.52) D(0.25) A(0.23) | Cuota: 1.67"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "02/02/2026",
+        "Partido": "Mallorca vs Sevilla",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.24) D(0.23) A(0.52) | Cuota: 2.4"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "26/01/2026",
+        "Partido": "Girona vs Getafe",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.32) D(0.28) A(0.40) | Cuota: 2.1"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "24/01/2026",
+        "Partido": "Villarreal vs Real Madrid",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.26) D(0.25) A(0.49) | Cuota: 3.4"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "24/01/2026",
+        "Partido": "Valencia vs Espanol",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.57) D(0.22) A(0.21) | Cuota: 2.45"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "23/01/2026",
+        "Partido": "Levante vs Elche",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.49) D(0.26) A(0.26) | Cuota: 2.2"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "19/01/2026",
+        "Partido": "Elche vs Sevilla",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.23) D(0.22) A(0.55) | Cuota: 2.25"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "18/01/2026",
+        "Partido": "Getafe vs Valencia",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.45) D(0.21) A(0.34) | Cuota: 2.55"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "17/01/2026",
+        "Partido": "Real Madrid vs Levante",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.63) D(0.26) A(0.11) | Cuota: 1.17"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "16/01/2026",
+        "Partido": "Espanol vs Girona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.40) D(0.25) A(0.34) | Cuota: 1.85"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "11/01/2026",
+        "Partido": "Levante vs Espanol",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.26) A(0.24) | Cuota: 3.1"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "10/01/2026",
+        "Partido": "Valencia vs Elche",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.57) D(0.23) A(0.20) | Cuota: 2.2"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "09/01/2026",
+        "Partido": "Getafe vs Real Sociedad",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.24) A(0.27) | Cuota: 3.3"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "04/01/2026",
+        "Partido": "Mallorca vs Girona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.26) A(0.24) | Cuota: 2.25"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "04/01/2026",
+        "Partido": "Sevilla vs Levante",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.60) D(0.24) A(0.16) | Cuota: 1.75"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "03/01/2026",
+        "Partido": "Elche vs Villarreal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.30) D(0.24) A(0.46) | Cuota: 3.2"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "20/12/2025",
+        "Partido": "Real Madrid vs Sevilla",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.60) D(0.25) A(0.14) | Cuota: 1.2"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "20/12/2025",
+        "Partido": "Levante vs Real Sociedad",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.25) A(0.23) | Cuota: 3.4"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "19/12/2025",
+        "Partido": "Valencia vs Mallorca",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.23) A(0.22) | Cuota: 1.9"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "13/12/2025",
+        "Partido": "Getafe vs Espanol",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.25) A(0.20) | Cuota: 2.5"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "13/12/2025",
+        "Partido": "Mallorca vs Elche",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.50) D(0.25) A(0.25) | Cuota: 2.45"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "12/12/2025",
+        "Partido": "Real Sociedad vs Girona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.53) D(0.28) A(0.19) | Cuota: 1.75"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "07/12/2025",
+        "Partido": "Valencia vs Sevilla",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.40) D(0.20) A(0.40) | Cuota: 2.15"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "07/12/2025",
+        "Partido": "Elche vs Girona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.41) D(0.26) A(0.33) | Cuota: 2.15"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "06/12/2025",
+        "Partido": "Villarreal vs Getafe",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.47) D(0.29) A(0.24) | Cuota: 1.62"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "30/11/2025",
+        "Partido": "Girona vs Real Madrid",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.19) D(0.25) A(0.57) | Cuota: 6.5"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "30/11/2025",
+        "Partido": "Real Sociedad vs Villarreal",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.51) D(0.30) A(0.19) | Cuota: 2.8"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "28/11/2025",
+        "Partido": "Getafe vs Elche",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.56) D(0.23) A(0.21) | Cuota: 2.25"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "24/11/2025",
+        "Partido": "Espanol vs Sevilla",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.24) D(0.23) A(0.54) | Cuota: 2.05"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "23/11/2025",
+        "Partido": "Elche vs Real Madrid",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.23) D(0.23) A(0.54) | Cuota: 7.0"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "22/11/2025",
+        "Partido": "Villarreal vs Mallorca",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.51) D(0.27) A(0.22) | Cuota: 1.44"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "21/11/2025",
+        "Partido": "Valencia vs Levante",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.22) A(0.24) | Cuota: 2.0"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "09/11/2025",
+        "Partido": "Mallorca vs Getafe",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.38) D(0.27) A(0.36) | Cuota: 2.5"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "08/11/2025",
+        "Partido": "Espanol vs Villarreal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.31) D(0.24) A(0.45) | Cuota: 2.8"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "07/11/2025",
+        "Partido": "Elche vs Real Sociedad",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.45) D(0.22) A(0.33) | Cuota: 2.7"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "01/11/2025",
+        "Partido": "Real Madrid vs Valencia",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.24) A(0.12) | Cuota: 1.17"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "31/10/2025",
+        "Partido": "Getafe vs Girona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.56) D(0.24) A(0.20) | Cuota: 2.15"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "26/10/2025",
+        "Partido": "Mallorca vs Levante",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.25) A(0.26) | Cuota: 2.1"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "25/10/2025",
+        "Partido": "Valencia vs Villarreal",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.24) A(0.26) | Cuota: 3.1"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "25/10/2025",
+        "Partido": "Espanol vs Elche",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.42) D(0.24) A(0.33) | Cuota: 1.95"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "24/10/2025",
+        "Partido": "Real Sociedad vs Sevilla",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.46) D(0.30) A(0.24) | Cuota: 1.95"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "19/10/2025",
+        "Partido": "Getafe vs Real Madrid",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.30) D(0.27) A(0.43) | Cuota: 8.0"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "18/10/2025",
+        "Partido": "Sevilla vs Mallorca",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.60) D(0.25) A(0.15) | Cuota: 1.85"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "04/10/2025",
+        "Partido": "Real Madrid vs Villarreal",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.23) A(0.23) | Cuota: 1.45"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "04/10/2025",
+        "Partido": "Girona vs Valencia",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.34) D(0.24) A(0.42) | Cuota: 2.45"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "27/09/2025",
+        "Partido": "Getafe vs Levante",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.24) A(0.24) | Cuota: 2.05"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "26/09/2025",
+        "Partido": "Girona vs Espanol",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.47) D(0.26) A(0.27) | Cuota: 2.45"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "24/09/2025",
+        "Partido": "Real Sociedad vs Mallorca",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.25) A(0.21) | Cuota: 1.8"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "23/09/2025",
+        "Partido": "Sevilla vs Villarreal",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.27) A(0.21) | Cuota: 3.1"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "23/09/2025",
+        "Partido": "Levante vs Real Madrid",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.23) D(0.25) A(0.52) | Cuota: 7.5"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "23/09/2025",
+        "Partido": "Espanol vs Valencia",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.35) D(0.23) A(0.41) | Cuota: 2.25"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "20/09/2025",
+        "Partido": "Real Madrid vs Espanol",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.66) D(0.25) A(0.08) | Cuota: 1.2"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "20/09/2025",
+        "Partido": "Girona vs Levante",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.41) D(0.26) A(0.34) | Cuota: 1.91"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "15/09/2025",
+        "Partido": "Espanol vs Mallorca",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.32) D(0.25) A(0.43) | Cuota: 2.1"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "13/09/2025",
+        "Partido": "Real Sociedad vs Real Madrid",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.42) D(0.29) A(0.30) | Cuota: 5.0"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "12/09/2025",
+        "Partido": "Sevilla vs Elche",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.61) D(0.25) A(0.14) | Cuota: 1.85"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "30/08/2025",
+        "Partido": "Real Madrid vs Mallorca",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.22) A(0.14) | Cuota: 1.18"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "30/08/2025",
+        "Partido": "Girona vs Sevilla",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.22) D(0.23) A(0.55) | Cuota: 2.4"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "29/08/2025",
+        "Partido": "Valencia vs Getafe",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.50) D(0.23) A(0.27) | Cuota: 2.3"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "29/08/2025",
+        "Partido": "Elche vs Levante",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.37) D(0.25) A(0.38) | Cuota: 2.15"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "25/08/2025",
+        "Partido": "Sevilla vs Getafe",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.60) D(0.26) A(0.14) | Cuota: 2.25"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "24/08/2025",
+        "Partido": "Villarreal vs Girona",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.58) D(0.26) A(0.16) | Cuota: 1.53"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "24/08/2025",
+        "Partido": "Real Sociedad vs Espanol",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.25) A(0.20) | Cuota: 1.8"
+    },
+    {
+        "Liga": "La Liga",
+        "Fecha": "16/08/2025",
+        "Partido": "Valencia vs Real Sociedad",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.51) D(0.18) A(0.31) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "05/03/2026",
+        "Partido": "Tottenham vs Crystal Palace",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.23) A(0.24) | Cuota: 2.35"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "04/03/2026",
+        "Partido": "Manchester City vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.72) D(0.18) A(0.10) | Cuota: 1.38"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "04/03/2026",
+        "Partido": "Aston Villa vs Chelsea",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.37) D(0.23) A(0.40) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "03/03/2026",
+        "Partido": "Everton vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.55) D(0.27) A(0.18) | Cuota: 1.57"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "03/03/2026",
+        "Partido": "Bournemouth vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.44) D(0.26) A(0.29) | Cuota: 2.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/03/2026",
+        "Partido": "Arsenal vs Chelsea",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.58) D(0.25) A(0.17) | Cuota: 1.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/03/2026",
+        "Partido": "Manchester United vs Crystal Palace",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.52) D(0.26) A(0.22) | Cuota: 1.53"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/03/2026",
+        "Partido": "Fulham vs Tottenham",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.25) D(0.24) A(0.50) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "28/02/2026",
+        "Partido": "Leeds vs Manchester City",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.11) D(0.22) A(0.67) | Cuota: 4.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "28/02/2026",
+        "Partido": "Burnley vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.27) A(0.24) | Cuota: 4.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "23/02/2026",
+        "Partido": "Everton vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.36) D(0.23) A(0.42) | Cuota: 3.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "22/02/2026",
+        "Partido": "Tottenham vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.30) D(0.29) A(0.40) | Cuota: 6.0"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "22/02/2026",
+        "Partido": "Nottingham Forest vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.13) D(0.26) A(0.61) | Cuota: 4.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "21/02/2026",
+        "Partido": "Chelsea vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.60) D(0.25) A(0.15) | Cuota: 1.22"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "21/02/2026",
+        "Partido": "Aston Villa vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.57) D(0.22) A(0.21) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "12/02/2026",
+        "Partido": "Brentford vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.25) D(0.22) A(0.53) | Cuota: 4.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "11/02/2026",
+        "Partido": "Manchester City vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.61) D(0.24) A(0.14) | Cuota: 1.36"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "11/02/2026",
+        "Partido": "Crystal Palace vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.57) D(0.28) A(0.15) | Cuota: 1.57"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "10/02/2026",
+        "Partido": "Everton vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.54) D(0.25) A(0.21) | Cuota: 2.38"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "10/02/2026",
+        "Partido": "Chelsea vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.61) D(0.27) A(0.12) | Cuota: 1.55"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "08/02/2026",
+        "Partido": "Liverpool vs Manchester City",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.33) A(0.19) | Cuota: 2.38"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "07/02/2026",
+        "Partido": "Fulham vs Everton",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.34) D(0.25) A(0.42) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "07/02/2026",
+        "Partido": "Bournemouth vs Aston Villa",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.30) D(0.22) A(0.48) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "07/02/2026",
+        "Partido": "Manchester United vs Tottenham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.45) D(0.34) A(0.21) | Cuota: 1.57"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "06/02/2026",
+        "Partido": "Leeds vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.52) D(0.22) A(0.26) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/02/2026",
+        "Partido": "Tottenham vs Manchester City",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.30) D(0.30) A(0.41) | Cuota: 4.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/02/2026",
+        "Partido": "Nottingham Forest vs Crystal Palace",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.30) D(0.31) A(0.39) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/02/2026",
+        "Partido": "Manchester United vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.57) D(0.28) A(0.15) | Cuota: 1.57"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/02/2026",
+        "Partido": "Aston Villa vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.59) D(0.22) A(0.19) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "31/01/2026",
+        "Partido": "Leeds vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.20) D(0.22) A(0.58) | Cuota: 5.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "26/01/2026",
+        "Partido": "Everton vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.56) D(0.24) A(0.20) | Cuota: 2.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "25/01/2026",
+        "Partido": "Arsenal vs Manchester United",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.23) A(0.22) | Cuota: 1.55"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "25/01/2026",
+        "Partido": "Crystal Palace vs Chelsea",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.31) D(0.27) A(0.42) | Cuota: 3.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "25/01/2026",
+        "Partido": "Brentford vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.24) A(0.24) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "24/01/2026",
+        "Partido": "Bournemouth vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.20) D(0.21) A(0.59) | Cuota: 3.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "24/01/2026",
+        "Partido": "Burnley vs Tottenham",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.23) D(0.28) A(0.49) | Cuota: 3.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "18/01/2026",
+        "Partido": "Aston Villa vs Everton",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.23) A(0.28) | Cuota: 1.67"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "17/01/2026",
+        "Partido": "Nottingham Forest vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.15) D(0.27) A(0.58) | Cuota: 6.0"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "17/01/2026",
+        "Partido": "Liverpool vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.65) D(0.24) A(0.10) | Cuota: 1.22"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "17/01/2026",
+        "Partido": "Leeds vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.39) D(0.27) A(0.34) | Cuota: 2.15"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "17/01/2026",
+        "Partido": "Chelsea vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.63) D(0.25) A(0.12) | Cuota: 1.73"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "17/01/2026",
+        "Partido": "Manchester United vs Manchester City",
+        "Prediccion_IA": "D",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.31) D(0.35) A(0.34) | Cuota: 3.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "08/01/2026",
+        "Partido": "Arsenal vs Liverpool",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.25) A(0.19) | Cuota: 1.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "07/01/2026",
+        "Partido": "Burnley vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.20) D(0.29) A(0.51) | Cuota: 4.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "07/01/2026",
+        "Partido": "Fulham vs Chelsea",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.27) D(0.23) A(0.50) | Cuota: 3.4"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "07/01/2026",
+        "Partido": "Crystal Palace vs Aston Villa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.46) D(0.20) A(0.34) | Cuota: 3.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "07/01/2026",
+        "Partido": "Bournemouth vs Tottenham",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.25) D(0.24) A(0.52) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "04/01/2026",
+        "Partido": "Manchester City vs Chelsea",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.53) D(0.27) A(0.20) | Cuota: 1.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "04/01/2026",
+        "Partido": "Fulham vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.18) D(0.23) A(0.59) | Cuota: 3.8"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "04/01/2026",
+        "Partido": "Everton vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.25) A(0.20) | Cuota: 2.35"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "04/01/2026",
+        "Partido": "Leeds vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.20) D(0.23) A(0.57) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "03/01/2026",
+        "Partido": "Bournemouth vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.24) D(0.21) A(0.55) | Cuota: 6.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "03/01/2026",
+        "Partido": "Aston Villa vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.59) D(0.21) A(0.20) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/01/2026",
+        "Partido": "Brentford vs Tottenham",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.25) A(0.45) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/01/2026",
+        "Partido": "Liverpool vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.64) D(0.27) A(0.09) | Cuota: 1.55"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/01/2026",
+        "Partido": "Crystal Palace vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.51) D(0.26) A(0.23) | Cuota: 2.15"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "30/12/2025",
+        "Partido": "Arsenal vs Aston Villa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.57) D(0.22) A(0.22) | Cuota: 1.42"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "30/12/2025",
+        "Partido": "Nottingham Forest vs Everton",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.29) D(0.31) A(0.40) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "30/12/2025",
+        "Partido": "Chelsea vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.59) D(0.26) A(0.15) | Cuota: 1.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "28/12/2025",
+        "Partido": "Crystal Palace vs Tottenham",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.31) D(0.27) A(0.42) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "27/12/2025",
+        "Partido": "Chelsea vs Aston Villa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.48) D(0.26) A(0.26) | Cuota: 1.83"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "27/12/2025",
+        "Partido": "Burnley vs Everton",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.40) D(0.26) A(0.34) | Cuota: 4.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "27/12/2025",
+        "Partido": "Brentford vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.49) D(0.27) A(0.24) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "27/12/2025",
+        "Partido": "Nottingham Forest vs Manchester City",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.11) D(0.25) A(0.64) | Cuota: 5.0"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "22/12/2025",
+        "Partido": "Fulham vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.55) D(0.21) A(0.24) | Cuota: 2.4"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "21/12/2025",
+        "Partido": "Aston Villa vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.26) A(0.40) | Cuota: 2.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "20/12/2025",
+        "Partido": "Leeds vs Crystal Palace",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.34) D(0.24) A(0.42) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "20/12/2025",
+        "Partido": "Everton vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.31) D(0.22) A(0.48) | Cuota: 5.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "20/12/2025",
+        "Partido": "Tottenham vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.31) D(0.30) A(0.38) | Cuota: 3.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "20/12/2025",
+        "Partido": "Bournemouth vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.42) D(0.26) A(0.32) | Cuota: 1.48"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "15/12/2025",
+        "Partido": "Manchester United vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.55) D(0.27) A(0.18) | Cuota: 1.83"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "14/12/2025",
+        "Partido": "Brentford vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.26) A(0.22) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "14/12/2025",
+        "Partido": "Nottingham Forest vs Tottenham",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.18) D(0.27) A(0.55) | Cuota: 2.55"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "14/12/2025",
+        "Partido": "Crystal Palace vs Manchester City",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.21) D(0.26) A(0.53) | Cuota: 3.9"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "13/12/2025",
+        "Partido": "Burnley vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.53) D(0.27) A(0.21) | Cuota: 4.0"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "13/12/2025",
+        "Partido": "Chelsea vs Everton",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.53) D(0.28) A(0.19) | Cuota: 1.67"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "07/12/2025",
+        "Partido": "Fulham vs Crystal Palace",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.33) D(0.23) A(0.43) | Cuota: 2.55"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "06/12/2025",
+        "Partido": "Leeds vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.13) D(0.22) A(0.65) | Cuota: 3.8"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "06/12/2025",
+        "Partido": "Tottenham vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.62) D(0.25) A(0.13) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "06/12/2025",
+        "Partido": "Everton vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.62) D(0.19) A(0.19) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "06/12/2025",
+        "Partido": "Bournemouth vs Chelsea",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.31) D(0.22) A(0.47) | Cuota: 3.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "06/12/2025",
+        "Partido": "Aston Villa vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.23) D(0.26) A(0.52) | Cuota: 4.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "03/12/2025",
+        "Partido": "Leeds vs Chelsea",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.26) D(0.23) A(0.51) | Cuota: 4.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "03/12/2025",
+        "Partido": "Burnley vs Crystal Palace",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.45) D(0.29) A(0.26) | Cuota: 4.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "03/12/2025",
+        "Partido": "Arsenal vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.59) D(0.27) A(0.14) | Cuota: 1.36"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "02/12/2025",
+        "Partido": "Fulham vs Manchester City",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.16) D(0.23) A(0.61) | Cuota: 4.33"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "02/12/2025",
+        "Partido": "Bournemouth vs Everton",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.29) D(0.27) A(0.44) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "30/11/2025",
+        "Partido": "Chelsea vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.29) A(0.38) | Cuota: 3.4"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "30/11/2025",
+        "Partido": "Crystal Palace vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.24) D(0.26) A(0.50) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "29/11/2025",
+        "Partido": "Tottenham vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.57) D(0.26) A(0.17) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "29/11/2025",
+        "Partido": "Manchester City vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.66) D(0.23) A(0.11) | Cuota: 1.22"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "29/11/2025",
+        "Partido": "Brentford vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.45) D(0.29) A(0.26) | Cuota: 1.45"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "24/11/2025",
+        "Partido": "Manchester United vs Everton",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.31) A(0.20) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "23/11/2025",
+        "Partido": "Arsenal vs Tottenham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.61) D(0.25) A(0.14) | Cuota: 1.42"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "23/11/2025",
+        "Partido": "Leeds vs Aston Villa",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.32) D(0.19) A(0.48) | Cuota: 3.0"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "22/11/2025",
+        "Partido": "Liverpool vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.68) D(0.19) A(0.13) | Cuota: 1.44"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "22/11/2025",
+        "Partido": "Burnley vs Chelsea",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.25) D(0.26) A(0.49) | Cuota: 6.25"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "09/11/2025",
+        "Partido": "Manchester City vs Liverpool",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.29) A(0.17) | Cuota: 1.9"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "09/11/2025",
+        "Partido": "Nottingham Forest vs Leeds",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.28) D(0.27) A(0.44) | Cuota: 2.25"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "09/11/2025",
+        "Partido": "Aston Villa vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.57) D(0.25) A(0.18) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "08/11/2025",
+        "Partido": "Everton vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.55) D(0.24) A(0.21) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "08/11/2025",
+        "Partido": "Tottenham vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.31) D(0.27) A(0.42) | Cuota: 2.63"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "02/11/2025",
+        "Partido": "Manchester City vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.60) D(0.25) A(0.15) | Cuota: 1.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/11/2025",
+        "Partido": "Liverpool vs Aston Villa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.60) D(0.21) A(0.20) | Cuota: 1.65"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/11/2025",
+        "Partido": "Tottenham vs Chelsea",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.41) D(0.32) A(0.27) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/11/2025",
+        "Partido": "Nottingham Forest vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.17) D(0.28) A(0.55) | Cuota: 3.3"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/11/2025",
+        "Partido": "Crystal Palace vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.26) A(0.20) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "01/11/2025",
+        "Partido": "Burnley vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.19) D(0.27) A(0.54) | Cuota: 10.0"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "26/10/2025",
+        "Partido": "Everton vs Tottenham",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.32) D(0.23) A(0.45) | Cuota: 2.35"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "26/10/2025",
+        "Partido": "Bournemouth vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.50) D(0.21) A(0.29) | Cuota: 1.8"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "26/10/2025",
+        "Partido": "Aston Villa vs Manchester City",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.28) D(0.23) A(0.49) | Cuota: 4.33"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "26/10/2025",
+        "Partido": "Arsenal vs Crystal Palace",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.60) D(0.23) A(0.17) | Cuota: 1.4"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "25/10/2025",
+        "Partido": "Brentford vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.19) D(0.22) A(0.59) | Cuota: 4.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "19/10/2025",
+        "Partido": "Liverpool vs Manchester United",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.49) D(0.27) A(0.24) | Cuota: 1.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "19/10/2025",
+        "Partido": "Tottenham vs Aston Villa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.46) D(0.22) A(0.32) | Cuota: 2.05"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "18/10/2025",
+        "Partido": "Fulham vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.22) D(0.22) A(0.56) | Cuota: 5.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "18/10/2025",
+        "Partido": "Manchester City vs Everton",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.56) D(0.25) A(0.18) | Cuota: 1.4"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "18/10/2025",
+        "Partido": "Crystal Palace vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.52) D(0.28) A(0.21) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "18/10/2025",
+        "Partido": "Burnley vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.55) D(0.25) A(0.20) | Cuota: 3.25"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "18/10/2025",
+        "Partido": "Nottingham Forest vs Chelsea",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.18) D(0.27) A(0.54) | Cuota: 3.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "05/10/2025",
+        "Partido": "Brentford vs Manchester City",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.16) D(0.22) A(0.62) | Cuota: 4.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "05/10/2025",
+        "Partido": "Everton vs Crystal Palace",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.25) A(0.21) | Cuota: 2.45"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "05/10/2025",
+        "Partido": "Aston Villa vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.27) A(0.19) | Cuota: 1.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "04/10/2025",
+        "Partido": "Chelsea vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.34) D(0.29) A(0.36) | Cuota: 2.8"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "04/10/2025",
+        "Partido": "Leeds vs Tottenham",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.25) D(0.24) A(0.51) | Cuota: 2.7"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "03/10/2025",
+        "Partido": "Bournemouth vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.41) D(0.26) A(0.33) | Cuota: 1.95"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "28/09/2025",
+        "Partido": "Aston Villa vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.53) D(0.23) A(0.24) | Cuota: 2.3"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "27/09/2025",
+        "Partido": "Manchester City vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.66) D(0.24) A(0.10) | Cuota: 1.17"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "27/09/2025",
+        "Partido": "Leeds vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.46) D(0.27) A(0.27) | Cuota: 3.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "27/09/2025",
+        "Partido": "Crystal Palace vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.21) D(0.25) A(0.54) | Cuota: 3.8"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "27/09/2025",
+        "Partido": "Brentford vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.24) D(0.24) A(0.52) | Cuota: 3.4"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "21/09/2025",
+        "Partido": "Arsenal vs Manchester City",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.54) D(0.25) A(0.21) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "20/09/2025",
+        "Partido": "Fulham vs Brentford",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.44) D(0.26) A(0.30) | Cuota: 2.0"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "20/09/2025",
+        "Partido": "Manchester United vs Chelsea",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.39) D(0.35) A(0.26) | Cuota: 2.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "20/09/2025",
+        "Partido": "Burnley vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.58) D(0.22) A(0.21) | Cuota: 3.4"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "20/09/2025",
+        "Partido": "Liverpool vs Everton",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.56) D(0.27) A(0.17) | Cuota: 1.45"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "14/09/2025",
+        "Partido": "Manchester City vs Manchester United",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.54) D(0.25) A(0.21) | Cuota: 1.75"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "14/09/2025",
+        "Partido": "Burnley vs Liverpool",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.16) D(0.27) A(0.57) | Cuota: 8.0"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "13/09/2025",
+        "Partido": "Brentford vs Chelsea",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.31) D(0.24) A(0.44) | Cuota: 4.5"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "13/09/2025",
+        "Partido": "Fulham vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.46) D(0.26) A(0.28) | Cuota: 1.91"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "13/09/2025",
+        "Partido": "Everton vs Aston Villa",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.42) D(0.21) A(0.37) | Cuota: 2.45"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "13/09/2025",
+        "Partido": "Arsenal vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.22) A(0.15) | Cuota: 1.38"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "31/08/2025",
+        "Partido": "Aston Villa vs Crystal Palace",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.50) D(0.25) A(0.25) | Cuota: 1.85"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "31/08/2025",
+        "Partido": "Liverpool vs Arsenal",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.48) D(0.31) A(0.21) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "30/08/2025",
+        "Partido": "Tottenham vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.58) D(0.26) A(0.16) | Cuota: 1.73"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "30/08/2025",
+        "Partido": "Manchester United vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.64) D(0.26) A(0.11) | Cuota: 1.33"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "30/08/2025",
+        "Partido": "Chelsea vs Fulham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.58) D(0.26) A(0.17) | Cuota: 1.55"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "24/08/2025",
+        "Partido": "Fulham vs Manchester United",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.23) D(0.22) A(0.55) | Cuota: 3.25"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "24/08/2025",
+        "Partido": "Crystal Palace vs Nottingham Forest",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.66) D(0.19) A(0.15) | Cuota: 2.35"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "23/08/2025",
+        "Partido": "Arsenal vs Leeds",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.61) D(0.28) A(0.11) | Cuota: 1.27"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "23/08/2025",
+        "Partido": "Brentford vs Aston Villa",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.34) D(0.21) A(0.45) | Cuota: 3.1"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "23/08/2025",
+        "Partido": "Manchester City vs Tottenham",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "A",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.59) D(0.26) A(0.15) | Cuota: 1.48"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "18/08/2025",
+        "Partido": "Leeds vs Everton",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.33) D(0.26) A(0.41) | Cuota: 2.38"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "17/08/2025",
+        "Partido": "Manchester United vs Arsenal",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "A",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.28) D(0.32) A(0.40) | Cuota: 3.6"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "17/08/2025",
+        "Partido": "Nottingham Forest vs Brentford",
+        "Prediccion_IA": "A",
+        "Resultado_Real": "H",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.29) D(0.28) A(0.43) | Cuota: 2.2"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "17/08/2025",
+        "Partido": "Chelsea vs Crystal Palace",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "D",
+        "Acierto": "❌",
+        "Info_Extra": "Prob IA: H(0.54) D(0.23) A(0.24) | Cuota: 1.62"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "16/08/2025",
+        "Partido": "Tottenham vs Burnley",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.60) D(0.24) A(0.16) | Cuota: 1.38"
+    },
+    {
+        "Liga": "Premier League",
+        "Fecha": "15/08/2025",
+        "Partido": "Liverpool vs Bournemouth",
+        "Prediccion_IA": "H",
+        "Resultado_Real": "H",
+        "Acierto": "✅",
+        "Info_Extra": "Prob IA: H(0.58) D(0.27) A(0.15) | Cuota: 1.3"
+    }
+]

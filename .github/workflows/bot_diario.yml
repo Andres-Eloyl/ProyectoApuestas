@@ -27,9 +27,7 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: 1. Generar Cartelera (The Odds API)
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+      - name: 1. Generar Cartelera (Football-Data)
         run: python cartelera_automatica.py
 
       - name: 2. Entrenar IA y Predecir

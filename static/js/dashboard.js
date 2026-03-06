@@ -49,14 +49,26 @@ document.addEventListener("DOMContentLoaded", () => {
             document.getElementById('g-balance').textContent = `${data.Aciertos} W - ${data.Fallos} L`;
         });
 
-    // 2. Fetch Today's Predictions & Set Filters
+    // 2. Fetch Real-time Predictions & Set Filters
     let rawPredictions = [];
 
-    fetch('/api/predicciones_hoy')
+    const tbodyPredictions = document.getElementById('predictions-body');
+    if (tbodyPredictions) {
+        tbodyPredictions.innerHTML = `<tr><td colspan="7" class="text-center" style="color:var(--brand-color); padding: 2rem;"><i class="fa-solid fa-circle-notch fa-spin" style="margin-right: 8px;"></i>Sincronizando Oráculo en Vivo (Tomará entre 5 y 10 segundos)...</td></tr>`;
+    }
+
+    fetch('/api/sync_predicciones')
         .then(res => res.json())
         .then(data => {
+            if (data.error) {
+                tbodyPredictions.innerHTML = `<tr><td colspan="7" class="text-center text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Error sincronizando IA: ${data.error}</td></tr>`;
+                return;
+            }
             rawPredictions = data;
             renderPredictions(rawPredictions);
+        })
+        .catch(err => {
+            tbodyPredictions.innerHTML = `<tr><td colspan="7" class="text-center text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Falla de conexión con el backend neuronal.</td></tr>`;
         });
 
     function renderPredictions(dataToRender) {
@@ -142,6 +154,43 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     filterSelect.addEventListener('change', applyFilters);
+
+    // 2.5 Fetch Historial Auditoria (Temporada Actual)
+    fetch('/api/historial_evaluado')
+        .then(res => res.json())
+        .then(data => {
+            renderAuditoria(data);
+        });
+
+    function renderAuditoria(dataToRender) {
+        const tbody = document.getElementById('auditoria-body');
+        tbody.innerHTML = '';
+
+        if (!dataToRender || dataToRender.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="7" class="text-center text-muted">Aún no hay datos de auditoría generados.</td></tr>`;
+            return;
+        }
+
+        dataToRender.forEach(p => {
+            const tr = document.createElement('tr');
+
+            // Colores por acierto
+            const isHit = p.Acierto === "✅";
+            const rowClass = isHit ? "row-success-subtle" : "row-fail-subtle";
+            const iconBadge = isHit ? `<span style="font-size:1.2rem;" title="Acierto">🎯</span>` : `<span style="font-size:1.2rem;" opacity="0.6" title="Fallo">❌</span>`;
+
+            tr.innerHTML = `
+                <td><span class="badge" style="background:var(--bg-secondary); color:var(--text-primary); border: 1px solid var(--border-color);">${p.Liga}</span></td>
+                <td style="color:var(--text-muted); font-size:0.85rem">${p.Fecha}</td>
+                <td><strong style="color:var(--text-primary);">${p.Partido}</strong></td>
+                <td><strong style="color:var(--brand-color); font-size:1.1rem">${p.Prediccion_IA}</strong></td>
+                <td><strong style="color:var(--text-primary); font-size:1.1rem">${p.Resultado_Real}</strong></td>
+                <td class="text-center">${iconBadge}</td>
+                <td class="desktop-only text-muted" style="font-size:0.8rem;">${p.Info_Extra}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
 
     // 3. Fetch Teams Stats (Virtual Scrolling)
     let rawStats = {};
