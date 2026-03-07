@@ -14,20 +14,46 @@ def dashboard():
 
 @app.route('/api/metricas_globales')
 def api_metricas_globales():
-    # Obtener métricas reales
-    EvaluadorResultados.conciliar_resultados()
-    metricas = EvaluadorResultados.obtener_metricas()
+    if not os.path.exists('historial_auditoria.json'):
+         return jsonify({"Total": 0, "Aciertos": 0, "Fallos": 0, "Precision": 0, "Ligas": {}})
     
-    # Proveer algo de data mock si no hay suficientes datos para que el dashboard no se vea vacío el primer día
-    if metricas['Aciertos'] == 0 and metricas['Fallos'] == 0:
-        metricas = {
-            "Aciertos": 12,
-            "Fallos": 4,
-            "WinRate": 75.0,
-            "ROI": 14.2,
-            "Yield": 14.2,
-            "Beneficio_Total": 145.50
-        }
+    with open('historial_auditoria.json', 'r', encoding='utf-8') as f:
+        datos = json.load(f)
+        
+    total = len(datos)
+    aciertos_globales = 0
+    ligas_stats = {}
+    
+    for partido in datos:
+        liga = partido.get("Liga", "Desconocida")
+        acierto = 1 if partido.get("Acierto") == "✅" else 0
+        
+        aciertos_globales += acierto
+        
+        if liga not in ligas_stats:
+            ligas_stats[liga] = {"total": 0, "aciertos": 0}
+            
+        ligas_stats[liga]["total"] += 1
+        ligas_stats[liga]["aciertos"] += acierto
+        
+    # Calcular porcentajes por liga
+    for liga, stats in ligas_stats.items():
+        if stats["total"] > 0:
+            stats["precision"] = round((stats["aciertos"] / stats["total"]) * 100, 1)
+        else:
+            stats["precision"] = 0.0
+            
+    precision_global = round((aciertos_globales / total) * 100, 1) if total > 0 else 0.0
+    fallos_globales = total - aciertos_globales
+    
+    metricas = {
+        "Total_Partidos": total,
+        "Aciertos": aciertos_globales,
+        "Fallos": fallos_globales,
+        "Precision_Global": precision_global,
+        "Desglose_Ligas": ligas_stats
+    }
+    
     return jsonify(metricas)
 
 @app.route('/api/predicciones_hoy')

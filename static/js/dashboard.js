@@ -26,27 +26,70 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // 1. Fetch Global Metrics (Financiero)
+    // 1. Fetch Precision Metrics & Chart (IA vs Realidad)
     fetch('/api/metricas_globales')
         .then(res => res.json())
         .then(data => {
-            const benEl = document.getElementById('g-beneficio');
-            benEl.textContent = `$${data.Beneficio_Total.toFixed(2)}`;
-            if (data.Beneficio_Total < 0) {
-                benEl.classList.remove('positive');
-                benEl.classList.add('negative');
+            document.getElementById('g-partidos').textContent = data.Total_Partidos;
+            document.getElementById('g-aciertos').textContent = data.Aciertos;
+            document.getElementById('g-fallos').textContent = data.Fallos;
+            document.getElementById('g-precision').textContent = `${data.Precision_Global.toFixed(1)}%`;
+
+            // Draw Precision Bar Chart
+            const ctx = document.getElementById('precisionChart');
+            if (ctx) {
+                Chart.defaults.color = '#6B6A68';
+                Chart.defaults.font.family = "'Inter', sans-serif";
+
+                const ligasObj = data.Desglose_Ligas || {};
+                const ligas = Object.keys(ligasObj);
+                const winRates = ligas.map(l => ligasObj[l].precision);
+                const bgColors = winRates.map(w => w >= 50 ? 'rgba(14, 142, 66, 0.7)' : 'rgba(215, 38, 61, 0.7)');
+                const borderColors = winRates.map(w => w >= 50 ? '#0E8E42' : '#D7263D');
+
+                new Chart(ctx.getContext('2d'), {
+                    type: 'bar',
+                    data: {
+                        labels: ligas,
+                        datasets: [{
+                            label: 'Precisión IA (%)',
+                            data: winRates,
+                            backgroundColor: bgColors,
+                            borderColor: borderColors,
+                            borderWidth: 2,
+                            borderRadius: 6
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                backgroundColor: '#111111',
+                                titleColor: '#fff',
+                                bodyColor: '#F5F4F0',
+                                padding: 12,
+                                displayColors: false,
+                                callbacks: {
+                                    label: function (context) {
+                                        return context.parsed.y + '% de Acierto';
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { grid: { display: false, drawBorder: false } },
+                            y: {
+                                beginAtZero: true,
+                                max: 100,
+                                grid: { color: 'rgba(0,0,0,0.03)', drawBorder: false },
+                                ticks: { callback: function (value) { return value + '%'; } }
+                            }
+                        }
+                    }
+                });
             }
-
-            const yieldEl = document.getElementById('g-yield');
-            yieldEl.textContent = `${data.Yield}%`;
-            if (data.Yield < 0) yieldEl.classList.add('negative');
-            else if (data.Yield > 0) yieldEl.classList.add('positive');
-
-            const winRateEl = document.getElementById('g-winrate');
-            winRateEl.textContent = `${data.WinRate}%`;
-            if (data.WinRate >= 50) winRateEl.classList.add('positive');
-
-            document.getElementById('g-balance').textContent = `${data.Aciertos} W - ${data.Fallos} L`;
         });
 
     // 2. Fetch Real-time Predictions & Set Filters
@@ -66,6 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             rawPredictions = data;
             renderPredictions(rawPredictions);
+            generateLiveInsights(rawPredictions);
         })
         .catch(err => {
             tbodyPredictions.innerHTML = `<tr><td colspan="7" class="text-center text-danger"><i class="fa-solid fa-triangle-exclamation"></i> Falla de conexión con el backend neuronal.</td></tr>`;
@@ -119,13 +163,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const searchTerm = searchInput.value.toLowerCase();
         const filterVal = filterSelect.value;
 
-        // Mapa de ligas para habilitar el filtrado por UI badges (ej. "Premier League")
+        // Mapa de ligas expandido para habilitar el filtrado inteligente
         const LEAGUES_MAP = {
-            "la liga": ["real madrid", "barcelona", "ath madrid", "sociedad", "betis", "valencia", "athletic", "osasuna", "celta", "alaves", "levante", "vallecano", "elche", "girona", "mallorca"],
-            "premier league": ["man city", "man united", "newcastle", "tottenham", "aston villa", "west ham", "brighton", "wolves", "nott'm forest", "sheffield united", "arsenal"],
-            "serie a": ["inter", "milan", "juventus", "roma", "napoli", "lazio", "atalanta", "fiorentina"],
-            "bundesliga": ["bayern munich", "dortmund", "leverkusen", "rb leipzig", "ein frankfurt"],
-            "ligue 1": ["psg", "marseille", "lyon", "monaco", "lille"]
+            "La Liga": ["real madrid", "barcelona", "ath madrid", "sociedad", "betis", "valencia", "athletic", "osasuna", "celta", "alaves", "levante", "vallecano", "elche", "girona", "mallorca", "las palmas", "sevilla", "villarreal"],
+            "Premier League": ["man city", "man united", "newcastle", "tottenham", "aston villa", "west ham", "brighton", "wolves", "nott'm forest", "sheffield united", "arsenal", "liverpool", "chelsea", "everton", "crystal palace", "fulham", "brentford", "bournemouth"],
+            "Serie A": ["inter", "milan", "juventus", "roma", "napoli", "lazio", "atalanta", "fiorentina", "bologna", "torino", "monza", "genoa", "lecce", "empoli"],
+            "Bundesliga": ["bayern munich", "dortmund", "leverkusen", "rb leipzig", "ein frankfurt", "stuttgart", "hoffenheim", "freiburg", "wolfsburg", "heidenheim"]
         };
 
         let filtered = rawPredictions.filter(p => {
@@ -133,9 +176,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const a = p.AwayTeam.toLowerCase();
             const matchText = `${h} ${a}`;
 
-            // Verifica si el texto está en el nombre o si el término de búsqueda es una liga y el equipo pertenece a ella
+            // Verifica si el texto está en el nombre de los equipos
             const matchesName = matchText.includes(searchTerm);
-            const matchesLeague = LEAGUES_MAP[searchTerm] && (LEAGUES_MAP[searchTerm].includes(h) || LEAGUES_MAP[searchTerm].includes(a));
+
+            // Verifica si el término coincide parcialmente con el nombre de alguna liga (ej: "premier")
+            let matchesLeague = false;
+            if (searchTerm.trim() !== '') {
+                for (const [leagueName, teams] of Object.entries(LEAGUES_MAP)) {
+                    if (leagueName.toLowerCase().includes(searchTerm)) {
+                        if (teams.some(team => h.includes(team) || a.includes(team))) {
+                            matchesLeague = true;
+                            break;
+                        }
+                    }
+                }
+            }
 
             return matchesName || matchesLeague;
         });
@@ -270,95 +325,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // 4. Render Bankroll Chart
-    fetch('/api/grafico_bankroll')
-        .then(res => res.json())
-        .then(data => {
-            const ctx = document.getElementById('bankrollChart').getContext('2d');
+    // 4. (Migrado Arriba) Render Bankroll Chart fue reemplazado por Precision Chart
 
-            Chart.defaults.color = '#6B6A68';
-            Chart.defaults.font.family = "'Inter', sans-serif";
-
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: data.labels,
-                    datasets: [{
-                        label: 'Capital Acumulado ($)',
-                        data: data.data,
-                        borderColor: '#0E8E42',
-                        backgroundColor: 'rgba(14, 142, 66, 0.05)',
-                        borderWidth: 3,
-                        pointBackgroundColor: '#FFFFFF',
-                        pointBorderColor: '#0E8E42',
-                        pointHoverBackgroundColor: '#000000',
-                        pointHoverBorderColor: '#FFFFFF',
-                        pointRadius: 4,
-                        pointHoverRadius: 6,
-                        fill: true,
-                        tension: 0.3
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            backgroundColor: '#111111',
-                            titleColor: '#fff',
-                            bodyColor: '#F5F4F0',
-                            borderColor: '#333',
-                            borderWidth: 1,
-                            padding: 12,
-                            displayColors: false,
-                            callbacks: {
-                                label: function (context) {
-                                    return 'Balance: $' + context.parsed.y.toFixed(2);
-                                }
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: { color: 'rgba(0,0,0,0.03)', drawBorder: false }
-                        },
-                        y: {
-                            grid: { color: 'rgba(0,0,0,0.03)', drawBorder: false },
-                            ticks: { callback: function (value) { return '$' + value; } }
-                        }
-                    }
-                }
-            });
-        });
-
-    // 5. Fetch Insights
-    fetch('/api/insights')
-        .then(res => res.json())
-        .then(data => {
-            const container = document.getElementById('insights-container');
-            container.innerHTML = '';
-
-            if (data.length === 0) {
-                container.innerHTML = `<div class="insight-card"><p>No hay alertas de rentabilidad notables hoy.</p></div>`;
-                return;
-            }
-
-            data.forEach(ins => {
-                container.innerHTML += `
-                <div class="insight-card">
-                    <div class="insight-icon" style="color:var(--brand-color)"><i class="fa-solid fa-bolt"></i></div>
-                    <div class="insight-body">
-                        <h3>${ins.titulo}</h3>
-                        <p>${ins.mensaje}</p>
-                        <p style="margin-top:0.5rem; font-weight:600; font-size:0.85rem; color:var(--text-primary)">Confianza IA: ${(ins.confianza * 100).toFixed(1)}%</p>
-                    </div>
-                </div>`;
-            });
-        })
-        .catch(err => {
-            console.error("No se pudo cargar los insights", err);
-        });
 
     // 6. Fetch Results Dashboard (Auditoría)
     fetch('/api/dashboard_resultados')
@@ -421,5 +389,60 @@ document.addEventListener("DOMContentLoaded", () => {
             fraseIndex = (fraseIndex + 1) % frases.length;
             mascotSpeech.textContent = frases[fraseIndex];
         }, 8000);
+    }
+
+    function generateLiveInsights(predictions) {
+        const container = document.getElementById('insights-container');
+        if (!container) return;
+        container.innerHTML = '';
+
+        const evPicks = predictions.filter(p => p.Recomendacion !== 'No Bet');
+        if (evPicks.length === 0) {
+            container.innerHTML = `<div class="insight-card"><p>El radar neuronal no detectó cuotas desbalanceadas notables para emitir alertas globales en este momento.</p></div>`;
+            return;
+        }
+
+        const LEAGUES_MAP = {
+            "La Liga": ["real madrid", "barcelona", "ath madrid", "sociedad", "betis", "valencia", "athletic", "osasuna", "celta", "alaves", "levante", "vallecano", "elche", "girona", "mallorca", "las palmas", "sevilla", "villarreal"],
+            "Premier League": ["man city", "man united", "newcastle", "tottenham", "aston villa", "west ham", "brighton", "wolves", "nott'm forest", "sheffield united", "arsenal", "liverpool", "chelsea", "everton", "crystal palace", "fulham", "brentford", "bournemouth"],
+            "Serie A": ["inter", "milan", "juventus", "roma", "napoli", "lazio", "atalanta", "fiorentina", "bologna", "torino", "monza", "genoa", "lecce", "empoli"],
+            "Bundesliga": ["bayern munich", "dortmund", "leverkusen", "rb leipzig", "ein frankfurt", "stuttgart", "hoffenheim", "freiburg", "wolfsburg", "heidenheim"]
+        };
+
+        const bestPicksByLeague = {};
+
+        evPicks.forEach(p => {
+            const h = p.HomeTeam.toLowerCase();
+            const a = p.AwayTeam.toLowerCase();
+            let assignedLeague = "Champions / Otras";
+
+            for (const [leagueName, teams] of Object.entries(LEAGUES_MAP)) {
+                if (teams.some(team => h.includes(team) || a.includes(team))) {
+                    assignedLeague = leagueName;
+                    break;
+                }
+            }
+
+            if (!bestPicksByLeague[assignedLeague] || p.EV > bestPicksByLeague[assignedLeague].EV) {
+                bestPicksByLeague[assignedLeague] = p;
+            }
+        });
+
+        const sortedLeagues = Object.keys(bestPicksByLeague).sort((a, b) => bestPicksByLeague[b].EV - bestPicksByLeague[a].EV);
+
+        sortedLeagues.forEach(league => {
+            const fila = bestPicksByLeague[league];
+            const msj = `En la jornada de <strong>${league}</strong>, el radar detecta una oportunidad de valor respaldando a ${fila.HomeTeam}. Al encontrar una cuota de <strong>${fila.Cuota}</strong> y un Edge matemático de ${fila.EV.toFixed(2)}, el motor de Poisson calcula un marcador probable de ${fila.Marcador_Exacto}. Se sugiere invertir ${(fila.Kelly_Stake * 100).toFixed(1)}% del pool.`;
+
+            container.innerHTML += `
+            <div class="insight-card">
+                <div class="insight-icon" style="color:var(--brand-color)"><i class="fa-solid fa-bolt"></i></div>
+                <div class="insight-body">
+                    <h3 style="margin-bottom:0.5rem; color:var(--text-primary); font-size: 1.1rem;">Pick ${league}: ${fila.HomeTeam}</h3>
+                    <p style="color:var(--text-muted); line-height:1.6; font-size:0.95rem;">${msj}</p>
+                    <div style="margin-top:0.8rem; font-size:0.85rem; font-weight:600; color:var(--success)">Convicción IA: ${(fila.Probabilidad * 100).toFixed(1)}%</div>
+                </div>
+            </div>`;
+        });
     }
 });

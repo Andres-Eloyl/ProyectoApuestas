@@ -64,37 +64,47 @@ h5 {
 /* Base Layout */
 .app-layout {
     display: flex;
+    flex-direction: column;
     height: 100vh;
     overflow: hidden;
 }
 
 /* =========================================
-   SIDEBAR (Premium Glass)
+   TOP NAVBAR (Horizontal Premium)
    ========================================= */
-.sidebar {
-    width: 330px;
+.top-navbar {
+    width: 100%;
     background: var(--bg-surface);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border-right: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
-    padding: 3rem 2rem;
-    z-index: 10;
+    z-index: 1000;
     box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+}
+
+/* Tier 1: Brand, Search & Actions */
+.navbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 2rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+    gap: 2rem;
 }
 
 .brand {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 3rem;
-    padding-left: 0.5rem;
+    flex-shrink: 0;
 }
 
 .brand-logo {
-    width: 75px;
-    height: 75px;
+    width: 45px;
+    height: 45px;
     object-fit: contain;
     filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
@@ -109,38 +119,82 @@ h5 {
     -webkit-text-fill-color: transparent;
 }
 
-.nav-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
+/* Search Bar in Top Navbar */
+.horizontal-search {
     flex-grow: 1;
-    overflow-y: auto;
-    padding-right: 8px;
-    /* For scrollbar breathing room */
+    max-width: 500px;
+    margin: 0;
 }
 
-.nav-heading {
-    color: #ADB5BD;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin: 1.5rem 0 0.5rem 0.5rem;
+/* Navbar Actions (Date & Devs) */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+.dev-links-horizontal {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.dev-name-small {
+    font-size: 0.85rem;
+    color: var(--text-muted);
     font-weight: 700;
 }
+
+.dev-links-horizontal a {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: var(--trans-fast);
+}
+
+.dev-links-horizontal a:hover {
+    color: var(--brand-color);
+    transform: translateY(-2px);
+}
+
+/* Tier 2: Navigation Links */
+.navbar-bottom {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background: #FFFFFF;
+}
+
+.nav-scroll-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    width: 100%;
+    padding: 0.5rem 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.nav-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+
 
 .nav-item {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 16px 20px;
+    gap: 8px;
+    padding: 10px 16px;
     color: var(--text-muted);
     text-decoration: none;
-    border-radius: var(--radius-sm);
+    border-radius: var(--radius-pill);
     transition: var(--trans-fast);
     font-weight: 600;
-    font-size: 1.15rem;
-    position: relative;
-    overflow: hidden;
+    font-size: 0.95rem;
+    white-space: nowrap;
 }
 
 .nav-item:hover {
@@ -156,70 +210,18 @@ h5 {
 }
 
 .icon {
-    font-size: 1.2rem;
-    width: 24px;
-    text-align: center;
-}
-
-.mt-2 {
-    margin-top: 2rem;
-}
-
-.mt-1 {
-    margin-top: 1rem;
-}
-
-/* Developer Info Section */
-.developer-info {
-    margin-top: auto;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-    text-align: center;
-}
-
-.dev-title {
-    font-size: 0.75rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.2rem;
-}
-
-.dev-name {
     font-size: 1.1rem;
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: 0.8rem;
 }
 
-.dev-links {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+.nav-divider {
+    width: 1px;
+    height: 24px;
+    background-color: var(--border-color);
+    margin: 0 8px;
+    flex-shrink: 0;
 }
 
-.dev-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: var(--bg-base);
-    color: var(--text-muted);
-    text-decoration: none;
-    transition: var(--trans-fast);
-    font-size: 1.1rem;
-    border: 1px solid var(--border-color);
-}
 
-.dev-links a:hover {
-    background-color: var(--brand-color);
-    color: #FFFFFF;
-    border-color: var(--brand-color);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(59, 130, 246, 0.25);
-}
 
 /* Status Box Minimalist */
 .data-status-box {
@@ -311,21 +313,7 @@ h5 {
     transform: scale(1.05) translateY(-10px) rotate(2deg);
 }
 
-/* Topbar Premium */
-.topbar {
-    height: 90px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 3rem;
-    background: rgba(248, 249, 250, 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    border-bottom: 1px solid rgba(233, 236, 239, 0.5);
-}
+
 
 .search-container {
     position: relative;

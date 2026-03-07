@@ -17,82 +17,55 @@
 <body>
     <div class="app-layout">
 
-        <!-- SIDEBAR MINIMALISTA -->
-        <aside class="sidebar">
-            <div class="brand">
-                <!-- Usar el Logo 2D Referenciado Face -->
-                <img src="/static/img/logo_nuevo.png" alt="PredictScore Logo" class="brand-logo" id="main-logo">
-                <span class="brand-text">PredictScore</span>
-            </div>
+        <!-- HORIZONTAL NAVBAR -->
+        <header class="top-navbar">
+            <!-- Tier 1: Brand, Search & Actions -->
+            <div class="navbar-top">
+                <div class="brand">
+                    <img src="/static/img/logo_nuevo.png" alt="PredictScore Logo" class="brand-logo" id="main-logo">
+                    <span class="brand-text">PredictScore</span>
+                </div>
+                
+                <div class="search-container horizontal-search">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="search" id="global-search" class="search-input" placeholder="Buscar equipo o partido...">
+                </div>
 
-            <nav class="nav-menu">
-                <span class="nav-heading">Principal</span>
-                <a href="#" class="nav-item active" data-target="view-home">
-                    <i class="fa-solid fa-house icon"></i> Inicio
-                </a>
-                <a href="#" class="nav-item" data-target="view-financial">
-                    <i class="fa-solid fa-chart-line icon"></i> Rendimiento
-                </a>
-                <a href="#" class="nav-item" data-target="view-results">
-                    <i class="fa-solid fa-table-list icon"></i> Historial (Auditoría)
-                </a>
-                <a href="#" class="nav-item" data-target="view-predictions">
-                    <i class="fa-solid fa-bolt icon"></i> Alertas de Valor
-                </a>
-
-                <span class="nav-heading mt-1">Inteligencia</span>
-                <a href="#" class="nav-item" data-target="view-xg">
-                    <i class="fa-solid fa-crosshairs icon"></i> xG Analytics
-                </a>
-                <a href="#" class="nav-item" data-target="view-insights">
-                    <i class="fa-solid fa-lightbulb icon"></i> Recomendaciones
-                </a>
-
-                <span class="nav-heading mt-1">Documentación</span>
-                <a href="#" class="nav-item" data-target="view-manual-usuario">
-                    <i class="fa-solid fa-user-graduate icon"></i> Manual de Usuario
-                </a>
-                <a href="#" class="nav-item" data-target="view-manual-tecnico">
-                    <i class="fa-solid fa-gears icon"></i> Manual Técnico
-                </a>
-
-                <span class="nav-heading mt-1">Soporte</span>
-                <a href="#" class="nav-item" data-target="view-guide">
-                    <i class="fa-solid fa-book icon"></i> Guía EV+
-                </a>
-                <a href="#" class="nav-item" data-target="view-support">
-                    <i class="fa-solid fa-headset icon"></i> Soporte Técnico
-                </a>
-            </nav>
-
-            <!-- DEVELOPER CREDITS -->
-            <div class="developer-info">
-                <p class="dev-title">Desarrollado por</p>
-                <p class="dev-name">Andres Lopez</p>
-                <div class="dev-links">
-                    <a href="https://github.com/Andres-Eloyl" target="_blank" title="GitHub"><i
-                            class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/andres-eloy-lopez" target="_blank" title="LinkedIn"><i
-                            class="fa-brands fa-linkedin"></i></a>
+                <div class="navbar-actions">
+                    <div class="date-badge" id="currentDate">--</div>
+                    <div class="dev-links-horizontal">
+                        <span class="dev-name-small">Andrés López</span>
+                        <a href="https://github.com/Andres-Eloyl" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/andres-eloy-lopez" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
-        </aside>
+
+            <!-- Tier 2: Navigation Links -->
+            <nav class="navbar-bottom">
+                <div class="nav-scroll-container">
+                    <a href="#" class="nav-item active" data-target="view-home"><i class="fa-solid fa-house icon"></i> Inicio</a>
+                    <a href="#" class="nav-item" data-target="view-financial"><i class="fa-solid fa-chart-line icon"></i> Rendimiento</a>
+                    <a href="#" class="nav-item" data-target="view-results"><i class="fa-solid fa-table-list icon"></i> Historial</a>
+                    <a href="#" class="nav-item" data-target="view-predictions"><i class="fa-solid fa-bolt icon"></i> Alertas de Valor</a>
+                    
+                    <div class="nav-divider"></div>
+                    
+                    <a href="#" class="nav-item" data-target="view-xg"><i class="fa-solid fa-crosshairs icon"></i> xG Analytics</a>
+                    <a href="#" class="nav-item" data-target="view-insights"><i class="fa-solid fa-lightbulb icon"></i> Recomendaciones</a>
+                    
+                    <div class="nav-divider"></div>
+                    
+                    <a href="#" class="nav-item" data-target="view-manual-usuario"><i class="fa-solid fa-user-graduate icon"></i> Usuario</a>
+                    <a href="#" class="nav-item" data-target="view-manual-tecnico"><i class="fa-solid fa-gears icon"></i> Técnico</a>
+                    <a href="#" class="nav-item" data-target="view-guide"><i class="fa-solid fa-book icon"></i> Guía EV+</a>
+                    <a href="#" class="nav-item" data-target="view-support"><i class="fa-solid fa-headset icon"></i> Soporte</a>
+                </div>
+            </nav>
+        </header>
 
         <!-- MAIN LAYOUT -->
         <main class="main-content">
-            <!-- TOPBAR EDITORIAL -->
-            <header class="topbar">
-                <div class="search-container">
-                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
-                    <input type="search" id="global-search" class="search-input"
-                        placeholder="Buscar equipo o partido...">
-                </div>
-
-                <div class="topbar-actions">
-                    <div class="date-badge" id="currentDate">--</div>
-                </div>
-            </header>
-
             <!-- VISTAS DE CONTENIDO -->
 
             <!-- 1. INICIO -->
@@ -155,37 +128,38 @@
             <section id="view-financial" class="view-section">
                 <div class="section-header">
                     <div>
-                        <h2>Rendimiento Global</h2>
-                        <p>Seguimiento de las proyecciones del motor sobre picks EV+</p>
+                        <h2>Precisión del Motor (IA vs Realidad)</h2>
+                        <p>Evaluación objetiva en vivo: ¿Qué tan acertadas han sido las predicciones de nuestra
+                            Inteligencia Artificial esta temporada frente a los resultados reales?</p>
                     </div>
                 </div>
 
                 <div class="metrics-grid">
                     <div class="metric-card">
-                        <div class="metric-label">Beneficio Acumulado</div>
-                        <div class="metric-value" id="g-beneficio">$0.00</div>
+                        <div class="metric-label">Partidos Comprobados</div>
+                        <div class="metric-value font-weight-bold" id="g-partidos">0</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-label">Yield (Retorno Real)</div>
-                        <div class="metric-value" id="g-yield">0.00%</div>
+                        <div class="metric-label">Aciertos (✅)</div>
+                        <div class="metric-value text-success" id="g-aciertos">0</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-label">Win Rate IA</div>
-                        <div class="metric-value" id="g-winrate">0.0%</div>
+                        <div class="metric-label">Fallos (❌)</div>
+                        <div class="metric-value text-danger" id="g-fallos">0</div>
                     </div>
                     <div class="metric-card">
-                        <div class="metric-label">Aciertos vs Fallos</div>
-                        <div class="metric-value text-dark" id="g-balance">0 W - 0 L</div>
+                        <div class="metric-label">Precisión Global</div>
+                        <div class="metric-value" style="color:var(--brand-color);" id="g-precision">0.0%</div>
                     </div>
                 </div>
 
                 <div class="glass-panel text-center">
-                    <div class="chart-container">
+                    <div class="chart-container" style="height: 350px;">
                         <h4
                             style="color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:1rem; font-size:0.85rem;">
-                            Crecimiento del Bankroll</h4>
-                        <div class="canvas-wrapper">
-                            <canvas id="bankrollChart"></canvas>
+                            Efectividad por Campeonato (Win-Rate %)</h4>
+                        <div class="canvas-wrapper" style="height: 100%;">
+                            <canvas id="precisionChart"></canvas>
                         </div>
                     </div>
                 </div>
