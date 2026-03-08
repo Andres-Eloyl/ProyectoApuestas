@@ -1,6 +1,4 @@
 import pandas as pd
-import requests
-import requests
 import json
 import logging
 import numpy as np
@@ -112,7 +110,7 @@ def generar_auditoria():
                 
                 try:
                     cuota_local = float(fila.get('B365H', fila.get('AvgH', 0)))
-                except:
+                except Exception:
                     cuota_local = 0.0
                 
                 fecha_partido = fila.get('Date', 'N/A')

@@ -3,39 +3,39 @@ import logging
 from modelos_poo import PredictorRandomForest
 from notificador import BotPredictscore
 
-def sistema_alertas_produccion():
+
+def sistema_alertas_produccion() -> None:
     logging.info("Iniciando Sistema de Alertas para el fin de semana del 20/02/2026...")
     bot_telegram = BotPredictscore()
-    
-    bot = PredictorRandomForest(ruta_csv='dataset_final_ml.csv')
+
+    bot = PredictorRandomForest(ruta_csv="dataset_final_ml.csv")
     bot.cargar_datos()
-    X, _, y, _ = bot.preparar_datos_entrenamiento(proporcion_train=1.0) 
+    X, _, y, _ = bot.preparar_datos_entrenamiento(proporcion_train=1.0)
     bot.entrenar(X, y)
 
     try:
-        hoy = pd.read_csv('partidos_hoy.csv')
-        
+        hoy = pd.read_csv("partidos_hoy.csv")
 
-        X_hoy = hoy[bot.features] 
-        
+        X_hoy = hoy[bot.features]
+
         probs = bot.predecir_probabilidades(X_hoy)
         clases = list(bot.obtener_clases())
     except Exception as e:
         print(f"Error al leer o predecir: {e}")
         return
 
-    print("\n" + "═"*60)
+    print("\n" + "═" * 60)
     print("REPORTES DE INVERSIÓN")
-    print("═"*60)
+    print("═" * 60)
 
     for i in range(len(hoy)):
-        p_h = probs[i][clases.index('H')]
-        cuota_h = hoy.iloc[i]['B365H']
+        p_h = probs[i][clases.index("H")]
+        cuota_h = hoy.iloc[i]["B365H"]
         ev = p_h * cuota_h
-        equipo_l = hoy.iloc[i]['HomeTeam']
-        equipo_v = hoy.iloc[i]['AwayTeam']
+        equipo_l = hoy.iloc[i]["HomeTeam"]
+        equipo_v = hoy.iloc[i]["AwayTeam"]
 
-        prob_local = p_h * 100 
+        prob_local = p_h * 100
 
         if prob_local >= 60:
             nivel_confianza = "🟢 ALTA"
@@ -59,9 +59,10 @@ def sistema_alertas_produccion():
         if ev > 1.0:
             print(f"🔥 [ALERTA DE VALOR] Enviando {equipo_l} a Telegram...")
             bot_telegram.enviar_mensaje(mensaje)  # <--- EXACTAMENTE ASÍ
-            
+
         else:
             print(f"❌ [SIN VALOR] {equipo_l} descartado (EV: {ev:.2f})")
+
 
 # ¡FUERA DE LA FUNCIÓN, PEGADO A LA IZQUIERDA!
 if __name__ == "__main__":
