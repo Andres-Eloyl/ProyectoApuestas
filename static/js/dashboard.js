@@ -1,3 +1,123 @@
+// Función global para mostrar notificaciones tipo Toast
+window.showToast = function (message, type = 'info') {
+    const toastContainer = document.getElementById('toast-container');
+    if (!toastContainer) {
+        // Create container if it doesn't exist
+        const container = document.createElement('div');
+        container.id = 'toast-container';
+        container.className = 'fixed top-20 right-6 z-50 flex flex-col gap-2';
+        document.body.appendChild(container);
+    }
+
+    const toast = document.createElement('div');
+    const bgColors = {
+        'info': 'bg-primary/90 border-primary',
+        'warning': 'bg-yellow-500/90 border-yellow-400',
+        'error': 'bg-red-500/90 border-red-400',
+        'success': 'bg-emerald-500/90 border-emerald-400'
+    };
+
+    const iconMap = {
+        'info': 'info',
+        'warning': 'warning',
+        'error': 'error',
+        'success': 'check_circle'
+    };
+
+    toast.className = `flex items-center gap-3 px-4 py-3 rounded shadow-lg border-l-4 text-white text-xs font-bold transform transition-all duration-300 translate-x-full opacity-0 ${bgColors[type]}`;
+
+    toast.innerHTML = `
+        <span class="material-symbols-outlined text-sm">${iconMap[type]}</span>
+        <span>${message}</span>
+    `;
+
+    document.getElementById('toast-container').appendChild(toast);
+
+    // Animate in
+    requestAnimationFrame(() => {
+        toast.classList.remove('translate-x-full', 'opacity-0');
+        toast.classList.add('translate-x-0', 'opacity-100');
+    });
+
+    // Remove after 3 seconds
+    setTimeout(() => {
+        toast.classList.remove('translate-x-0', 'opacity-100');
+        toast.classList.add('translate-x-full', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+    }, 3000);
+};
+
+// --- MODAL SYSTEM LOGIC ---
+window.openModal = function (templateId) {
+    const globalModal = document.getElementById('global-modal');
+    const modalBody = document.getElementById('modal-body');
+    const template = document.getElementById('tpl-' + templateId);
+
+    if (globalModal && modalBody && template) {
+        // Cargar el contenido
+        modalBody.innerHTML = template.innerHTML;
+
+        // Mostrar
+        globalModal.classList.remove('hidden');
+        globalModal.classList.add('flex');
+
+        // Animacion entrada
+        requestAnimationFrame(() => {
+            globalModal.classList.remove('opacity-0');
+            globalModal.classList.add('opacity-100');
+            const wrapper = document.getElementById('modal-content-wrapper');
+            if (wrapper) {
+                wrapper.classList.remove('scale-95');
+                wrapper.classList.add('scale-100');
+            }
+        });
+    } else {
+        showToast('Ventana no disponible aún.', 'warning');
+    }
+};
+
+window.closeModal = function () {
+    const globalModal = document.getElementById('global-modal');
+    if (globalModal) {
+        // Animacion salida
+        globalModal.classList.remove('opacity-100');
+        globalModal.classList.add('opacity-0');
+        const wrapper = document.getElementById('modal-content-wrapper');
+        if (wrapper) {
+            wrapper.classList.remove('scale-100');
+            wrapper.classList.add('scale-95');
+        }
+
+        setTimeout(() => {
+            globalModal.classList.add('hidden');
+            globalModal.classList.remove('flex');
+            document.getElementById('modal-body').innerHTML = '';
+        }, 300);
+    }
+};
+
+// Cerrar modal con Escape o Clic fuera
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+});
+document.addEventListener('click', (e) => {
+    if (e.target.id === 'global-modal') closeModal();
+});
+
+// --- FULLSCREEN LOGIC ---
+window.toggleFullScreen = function () {
+    if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch((err) => {
+            showToast(`Error al intentar pantalla completa: ${err.message}`, 'error');
+        });
+        showToast('Pantalla Completa Activada', 'success');
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        }
+    }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // 1. Fetch Precision Metrics
@@ -215,5 +335,95 @@ document.addEventListener("DOMContentLoaded", () => {
                 </tr>`;
             });
         });
+
+    // 5. Lógica del Asistente Analista (Chatbot)
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+    const chatMessages = document.getElementById('chat-messages');
+
+    function appendMessage(sender, text) {
+        if (!chatMessages) return;
+
+        const isUser = sender === 'user';
+        const iconClasses = isUser ? 'person text-slate-400' : 'smart_toy text-primary';
+        const bgClasses = isUser ? 'bg-primary/20 text-white border-primary/30 rounded-tr-none' : 'bg-slate-800/80 text-slate-300 border-slate-700/50 rounded-tl-none';
+
+        // Parsear markdown básico (negritas)
+        const parsedText = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        // Convertir saltos de línea a <br>
+        const formattedText = parsedText.replace(/\n/g, '<br>');
+
+        const msgHTML = `
+        <div class="flex gap-2 text-sm max-w-[90%] ${isUser ? 'ml-auto flex-row-reverse' : ''}">
+            <span class="material-symbols-outlined text-sm mt-0.5" class="${iconClasses}">${isUser ? 'person' : 'smart_toy'}</span>
+            <div class="${bgClasses} p-2 rounded-lg border text-xs leading-relaxed" style="word-break: break-word;">
+                ${formattedText}
+            </div>
+        </div>`;
+
+        chatMessages.insertAdjacentHTML('beforeend', msgHTML);
+        chatMessages.scrollTop = chatMessages.scrollHeight; // Auto-scroll
+    }
+
+    function sendMessage() {
+        const text = chatInput.value.trim();
+        if (!text) return;
+
+        // Limpiar input y mostrar msj del usuario
+        chatInput.value = '';
+        appendMessage('user', text);
+
+        // Indicador de "escribiendo" (opcional, simplificado por ahora)
+
+        fetch('/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ mensaje: text })
+        })
+            .then(res => res.json())
+            .then(data => {
+                appendMessage('bot', data.respuesta);
+            })
+            .catch(err => {
+                console.error("Error en chat:", err);
+                appendMessage('bot', `<span class="text-red-400">Error de conexión con el núcleo analítico.</span>`);
+            });
+    }
+
+    if (chatSend && chatInput) {
+        chatSend.addEventListener('click', sendMessage);
+        chatInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    }
+
+    // 6. Lógica de toggle para el Chatbot Flotante
+    const chatbotContainer = document.getElementById('floating-chatbot');
+    const chatbotToggleBtn = document.getElementById('chatbot-toggle');
+    const chatbotIcon = document.getElementById('chatbot-icon');
+
+    if (chatbotContainer && chatbotToggleBtn && chatbotIcon) {
+        let isChatbotOpen = false;
+
+        chatbotToggleBtn.addEventListener('click', () => {
+            isChatbotOpen = !isChatbotOpen;
+
+            if (isChatbotOpen) {
+                chatbotContainer.classList.remove('translate-y-[calc(100%-48px)]');
+                chatbotContainer.classList.add('translate-y-0');
+                chatbotIcon.classList.add('rotate-180');
+                // Auto-focus the input after a short delay
+                setTimeout(() => chatInput && chatInput.focus(), 300);
+            } else {
+                chatbotContainer.classList.remove('translate-y-0');
+                chatbotContainer.classList.add('translate-y-[calc(100%-48px)]');
+                chatbotIcon.classList.remove('rotate-180');
+            }
+        });
+    }
 
 });
