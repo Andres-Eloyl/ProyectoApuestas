@@ -192,4 +192,4 @@ if __name__ == "__main__":
 
     if X_tr is not None:
         bot.entrenar(X_tr, y_tr)
-        print("\n✅ El nuevo modelo de Gradient Boosting está listo y calibrado.")
+        print("\nEl nuevo modelo de Gradient Boosting está listo y calibrado.")

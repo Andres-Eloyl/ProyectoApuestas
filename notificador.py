@@ -17,8 +17,8 @@ class BotPredictscore:
         try:
             respuesta = requests.post(self.url, data=payload)
             if respuesta.status_code == 200:
-                print("✅ Notificación enviada a Telegram con éxito.")
+                print("Notificación enviada a Telegram con éxito.")
             else:
-                print(f"❌ Telegram rebotó el mensaje. Razón: {respuesta.text}")
+                print(f"Telegram rebotó el mensaje. Razón: {respuesta.text}")
         except Exception as e:
-            print(f"❌ Error de conexión de red: {e}")
+            print(f"Error de conexión de red: {e}")

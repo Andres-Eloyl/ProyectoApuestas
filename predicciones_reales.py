@@ -61,7 +61,7 @@ def sistema_alertas_produccion() -> None:
             bot_telegram.enviar_mensaje(mensaje)  # <--- EXACTAMENTE ASÍ
 
         else:
-            print(f"❌ [SIN VALOR] {equipo_l} descartado (EV: {ev:.2f})")
+            print(f"[SIN VALOR] {equipo_l} descartado (EV: {ev:.2f})")
 
 
 # ¡FUERA DE LA FUNCIÓN, PEGADO A LA IZQUIERDA!

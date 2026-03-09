@@ -212,7 +212,7 @@ document.addEventListener("DOMContentLoaded", () => {
         tbodyTerminal.innerHTML = `<tr><td colspan="7" class="text-center p-4">Iniciando oráculo neuronal neuronal...</td></tr>`;
     }
 
-    fetch('/api/sync_predicciones')
+    fetch('/api/predicciones_hoy')
         .then(res => res.json())
         .then(data => {
             if (data.error) {
@@ -228,6 +228,49 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderTerminalAndAlertas(predictions) {
         if (tbodyTerminal) tbodyTerminal.innerHTML = '';
         if (alertasValors) alertasValors.innerHTML = '';
+
+        const partidosCriticosContainer = document.getElementById('ui-partidos-criticos');
+        if (partidosCriticosContainer) {
+            partidosCriticosContainer.innerHTML = '';
+            const criticos = [...predictions].filter(p => p.Recomendacion !== 'No Bet').sort((a, b) => b.Probabilidad - a.Probabilidad).slice(0, 2);
+            while (criticos.length < 2 && predictions.length > criticos.length) {
+                const p = predictions.find(pred => !criticos.includes(pred));
+                if (p) criticos.push(p);
+            }
+            criticos.forEach((p, index) => {
+                const totalG = (p.Proj_Goles_L + p.Proj_Goles_V) || 1;
+                const pctL = Math.round((p.Proj_Goles_L / totalG) * 100);
+                const pctV = 100 - pctL;
+                const posL = Math.round(p.Probabilidad * 100);
+                const posV = 100 - posL;
+                partidosCriticosContainer.innerHTML += `
+                            <div class="p-3 bg-slate-900/40 border border-slate-800 rounded hover:border-primary/50 transition-colors cursor-pointer group">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-[9px] text-slate-500 font-bold uppercase">Predicción • Carga Actual</span>
+                                    <span class="text-[9px] px-1 ${index === 0 ? 'bg-primary text-white' : 'bg-slate-800 text-slate-400'} rounded">${index === 0 ? 'DESTACADO' : 'SEGUIMIENTO'}</span>
+                                </div>
+                                <div class="grid grid-cols-3 items-center gap-2 mb-3 text-center">
+                                    <div class="text-[11px] font-bold text-white uppercase truncate">${p.HomeTeam}</div>
+                                    <div class="text-xs font-black text-primary">${p.Proj_Goles_L} - ${p.Proj_Goles_V}</div>
+                                    <div class="text-[11px] font-bold text-white uppercase truncate">${p.AwayTeam}</div>
+                                </div>
+                                <div class="space-y-1.5">
+                                    <div class="flex justify-between text-[10px]">
+                                        <span class="text-slate-500 uppercase">xG (Proyectado)</span>
+                                        <span class="text-white font-bold">${p.Proj_Goles_L} - ${p.Proj_Goles_V}</span>
+                                    </div>
+                                    <div class="h-1 bg-slate-800 rounded-full overflow-hidden flex">
+                                        <div class="h-full bg-primary" style="width: ${pctL}%"></div>
+                                        <div class="h-full bg-slate-700" style="width: ${pctV}%"></div>
+                                    </div>
+                                    <div class="flex justify-between text-[10px]">
+                                        <span class="text-slate-500 uppercase">Probabilidad (H-A)</span>
+                                        <span class="text-white font-bold">${posL}% - ${posV}%</span>
+                                    </div>
+                                </div>
+                            </div>`;
+            });
+        }
 
         let marqueeText = "";
 
@@ -262,8 +305,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const ev = parseFloat(p.EV);
             const valueStr = ev > 1.0 ? `+${((ev - 1.0) * 100).toFixed(1)}%` : '0.0%';
 
-            // Marquee Text Building
-            marqueeText += ` • ${p.HomeTeam.toUpperCase()} vs ${p.AwayTeam.toUpperCase()} (xG: ${p.Proj_Goles_L} - ${p.Proj_Goles_V})`;
+
 
             tbodyTerminal.innerHTML += `
             <tr class="border-b border-slate-800/50 hover:bg-slate-900/30 transition-colors">
@@ -292,7 +334,13 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         if (marquee) {
-            marquee.textContent = marqueeText + " " + marqueeText; // Duplicate for smooth looping
+            if (valuePicks.length > 0) {
+                const top3 = valuePicks.slice(0, 3);
+                marqueeText = top3.map(p => `STRONG PICK: ${p.HomeTeam.toUpperCase()} vs ${p.AwayTeam.toUpperCase()} | VALOR (EV): ${p.EV} | CUOTA: ${p.Cuota} | SUGERENCIA: ${p.Recomendacion} (Confianza: ${(p.Probabilidad * 100).toFixed(0)}%)`).join('   ✦   ');
+            } else {
+                marqueeText = "Buscando valor en los mercados globales... No se detectaron anomalías EV+ en la sesión actual.";
+            }
+            marquee.textContent = marqueeText + "   ✦   " + marqueeText; // Duplicate for smooth looping
         }
     }
 
@@ -324,14 +372,15 @@ document.addEventListener("DOMContentLoaded", () => {
             // Limit to last 5
             const recent = data.slice(-5).reverse();
             recent.forEach(p => {
-                const isHit = p.Acierto === "✅";
-                const color = isHit ? 'emerald-500' : 'red-500';
+                const isHit = p.Acierto === "ACIERTO";
+                const isPending = p.Acierto === "PENDIENTE";
+                const color = isHit ? 'emerald-500' : (isPending ? 'slate-400' : 'red-500');
                 tbody.innerHTML += `
                 <tr class="border-b border-slate-800/50 hover:bg-slate-900/30 transition-colors">
                     <td class="p-4">${p.Fecha}</td>
                     <td class="p-4"><strong class="text-white">${p.Partido}</strong></td>
                     <td class="p-4 text-primary font-bold">${p.Prediccion_IA}</td>
-                    <td class="p-4 text-${color} font-black">${p.Resultado_Real || '-'} ${p.Acierto}</td>
+                    <td class="p-4 text-${color} font-black">${p.Resultado_Real !== '-' ? p.Resultado_Real : ''} ${p.Acierto}</td>
                 </tr>`;
             });
         });

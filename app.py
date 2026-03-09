@@ -66,7 +66,8 @@ def api_predicciones_hoy():
         return jsonify([])
 
     df = pd.read_csv("historial_apuestas.csv")
-    df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"])
+    # Convert back to strictly formatted string for comparison
+    df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"]).dt.strftime("%Y-%m-%d")
 
     # Asume que las últimas son las de hoy (filtrar por fecha máxima o hoy)
     hoy_str = pd.Timestamp.now().strftime("%Y-%m-%d")
@@ -180,7 +181,7 @@ def api_insights():
         return jsonify([])
 
     df = pd.read_csv("historial_apuestas.csv")
-    df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"])
+    df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"]).dt.strftime("%Y-%m-%d")
 
     hoy_str = pd.Timestamp.now().strftime("%Y-%m-%d")
     predicciones = df[
@@ -219,11 +220,29 @@ def api_dashboard_resultados():
 
 @app.route("/api/historial_evaluado")
 def api_historial_evaluado():
-    if not os.path.exists("historial_auditoria.json"):
+    if not os.path.exists("historial_apuestas.csv"):
         return jsonify([])
-    with open("historial_auditoria.json", "r", encoding="utf-8") as f:
-        datos = json.load(f)
-    return jsonify(datos)
+
+    df = pd.read_csv("historial_apuestas.csv")
+    df = df[df["Recomendacion"] != "No Bet"]
+    recent = df.tail(10)
+    data = []
+    for _, row in recent.iterrows():
+        gp = float(row.get("Ganancia_Perdida", 0)) if pd.notna(row.get("Ganancia_Perdida")) else 0
+        res_real = row.get("Resultado_Real", "")
+        if pd.isna(res_real) or res_real == "":
+            acierto = "PENDIENTE"
+        else:
+            acierto = "ACIERTO" if gp > 0 else "FALLO"
+
+        data.append({
+            "Fecha": str(row["Fecha_Partido"]),
+            "Partido": f"{row['HomeTeam']} vs {row['AwayTeam']}",
+            "Prediccion_IA": str(row["Recomendacion"]),
+            "Resultado_Real": str(res_real) if pd.notna(res_real) and res_real != "" else "-",
+            "Acierto": acierto
+        })
+    return jsonify(data)
 
 
 @app.route("/api/chat", methods=["POST"])
@@ -248,7 +267,7 @@ def api_chat():
             )
 
         df = pd.read_csv("historial_apuestas.csv")
-        df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"])
+        df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"]).dt.strftime("%Y-%m-%d")
         hoy_str = pd.Timestamp.now().strftime("%Y-%m-%d")
         predicciones = df[
             (df["Fecha_Prediccion"] == hoy_str) & (df["Recomendacion"] != "No Bet")
