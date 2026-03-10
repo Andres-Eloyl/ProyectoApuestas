@@ -24,12 +24,7 @@ LIGAS_TOP_5 = {
 def inicializar_db() -> None:
     """
     Crea las tablas en SQLite si no existen.
-
-    ¿Por qué SQLite y no Pandas/CSV en Memoria?
-    Antes cargábamos miles de filas CSV a RAM, lo que causaba cuellos de botella
-    al procesar las 5 grandes ligas + Champions. SQLite permite que el motor
-    inteligente lea los datos estructurados desde el disco casi al instante,
-    sin colapsos de memoria.
+    Se emplea SQLite para optimizar el acceso a disco en la lectura de grandes volúmenes de datos.
     """
     conn = sqlite3.connect(DB_FILE)
     cursor = conn.cursor()
@@ -220,13 +215,8 @@ def descargar_historico_top5() -> None:
 
 def extraer_champions_y_copas() -> None:
     """
-    Scraper preventivo para extraer resultados de torneos nocaut (Champions/Copas Locales).
-
-    Nota Técnica: Origen de Datos Alternativo
-    Originalmente usamos web scraping directo con requests sobre FBref.com, pero este portal implementó
-    Cloudflare HCaptcha (Escudo Anti-Bots nivel militar).
-    Para no pagar proxies residenciales, extraemos los partidos directamente desde un servidor público
-    CSV de fixturedownload, garantizando resiliencia, gratuidad y cero bloqueos.
+    Extrae resultados de torneos nocaut (Champions/Copas Locales) desde un proveedor CSV.
+    Garantiza una actualización fluida sin bloqueos por antibots.
     """
     conn = sqlite3.connect(DB_FILE)
 

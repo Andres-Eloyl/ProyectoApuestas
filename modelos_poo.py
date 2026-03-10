@@ -87,12 +87,12 @@ class PredictorRandomForest(PredictorDeportivoBase):
 
         logging.info(f"Mejores parámetros encontrados: {grid_search.best_params_}")
 
-        logging.info("Calibrando probabilidades (Escalamiento de Platt)...")
+        logging.info("Calibración de probabilidades completada mediante escalamiento de Platt.")
         self.modelo_calibrado = CalibratedClassifierCV(
             grid_search.best_estimator_, method="sigmoid", cv=5
         )
         self.modelo_calibrado.fit(X_train, y_train)
-        logging.info("¡Entrenamiento y Calibración finalizados con éxito!")
+        logging.info("Modelo RandomForest calibrado y entrenado.")
 
     def predecir_probabilidades(self, X_test: pd.DataFrame) -> Optional[np.ndarray]:
         """Devuelve las probabilidades calibradas para cada resultado (H, D, A)."""
@@ -124,12 +124,12 @@ class PredictorGradientBoosting(PredictorDeportivoBase):
             random_state=42,
         )
 
-        logging.info("Calibrando probabilidades...")
+        logging.info("Calibración de probabilidades iniciada.")
         self.modelo_calibrado = CalibratedClassifierCV(
             modelo_base, method="sigmoid", cv=5
         )
         self.modelo_calibrado.fit(X_train, y_train)
-        logging.info("¡Motor HistGradient calibrado con éxito!")
+        logging.info("Modelo HistGradientBoosting calibrado y entrenado.")
 
     def predecir_probabilidades(self, X_test: pd.DataFrame) -> Optional[np.ndarray]:
         """Devuelve las probabilidades de los resultados usando el ensamble HistGradientBoosting."""
@@ -192,4 +192,4 @@ if __name__ == "__main__":
 
     if X_tr is not None:
         bot.entrenar(X_tr, y_tr)
-        print("\nEl nuevo modelo de Gradient Boosting está listo y calibrado.")
+        print("\nEntrenamiento del Gradient Boosting completado para inferencia.")

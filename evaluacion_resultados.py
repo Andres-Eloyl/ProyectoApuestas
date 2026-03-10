@@ -108,8 +108,7 @@ class EvaluadorResultados:
                 if not partido.empty:
                     # Coge el ultimo si hay varios recientes
                     resultado = partido.iloc[-1]["FTR"]
-                    # Consideramos que la apuesta recomendada fue a Gana Local (H) por simplicidad
-                    # Si la recom era H y resultado es H, ganó.
+                    # Lógica simplificada asumiendo pronóstico al equipo local (H)
                     if apuesta["Recomendacion"] == "H":
                         if resultado == "H":
                             ganancia = (
@@ -174,9 +173,7 @@ class EvaluadorResultados:
             "Aciertos": aciertos,
             "Fallos": fallos,
             "WinRate": round(win_rate, 2),
-            "ROI": round(
-                yield_pct, 2
-            ),  # En apuestas el ROI y Yield suelen ser intercambiables, pero se usa Yield para medir rentabilidad sobre apostado.
+            "ROI": round(yield_pct, 2),
             "Yield": round(yield_pct, 2),
             "Beneficio_Total": round(beneficio_total, 2),
         }

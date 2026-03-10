@@ -37,20 +37,19 @@ TRADUCTOR = {
 }
 
 def generar_cartelera_diaria():
-    # 1. Cargamos el caché de estadísticas (stats_actuales.json)
-    logging.info("1. Cargando estadísticas neuronales desde stats_actuales.json...")
+    logging.info("Cargando estadísticas desde stats_actuales.json...")
     
     try:
         with open('stats_actuales.json', 'r') as f:
             stats_historicas = json.load(f)
     except FileNotFoundError:
-        logging.error("❌ No existe stats_actuales.json. Debes ejecutar ingenieria_caracteristicas.py primero.")
+        logging.error("No existe stats_actuales.json. Ejecute ingenieria_caracteristicas.py primero.")
         return
 
-    logging.info("2. Descargando cartelera oficial de próximos partidos (Football-Data.co.uk)...")
+    logging.info("Descargando cartelera de próximos partidos (Football-Data.co.uk)...")
     
     try:
-        # Descargamos directamente el CSV público de próximos partidos. ¡Sin necesidad de API Key!
+        # Descarga del CSV público de próximos partidos.
         df_fixtures = pd.read_csv("https://www.football-data.co.uk/fixtures.csv")
     except Exception as e:
         logging.error(f"Error descargando la cartelera en tiempo real: {e}")
@@ -77,7 +76,7 @@ def generar_cartelera_diaria():
             eq_l = TRADUCTOR.get(eq_local_csv, eq_local_csv)
             eq_v = TRADUCTOR.get(eq_visita_csv, eq_visita_csv)
             
-            # Si el equipo no está en nuestro motor neuronal top (ej. Copas extrañas), lo ignoramos
+            # Si el equipo no está en el registro de stats, se ignora.
             if eq_l not in stats_historicas or eq_v not in stats_historicas:
                 continue
                 
@@ -114,8 +113,8 @@ def generar_cartelera_diaria():
             })
 
     if not partidos_hoy:
-        logging.info("⭐ Alerta: No hay partidos europeos filtrados para los próximos días o las cuotas aún no abren. Inyectando partidos destacados de demostración...")
-        # Generamos partidos simulados super realistas basados en los datos historicos reales como fallback de exhibición
+        logging.info("Alerta: No hay partidos o cuotas disponibles. Inyectando partidos de demostración.")
+        # Se generan partidos basados en datos históricos para propósitos de demostración.
         partidos_hoy = [
             {
                 'HomeTeam': 'Ath Madrid', 'AwayTeam': 'Barcelona',
@@ -177,7 +176,7 @@ def generar_cartelera_diaria():
 
     df_final = pd.DataFrame(partidos_hoy)
     df_final.to_csv('partidos_hoy.csv', index=False)
-    logging.info(f"✅ ¡Éxito! Cartelera lista: {len(df_final)} partidos en CSV ('partidos_hoy.csv').")
+    logging.info(f"Cartelera lista: {len(df_final)} partidos guardados en 'partidos_hoy.csv'.")
 
 if __name__ == '__main__':
     generar_cartelera_diaria()

@@ -10,11 +10,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def dashboard():
+    """Renderiza la vista principal del dashboard."""
     return render_template("index.html")
 
 
 @app.route("/api/metricas_globales")
 def api_metricas_globales():
+    """Calcula y devuelve las métricas globales de precisión, ROI y desgloses por liga."""
     if not os.path.exists("historial_auditoria.json"):
         return jsonify(
             {"Total": 0, "Aciertos": 0, "Fallos": 0, "Precision": 0, "Ligas": {}}
@@ -39,7 +41,6 @@ def api_metricas_globales():
         ligas_stats[liga]["total"] += 1
         ligas_stats[liga]["aciertos"] += acierto
 
-    # Calcular porcentajes por liga
     for liga, stats in ligas_stats.items():
         if stats["total"] > 0:
             stats["precision"] = round((stats["aciertos"] / stats["total"]) * 100, 1)
@@ -62,18 +63,16 @@ def api_metricas_globales():
 
 @app.route("/api/predicciones_hoy")
 def api_predicciones_hoy():
+    """Retorna las predicciones de la IA generadas para la fecha actual."""
     if not os.path.exists("historial_apuestas.csv"):
         return jsonify([])
 
     df = pd.read_csv("historial_apuestas.csv")
-    # Convert back to strictly formatted string for comparison
     df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"]).dt.strftime("%Y-%m-%d")
 
-    # Asume que las últimas son las de hoy (filtrar por fecha máxima o hoy)
     hoy_str = pd.Timestamp.now().strftime("%Y-%m-%d")
     predicciones = df[df["Fecha_Prediccion"] == hoy_str]
 
-    # Si no hay de hoy, devolvemos las últimas 10
     if predicciones.empty:
         predicciones = df.tail(10)
 
@@ -89,33 +88,32 @@ def api_predicciones_hoy():
         "Proj_Goles_V",
         "Marcador_Exacto",
     ]
-    # Como estas columnas pueden arrojar NaN si leemos histórico muy antiguo, reemplazamos por strings vacíos.
+    
     data = predicciones[cols].fillna("-").to_dict(orient="records")
     return jsonify(data)
 
 
 @app.route("/api/sync_predicciones")
 def api_sync_predicciones():
-    # 1. Ejecutar extractor de cuotas y fechas en vivo
+    """Sincroniza la cartelera actual, ejecuta el modelo predictivo y retorna los resultados."""
     try:
         subprocess.run([sys.executable, "cartelera_automatica.py"], check=True)
     except Exception as e:
         print(f"Error sincronizando cartelera: {e}")
         return jsonify({"error": "Fallo al descargar partidos en vivo."}), 500
 
-    # 2. Ejecutar la inferencia neuronal para los partidos extraídos
     try:
         subprocess.run([sys.executable, "predicciones_hoy.py"], check=True)
     except Exception as e:
         print(f"Error sincronizando predicciones: {e}")
         return jsonify({"error": "Fallo al ejecutar modelo de IA."}), 500
 
-    # 3. Leer y devolver el JSON/CSV fresco recién creado
     return api_predicciones_hoy()
 
 
 @app.route("/api/stats_equipos")
 def api_stats_equipos():
+    """Retorna las estadísticas recientes precalculadas de cada equipo."""
     if not os.path.exists("stats_actuales.json"):
         return jsonify({})
     with open("stats_actuales.json", "r") as f:
@@ -125,8 +123,8 @@ def api_stats_equipos():
 
 @app.route("/api/grafico_bankroll")
 def api_grafico_bankroll():
+    """Provee los datos históricos para graficar la evolución del bankroll."""
     if not os.path.exists("historial_apuestas.csv"):
-        # Mock data para ver el gráfico bello
         return jsonify(
             {
                 "labels": [
@@ -162,7 +160,6 @@ def api_grafico_bankroll():
             }
         )
 
-    # Evolución del bankroll empezando en 1000
     capital = 1000
     evolucion = [capital]
     labels = ["Inicio"]
@@ -177,6 +174,7 @@ def api_grafico_bankroll():
 
 @app.route("/api/insights")
 def api_insights():
+    """Genera recomendaciones automáticas basadas en las predicciones con mayor Expected Value (EV+)."""
     if not os.path.exists("historial_apuestas.csv"):
         return jsonify([])
 
@@ -189,10 +187,8 @@ def api_insights():
     ]
 
     if predicciones.empty:
-        # Busca del dia previo si hoy está vacio pero no es No Bet
         predicciones = df[df["Recomendacion"] != "No Bet"].tail(3)
     else:
-        # Top 3 de mayor EV
         predicciones = predicciones.sort_values(by="EV", ascending=False).head(3)
 
     insights = []
@@ -211,6 +207,7 @@ def api_insights():
 
 @app.route("/api/dashboard_resultados")
 def api_dashboard_resultados():
+    """Expone el dataset completo de historial de apuestas para el cliente."""
     if not os.path.exists("historial_apuestas.csv"):
         return jsonify([])
     df = pd.read_csv("historial_apuestas.csv")
@@ -220,6 +217,7 @@ def api_dashboard_resultados():
 
 @app.route("/api/historial_evaluado")
 def api_historial_evaluado():
+    """Recupera los últimos pronósticos verificados para mostrar en auditoría."""
     if not os.path.exists("historial_apuestas.csv"):
         return jsonify([])
 
@@ -247,6 +245,7 @@ def api_historial_evaluado():
 
 @app.route("/api/chat", methods=["POST"])
 def api_chat():
+    """Procesa mensajes del chatbot asistente y responde con contexto de datos."""
     data = request.get_json()
     if not data or "mensaje" not in data:
         return jsonify({"respuesta": "Mensaje vacío u objeto JSON inválido"}), 400

@@ -103,30 +103,51 @@
                     class="absolute inset-0 bg-gradient-to-r from-background-dark via-background-dark/80 to-transparent">
                 </div>
                 <div class="absolute inset-0 bg-gradient-to-t from-background-dark to-transparent"></div>
-                <div class="container mx-auto px-6 relative z-10">
-                    <div class="max-w-2xl">
-                        <div class="flex items-center gap-3 mb-6">
+                <div class="container mx-auto px-6 relative z-10 flex items-center h-full">
+                    <!-- Left Arrow -->
+                    <button onclick="prevGuideStep()"
+                        class="absolute left-0 md:left-6 z-20 size-10 md:size-14 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:bg-primary/80 hover:border-primary transition-all group overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:shadow-[0_0_20px_rgba(10,71,194,0.6)]">
+                        <span
+                            class="material-symbols-outlined transform group-hover:-translate-x-1 transition-transform">arrow_back_ios_new</span>
+                    </button>
+
+                    <div class="max-w-2xl mx-auto md:ml-16 transition-opacity duration-300" id="hero-carousel-content">
+                        <div class="flex items-center gap-3 mb-6" id="hero-badge-container">
                             <span
-                                class="px-2 py-1 bg-red-600 text-white text-[10px] font-black uppercase tracking-tighter animate-pulse">Live
-                                Analysis</span>
+                                class="px-2 py-1 bg-red-600 text-white text-[10px] font-black uppercase tracking-tighter animate-pulse"
+                                id="hero-badge">Live Analysis</span>
                         </div>
-                        <h1 class="text-5xl md:text-7xl font-black text-white leading-[0.9] mb-4">
+                        <h1 class="text-5xl md:text-7xl font-black text-white leading-[0.9] mb-4" id="hero-title">
                             EL PODER DEL <br /><span class="text-primary italic">DATO PURO.</span>
                         </h1>
-                        <p class="text-lg text-slate-300 max-w-lg mb-8 font-medium border-l-2 border-primary pl-4">
+                        <p class="text-lg text-slate-300 max-w-lg mb-8 font-medium border-l-2 border-primary pl-4"
+                            id="hero-description">
                             Transformamos la pasión del estadio en métricas de alta precisión. Analítica avanzada para
                             decisiones en milisegundos.
                         </p>
-                        <div class="flex flex-wrap gap-3">
-                            <a href="#terminal"
+                        <div class="flex flex-wrap gap-3" id="hero-actions">
+                            <a href="#terminal" onclick="smoothScrollTo(event, 'terminal')"
                                 class="h-12 px-8 bg-primary text-white font-black rounded hover:brightness-110 transition-all shadow-xl shadow-primary/20 flex items-center gap-2">
                                 ABRIR TERMINAL <span class="material-symbols-outlined text-sm">terminal</span>
                             </a>
-                            <a href="#alertavalor"
+                            <a href="#alertavalor" onclick="smoothScrollTo(event, 'alertavalor')"
                                 class="h-12 px-8 bg-white/5 backdrop-blur-md border border-white/10 text-white font-black rounded hover:bg-white/10 transition-all flex items-center justify-center">
                                 EXPLORAR MERCADOS
                             </a>
                         </div>
+                    </div>
+
+                    <!-- Right Arrow -->
+                    <button onclick="nextGuideStep()"
+                        class="absolute right-0 md:right-6 z-20 size-10 md:size-14 rounded-full bg-black/30 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/70 hover:text-white hover:bg-primary/80 hover:border-primary transition-all group overflow-hidden shadow-[0_0_15px_rgba(0,0,0,0.5)] hover:shadow-[0_0_20px_rgba(10,71,194,0.6)]">
+                        <span
+                            class="material-symbols-outlined transform group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+                    </button>
+
+                    <!-- Indicators -->
+                    <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2"
+                        id="hero-indicators">
+                        <!-- Dots injected via JS -->
                     </div>
                 </div>
                 <div class="absolute right-10 bottom-10 hidden xl:flex flex-col gap-4 z-10 cursor-pointer group"

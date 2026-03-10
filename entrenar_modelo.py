@@ -3,7 +3,11 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, classification_report
 
 def entrenar_y_evaluar():
-    print("Cargando el dataset inteligente...")
+    """
+    Entrena y evalúa un modelo base RandomForest para predecir resultados de partidos.
+    Divide el dataset en 80% entrenamiento y 20% prueba, e imprime métricas de clasificación.
+    """
+    print("Cargando el dataset...")
     try:
         df = pd.read_csv('dataset_final_ml.csv')
     except FileNotFoundError:
@@ -21,11 +25,11 @@ def entrenar_y_evaluar():
     X_test = X.iloc[punto_corte:]
     y_test = y.iloc[punto_corte:]
 
-    print(f"Partidos para entrenar: {len(X_train)}")
-    print(f"Partidos para examinar (Futuro simulado): {len(X_test)}\n")
+    print(f"Instancias de entrenamiento: {len(X_train)}")
+    print(f"Instancias de prueba: {len(X_test)}\n")
 
     
-    print("Entrenando el Bosque Aleatorio (Random Forest)...")
+    print("Iniciando entrenamiento (Random Forest)...")
     
     modelo = RandomForestClassifier(n_estimators=100, random_state=42)
     

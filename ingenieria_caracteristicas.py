@@ -43,7 +43,7 @@ def generar_dataset_ml() -> None:
         hst_l = fila.get("HST", 0)
         ast_v = fila.get("AST", 0)
 
-        # xG Estimado (Modelo Naive: 0.3 por tiro a puerta, 0.05 por tiro general)
+        # xG Estimado (Modelo base)
         xg_partido_l = (hst_l * 0.3) + (hs_l * 0.05)
         xg_partido_v = (ast_v * 0.3) + (as_v * 0.05)
 
@@ -121,7 +121,7 @@ def generar_dataset_ml() -> None:
     df_final = pd.DataFrame(features_lista)
     df_final.to_csv("dataset_final_ml.csv", index=False)
 
-    # === Exportar stats actuales para predicciones en vivo ===
+    # Exportar estadísticas calculadas para uso en vivo
     import json
 
     stats_actuales = {}

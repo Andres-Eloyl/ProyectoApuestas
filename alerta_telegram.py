@@ -72,7 +72,7 @@ def analizar_y_notificar() -> None:
         logging.warning("No se encontró partidos_hoy.csv, la cartelera está vacía.")
         return
 
-    # Necesitamos predecir rápidamente (Simulación de insights vía import)
+    # Cargar predicciones del día
     try:
         hoy_str = datetime.now().strftime("%Y-%m-%d")
         df_pred = pd.read_csv("historial_apuestas.csv")
@@ -81,8 +81,7 @@ def analizar_y_notificar() -> None:
         logging.error(f"No se pudo cargar el historial de apuestas: {e}")
         return
 
-    # Filtramos solo aquellos partidos que sean rentables (Recomendacion: Apostar)
-    # y los ordenamos por Valor Esperado (EV) de mayor a menor
+    # Filtrar predicciones rentables y ordenar por EV descendente
     ev_picks = df_pred[df_pred["Recomendacion"] != "No Bet"].sort_values(
         "EV", ascending=False
     )

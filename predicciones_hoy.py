@@ -5,11 +5,12 @@ from evaluacion_resultados import EvaluadorResultados
 
 
 def predecir_jornada_actual() -> None:
-    # Cargar el modelo avanzado histórico
+    """
+    Ejecuta el ciclo completo de predicción para la jornada actual empleando Gradient Boosting.
+    Carga el modelo, entrena con las características principales y evalúa cada partido de 'partidos_hoy.csv'.
+    """
     bot = PredictorGradientBoosting(ruta_csv="dataset_final_ml.csv")
     bot.cargar_datos()
-
-    # Aseguramos que utilice las features más potentes descubiertas
     bot.features = [
         "Racha_Local",
         "Racha_Visita",
@@ -100,7 +101,6 @@ def predecir_jornada_actual() -> None:
         q = 1 - p_h
         kelly_frac = max(0, (p_h - (q / b)) * 0.1) if b > 0 else 0
 
-        # --- NUEVO: Simulación de Marcador (Poisson) ---
         xg_l = hoy_df.iloc[i]["xG_Favor_Local"]
         xg_v = hoy_df.iloc[i]["xG_Favor_Visita"]
         g_l, g_v, marcador_exacto = PredictorGolesPoisson.predecir_marcador(xg_l, xg_v)
@@ -122,7 +122,6 @@ def predecir_jornada_actual() -> None:
         else:
             print("   NO APOSTAR: No hay valor suficiente en la cuota.")
 
-        # Asignamos la fecha del partido a mañana
         fecha_partido = (pd.Timestamp.now() + pd.Timedelta(days=1)).strftime("%Y-%m-%d")
         EvaluadorResultados.registrar_prediccion(
             fecha=fecha_partido,

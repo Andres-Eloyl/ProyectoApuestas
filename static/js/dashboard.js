@@ -118,7 +118,131 @@ window.toggleFullScreen = function () {
     }
 };
 
+// --- INTERACTIVE TUTORIAL LOGIC ---
+const tutorialSteps = [
+    {
+        badge: 'Live Analysis',
+        badgeClass: 'bg-red-600',
+        title: 'EL PODER DEL <br /><span class="text-primary italic">DATO PURO.</span>',
+        description: 'Transformamos la pasión del estadio en métricas de alta precisión. Analítica avanzada para decisiones en milisegundos.',
+        actions: `
+            <a href="#terminal" onclick="smoothScrollTo(event, 'terminal')" class="h-12 px-8 bg-primary text-white font-black rounded hover:brightness-110 transition-all shadow-xl shadow-primary/20 flex items-center gap-2">
+                ABRIR TERMINAL <span class="material-symbols-outlined text-sm">terminal</span>
+            </a>
+            <a href="#alertavalor" onclick="smoothScrollTo(event, 'alertavalor')" class="h-12 px-8 bg-white/5 backdrop-blur-md border border-white/10 text-white font-black rounded hover:bg-white/10 transition-all flex items-center justify-center">
+                EXPLORAR MERCADOS
+            </a>
+        `
+    },
+    {
+        badge: 'Monitor',
+        badgeClass: 'bg-emerald-600',
+        title: 'MONITOR<br /><span class="text-emerald-500 italic">EN VIVO.</span>',
+        description: 'Observa en tiempo real la rentabilidad operativa. El ROI, Win Rate y Accuracy definen la salud actual de tu estrategia frente a la Inteligencia Artificial.',
+        actions: `
+            <a href="#livexg" onclick="smoothScrollTo(event, 'livexg')" class="h-12 px-8 bg-emerald-600 text-white font-black rounded hover:brightness-110 transition-all shadow-xl shadow-emerald-500/20 flex items-center justify-center">
+                IR AL MONITOR
+            </a>
+        `
+    },
+    {
+        badge: 'Value Picks',
+        badgeClass: 'bg-orange-500',
+        title: 'ALERTAS DE<br /><span class="text-orange-500 italic">VALOR EXTREMO.</span>',
+        description: 'El motor audita contantemente discrepancias entre la casa de apuestas y nuestra probabilidad predicha. Descubre los mercados con EV+ (Expected Value Positivo) al instante.',
+        actions: `
+            <a href="#alertavalor" onclick="smoothScrollTo(event, 'alertavalor')" class="h-12 px-8 bg-orange-600 text-white font-black rounded hover:brightness-110 transition-all shadow-xl shadow-orange-500/20 flex items-center justify-center">
+                VER ALERTAS
+            </a>
+        `
+    },
+    {
+        badge: 'Terminal',
+        badgeClass: 'bg-purple-600',
+        title: 'TERMINAL<br /><span class="text-purple-500 italic">MULTICANAL.</span>',
+        description: 'Todas las ligas cruzadas con variables de xG, confianza del modelo y ratings IA. Revisa al detalle cada partido disponible.',
+        actions: `
+            <a href="#terminal" onclick="smoothScrollTo(event, 'terminal')" class="h-12 px-8 bg-purple-600 text-white font-black rounded hover:brightness-110 transition-all shadow-xl shadow-purple-500/20 flex items-center justify-center">
+                DWH TERMINAL
+            </a>
+        `
+    },
+    {
+        badge: 'Precisión',
+        badgeClass: 'bg-slate-600',
+        title: 'AUDITORÍA<br /><span class="text-slate-400 italic">Y PRECISIÓN.</span>',
+        description: 'Visualiza la confiabilidad por liga y el historial reciente de predicciones. Transparencia total sobre los aciertos y fallos de la red neuronal.',
+        actions: `
+            <a href="#rendimiento" onclick="smoothScrollTo(event, 'rendimiento')" class="h-12 px-8 bg-slate-700 text-white font-black rounded hover:brightness-110 transition-all shadow-xl flex items-center justify-center">
+                EVALUAR RESULTADOS
+            </a>
+        `
+    }
+];
+
+let currentGuideStep = 0;
+
+function updateGuideCarousel() {
+    const container = document.getElementById('hero-carousel-content');
+    const badgeContainer = document.getElementById('hero-badge-container');
+    const title = document.getElementById('hero-title');
+    const desc = document.getElementById('hero-description');
+    const actions = document.getElementById('hero-actions');
+    const indicators = document.getElementById('hero-indicators');
+
+    if (!container) return;
+
+    // Fade out
+    container.classList.add('opacity-0');
+
+    setTimeout(() => {
+        const step = tutorialSteps[currentGuideStep];
+
+        // Update content
+        badgeContainer.innerHTML = `<span class="px-2 py-1 text-white text-[10px] font-black uppercase tracking-tighter shadow-sm ${step.badgeClass}">${step.badge}</span>`;
+        title.innerHTML = step.title;
+        desc.innerHTML = step.description;
+        actions.innerHTML = step.actions;
+
+        // Update indicators
+        indicators.innerHTML = tutorialSteps.map((_, index) => `
+            <div class="h-1.5 rounded-full transition-all duration-300 ${index === currentGuideStep ? 'w-6 bg-primary' : 'w-1.5 bg-white/20 hover:bg-white/40 cursor-pointer'}" 
+                 onclick="goToGuideStep(${index})"></div>
+        `).join('');
+
+        // Fade in
+        container.classList.remove('opacity-0');
+    }, 300); // 300ms matches the transition-opacity duration-300 class
+}
+
+window.nextGuideStep = function () {
+    currentGuideStep = (currentGuideStep + 1) % tutorialSteps.length;
+    updateGuideCarousel();
+};
+
+window.prevGuideStep = function () {
+    currentGuideStep = (currentGuideStep - 1 + tutorialSteps.length) % tutorialSteps.length;
+    updateGuideCarousel();
+};
+
+window.goToGuideStep = function (stepIndex) {
+    if (stepIndex !== currentGuideStep) {
+        currentGuideStep = stepIndex;
+        updateGuideCarousel();
+    }
+};
+
+window.smoothScrollTo = function (event, targetId) {
+    if (event) event.preventDefault();
+    const target = document.getElementById(targetId);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
+    // Initialize guide indicators
+    updateGuideCarousel();
 
     // 1. Fetch Precision Metrics
     fetch('/api/metricas_globales')
@@ -132,12 +256,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const elWr = document.getElementById('ui-wr');
             const elAcc = document.getElementById('ui-acc');
 
-            if (elPrecision) elPrecision.textContent = `${data.Precision_Global.toFixed(1)}%`;
-            if (elAciertos) elAciertos.textContent = `+${data.Aciertos}`;
-            if (elFallos) elFallos.textContent = `-${data.Fallos}`;
+            if (elPrecision) elPrecision.textContent = `${data.Precision_Global.toFixed(1)}% `;
+            if (elAciertos) elAciertos.textContent = `+ ${data.Aciertos} `;
+            if (elFallos) elFallos.textContent = `- ${data.Fallos} `;
 
             // Stats en header superior
-            if (elRoi) elRoi.textContent = `+${(data.Precision_Global / 10).toFixed(1)}% ROI`; // Estimado
+            if (elRoi) elRoi.textContent = `+ ${(data.Precision_Global / 10).toFixed(1)}% ROI`; // Estimado
             if (elWr) elWr.textContent = `${data.Precision_Global.toFixed(1)}% WR`;
             if (elAcc) elAcc.textContent = `${data.Precision_Global.toFixed(0)}% ACC`;
 
@@ -155,7 +279,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const shortName = shortMap[liga] || liga.substring(0, 2).toUpperCase();
 
                     elEficiencia.innerHTML += `
-                    <div class="flex items-center gap-3">
+            <div class="flex items-center gap-3">
                         <span class="text-[10px] font-black text-white w-6">${shortName}</span>
                         <div class="flex-1 h-2 bg-slate-800 rounded-full overflow-hidden">
                             <div class="h-full bg-${color}" style="width: ${stats.precision}%"></div>
@@ -244,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const posL = Math.round(p.Probabilidad * 100);
                 const posV = 100 - posL;
                 partidosCriticosContainer.innerHTML += `
-                            <div class="p-3 bg-slate-900/40 border border-slate-800 rounded hover:border-primary/50 transition-colors cursor-pointer group">
+            <div class="p-3 bg-slate-900/40 border border-slate-800 rounded hover:border-primary/50 transition-colors cursor-pointer group">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-[9px] text-slate-500 font-bold uppercase">Predicción • Carga Actual</span>
                                     <span class="text-[9px] px-1 ${index === 0 ? 'bg-primary text-white' : 'bg-slate-800 text-slate-400'} rounded">${index === 0 ? 'DESTACADO' : 'SEGUIMIENTO'}</span>
@@ -282,7 +406,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const colors = ['primary', 'emerald-500', 'orange-500', 'slate-400'];
             const color = colors[index % colors.length];
             const ev = parseFloat(p.EV);
-            const valueStr = ev > 1.0 ? `+${(ev - 1.0).toFixed(2)}v` : '0.00v';
+            const valueStr = ev > 1.0 ? `+ ${(ev - 1.0).toFixed(2)} v` : '0.00v';
 
             alertasValors.innerHTML += `
             <div class="p-2 border-l-2 border-${color} bg-slate-900/40 flex items-center justify-between group cursor-pointer hover:bg-slate-900">
@@ -303,7 +427,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const colorClass = isInvest ? 'emerald-500' : 'slate-500';
             const bgClass = isInvest ? 'emerald-500/10' : 'slate-500/10';
             const ev = parseFloat(p.EV);
-            const valueStr = ev > 1.0 ? `+${((ev - 1.0) * 100).toFixed(1)}%` : '0.0%';
+            const valueStr = ev > 1.0 ? `+ ${((ev - 1.0) * 100).toFixed(1)}% ` : '0.0%';
 
 
 
@@ -336,7 +460,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (marquee) {
             if (valuePicks.length > 0) {
                 const top3 = valuePicks.slice(0, 3);
-                marqueeText = top3.map(p => `STRONG PICK: ${p.HomeTeam.toUpperCase()} vs ${p.AwayTeam.toUpperCase()} | VALOR (EV): ${p.EV} | CUOTA: ${p.Cuota} | SUGERENCIA: ${p.Recomendacion} (Confianza: ${(p.Probabilidad * 100).toFixed(0)}%)`).join('   ✦   ');
+                marqueeText = top3.map(p => `STRONG PICK: ${p.HomeTeam.toUpperCase()} vs ${p.AwayTeam.toUpperCase()} | VALOR(EV): ${p.EV} | CUOTA: ${p.Cuota} | SUGERENCIA: ${p.Recomendacion} (Confianza: ${(p.Probabilidad * 100).toFixed(0)
+                    }%)`).join('   ✦   ');
             } else {
                 marqueeText = "Buscando valor en los mercados globales... No se detectaron anomalías EV+ en la sesión actual.";
             }
@@ -437,7 +562,7 @@ document.addEventListener("DOMContentLoaded", () => {
             })
             .catch(err => {
                 console.error("Error en chat:", err);
-                appendMessage('bot', `<span class="text-red-400">Error de conexión con el núcleo analítico.</span>`);
+                appendMessage('bot', `<span class="text-red-400"> Error de conexión con el núcleo analítico.</span>`);
             });
     }
 
