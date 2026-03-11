@@ -74,7 +74,9 @@ def api_predicciones_hoy():
     predicciones = df[df["Fecha_Prediccion"] == hoy_str]
 
     if predicciones.empty:
-        predicciones = df.tail(10)
+        if not df.empty:
+            ultima_fecha = df["Fecha_Prediccion"].max()
+            predicciones = df[df["Fecha_Prediccion"] == ultima_fecha]
 
     cols = [
         "HomeTeam",
@@ -187,8 +189,13 @@ def api_insights():
     ]
 
     if predicciones.empty:
-        predicciones = df[df["Recomendacion"] != "No Bet"].tail(3)
-    else:
+        if not df.empty:
+            ultima_fecha = df["Fecha_Prediccion"].max()
+            predicciones = df[
+                (df["Fecha_Prediccion"] == ultima_fecha) & (df["Recomendacion"] != "No Bet")
+            ]
+            
+    if not predicciones.empty:
         predicciones = predicciones.sort_values(by="EV", ascending=False).head(3)
 
     insights = []
@@ -340,4 +347,4 @@ def api_chat():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=False, port=5000)

@@ -189,7 +189,7 @@
                         <div class="flex justify-between items-center border-b border-slate-800 pb-2">
                             <h4 class="text-[11px] font-black text-slate-400 uppercase tracking-widest">Partidos
                                 Críticos</h4>
-                            <span onclick="toggleFullScreen()"
+                            <span onclick="openModal('criticosModal')"
                                 class="material-symbols-outlined text-slate-600 text-sm cursor-pointer hover:text-white transition-colors"
                                 title="Pantalla Completa">fullscreen</span>
                         </div>
@@ -383,6 +383,16 @@
 
         <!-- Hidden Modals Templates -->
         <div id="modal-templates" class="hidden">
+            <!-- Partidos Criticos Modal -->
+            <div id="tpl-criticosModal">
+                <h2 class="text-2xl font-black text-white mb-2 flex items-center gap-2"><span
+                        class="material-symbols-outlined text-primary">sports_soccer</span> PARTIDOS CRÍTICOS (EN DETALLE)</h2>
+                <p class="text-slate-400 text-sm mb-6">Visualización ampliada de las predicciones principales con mayor probabilidad.</p>
+                <div class="space-y-4" id="ui-partidos-criticos-modal">
+                    <!-- Contenido inyectado vía JS -->
+                </div>
+            </div>
+
             <!-- Upgrade Modal -->
             <div id="tpl-upgradeModal">
                 <h2 class="text-2xl font-black text-white mb-2 flex items-center gap-2"><span
@@ -408,7 +418,7 @@
                     <button
                         class="w-full h-12 bg-primary text-white font-black rounded hover:brightness-110 transition-all uppercase mt-4 shadow-[0_0_15px_rgba(10,71,194,0.4)]"
                         onclick="showToast('Redirigiendo a pasarela segura...', 'success'); closeModal();">SUSCRIBIRSE
-                        AHORA ($49/MES)</button>
+                        AHORA ($4.99/MES)</button>
                 </div>
             </div>
 
@@ -514,11 +524,15 @@
             <!-- Genericos (Terminos, API Docs, Graficos, Alertas) -->
             <div id="tpl-chartModal">
                 <h2 class="text-2xl font-black text-white mb-2 flex items-center gap-2"><span
-                        class="material-symbols-outlined text-slate-400">bar_chart</span> ANÁLISIS AMPLIADO</h2>
-                <div class="h-64 bg-slate-900 border border-slate-800 rounded mt-4 flex items-center justify-center">
-                    <p class="text-slate-500 text-sm font-bold uppercase"><span
-                            class="material-symbols-outlined animate-spin align-middle mr-2">sync</span> Sincronizando
-                        modelo de series de tiempo...</p>
+                        class="material-symbols-outlined text-slate-400">bar_chart</span> ANÁLISIS AMPLIADO (DETALLE LIGAS)</h2>
+                <div class="space-y-4 mt-6">
+                    <p class="text-slate-400 text-sm">Eficiencia proyectada por liga según las variables capturadas por el motor inteligente.</p>
+                    <div class="bg-slate-900/40 p-4 border border-slate-800 rounded">
+                        <div class="space-y-4" id="ui-eficiencia-ligas-modal">
+                            <!-- Inyectado vía JS -->
+                            <p class="text-slate-500 text-xs italic">Cargando desglose...</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="tpl-alertsModal">

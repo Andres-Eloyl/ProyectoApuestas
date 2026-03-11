@@ -267,6 +267,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (elEficiencia && data.Desglose_Ligas) {
                 elEficiencia.innerHTML = '';
+                const elEficienciaModal = document.querySelector('#tpl-chartModal #ui-eficiencia-ligas-modal');
+                if (elEficienciaModal) elEficienciaModal.innerHTML = '';
                 const ligasObj = data.Desglose_Ligas;
 
                 // Colors map
@@ -278,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const color = colorMap[liga] || "primary";
                     const shortName = shortMap[liga] || liga.substring(0, 2).toUpperCase();
 
-                    elEficiencia.innerHTML += `
+                    const efHTML = `
             <div class="flex items-center gap-3">
                         <span class="text-[10px] font-black text-white w-6">${shortName}</span>
                         <div class="flex-1 h-2 bg-slate-800 rounded-full overflow-hidden">
@@ -286,6 +288,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                         <span class="text-[10px] font-bold text-${color}">${stats.precision.toFixed(0)}%</span>
                     </div>`;
+                    elEficiencia.innerHTML += efHTML;
+                    if (elEficienciaModal) elEficienciaModal.innerHTML += efHTML;
                 }
             }
 
@@ -356,6 +360,8 @@ document.addEventListener("DOMContentLoaded", () => {
         const partidosCriticosContainer = document.getElementById('ui-partidos-criticos');
         if (partidosCriticosContainer) {
             partidosCriticosContainer.innerHTML = '';
+            const partidosCriticosModal = document.querySelector('#tpl-criticosModal #ui-partidos-criticos-modal');
+            if (partidosCriticosModal) partidosCriticosModal.innerHTML = '';
             const criticos = [...predictions].filter(p => p.Recomendacion !== 'No Bet').sort((a, b) => b.Probabilidad - a.Probabilidad).slice(0, 2);
             while (criticos.length < 2 && predictions.length > criticos.length) {
                 const p = predictions.find(pred => !criticos.includes(pred));
@@ -367,7 +373,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const pctV = 100 - pctL;
                 const posL = Math.round(p.Probabilidad * 100);
                 const posV = 100 - posL;
-                partidosCriticosContainer.innerHTML += `
+                const criticoHTML = `
             <div class="p-3 bg-slate-900/40 border border-slate-800 rounded hover:border-primary/50 transition-colors cursor-pointer group">
                                 <div class="flex justify-between items-center mb-2">
                                     <span class="text-[9px] text-slate-500 font-bold uppercase">Predicción • Carga Actual</span>
@@ -393,6 +399,8 @@ document.addEventListener("DOMContentLoaded", () => {
                                     </div>
                                 </div>
                             </div>`;
+                partidosCriticosContainer.innerHTML += criticoHTML;
+                if (partidosCriticosModal) partidosCriticosModal.innerHTML += criticoHTML;
             });
         }
 
