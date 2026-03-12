@@ -2,8 +2,8 @@ from flask import Flask, render_template, jsonify, request
 import pandas as pd
 import json
 import os
-import subprocess
 import sys
+from servicios import PredictionService
 
 app = Flask(__name__)
 
@@ -17,13 +17,11 @@ def dashboard():
 @app.route("/api/metricas_globales")
 def api_metricas_globales():
     """Calcula y devuelve las métricas globales de precisión, ROI y desgloses por liga."""
-    if not os.path.exists("historial_auditoria.json"):
+    datos = PredictionService.obtener_auditoria()
+    if not datos:
         return jsonify(
             {"Total": 0, "Aciertos": 0, "Fallos": 0, "Precision": 0, "Ligas": {}}
         )
-
-    with open("historial_auditoria.json", "r", encoding="utf-8") as f:
-        datos = json.load(f)
 
     total = len(datos)
     aciertos_globales = 0
@@ -64,10 +62,9 @@ def api_metricas_globales():
 @app.route("/api/predicciones_hoy")
 def api_predicciones_hoy():
     """Retorna las predicciones de la IA generadas para la fecha actual."""
-    if not os.path.exists("historial_apuestas.csv"):
+    df = PredictionService.obtener_historial_apuestas()
+    if df.empty:
         return jsonify([])
-
-    df = pd.read_csv("historial_apuestas.csv")
     df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"]).dt.strftime("%Y-%m-%d")
 
     hoy_str = pd.Timestamp.now().strftime("%Y-%m-%d")
@@ -97,20 +94,15 @@ def api_predicciones_hoy():
 
 @app.route("/api/sync_predicciones")
 def api_sync_predicciones():
-    """Sincroniza la cartelera actual, ejecuta el modelo predictivo y retorna los resultados."""
-    try:
-        subprocess.run([sys.executable, "cartelera_automatica.py"], check=True)
-    except Exception as e:
-        print(f"Error sincronizando cartelera: {e}")
-        return jsonify({"error": "Fallo al descargar partidos en vivo."}), 500
-
-    try:
-        subprocess.run([sys.executable, "predicciones_hoy.py"], check=True)
-    except Exception as e:
-        print(f"Error sincronizando predicciones: {e}")
-        return jsonify({"error": "Fallo al ejecutar modelo de IA."}), 500
-
-    return api_predicciones_hoy()
+    """Lanza la sincronización y ejecución del modelo en background (sin bloquear respuesta)."""
+    lanzado = PredictionService.sincronizar_predicciones_async()
+    if lanzado:
+        # Devolvemos un status 202 accepted mientras procesa por detras, 
+        # y ademas mandamos las predicciones cacheadas (anteriores) para no colgar la UI.
+        return api_predicciones_hoy(), 202 
+    else:
+        # Si ya habia un proceso corriendo
+        return api_predicciones_hoy()
 
 
 @app.route("/api/stats_equipos")
@@ -177,10 +169,9 @@ def api_grafico_bankroll():
 @app.route("/api/insights")
 def api_insights():
     """Genera recomendaciones automáticas basadas en las predicciones con mayor Expected Value (EV+)."""
-    if not os.path.exists("historial_apuestas.csv"):
+    df = PredictionService.obtener_historial_apuestas()
+    if df.empty:
         return jsonify([])
-
-    df = pd.read_csv("historial_apuestas.csv")
     df["Fecha_Prediccion"] = pd.to_datetime(df["Fecha_Prediccion"]).dt.strftime("%Y-%m-%d")
 
     hoy_str = pd.Timestamp.now().strftime("%Y-%m-%d")
@@ -215,9 +206,9 @@ def api_insights():
 @app.route("/api/dashboard_resultados")
 def api_dashboard_resultados():
     """Expone el dataset completo de historial de apuestas para el cliente."""
-    if not os.path.exists("historial_apuestas.csv"):
+    df = PredictionService.obtener_historial_apuestas()
+    if df.empty:
         return jsonify([])
-    df = pd.read_csv("historial_apuestas.csv")
     df = df.fillna("-")
     return jsonify(df.to_dict(orient="records"))
 
@@ -225,10 +216,9 @@ def api_dashboard_resultados():
 @app.route("/api/historial_evaluado")
 def api_historial_evaluado():
     """Recupera los últimos pronósticos verificados para mostrar en auditoría."""
-    if not os.path.exists("historial_apuestas.csv"):
+    df = PredictionService.obtener_historial_apuestas()
+    if df.empty:
         return jsonify([])
-
-    df = pd.read_csv("historial_apuestas.csv")
     df = df[df["Recomendacion"] != "No Bet"]
     recent = df.tail(10)
     data = []

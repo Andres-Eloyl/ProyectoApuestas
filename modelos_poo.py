@@ -6,6 +6,8 @@ from sklearn.ensemble import RandomForestClassifier, HistGradientBoostingClassif
 from sklearn.model_selection import GridSearchCV
 from sklearn.calibration import CalibratedClassifierCV
 from typing import List, Optional, Tuple
+import joblib
+import os
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s - %(message)s")
 
@@ -62,6 +64,32 @@ class PredictorDeportivoBase:
         corte = int(len(self.df) * proporcion_train)
         logging.info(f"Datos divididos en punto de corte: {corte}")
         return X.iloc[:corte], X.iloc[corte:], y.iloc[:corte], y.iloc[corte:]
+
+    def guardar_modelo(self, ruta_archivo: str = "modelo_entrenado.joblib") -> None:
+        """Serializa y guarda el modelo calibrado en disco."""
+        if self.modelo_calibrado is None:
+            logging.error("No hay un modelo entrenado para guardar.")
+            return
+        
+        try:
+            joblib.dump(self.modelo_calibrado, ruta_archivo)
+            logging.info(f"Modelo guardado exitosamente en: {ruta_archivo}")
+        except Exception as e:
+            logging.error(f"Error al guardar el modelo: {e}")
+
+    def cargar_modelo(self, ruta_archivo: str = "modelo_entrenado.joblib") -> bool:
+        """Carga un modelo previamente entrenado desde disco."""
+        if not os.path.exists(ruta_archivo):
+            logging.error(f"No se encontró el archivo del modelo en: {ruta_archivo}")
+            return False
+            
+        try:
+            self.modelo_calibrado = joblib.load(ruta_archivo)
+            logging.info(f"Modelo cargado exitosamente desde: {ruta_archivo}")
+            return True
+        except Exception as e:
+            logging.error(f"Error al cargar el modelo: {e}")
+            return False
 
 
 class PredictorRandomForest(PredictorDeportivoBase):

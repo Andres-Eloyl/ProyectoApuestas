@@ -28,16 +28,26 @@ def entrenar_y_evaluar():
     print(f"Instancias de entrenamiento: {len(X_train)}")
     print(f"Instancias de prueba: {len(X_test)}\n")
 
+    print("Iniciando entrenamiento avanzado (HistGradientBoosting)...")
     
-    print("Iniciando entrenamiento (Random Forest)...")
+    # Instanciamos nuestra clase de BOOSTER
+    from modelos_poo import PredictorGradientBoosting
     
-    modelo = RandomForestClassifier(n_estimators=100, random_state=42)
+    bot = PredictorGradientBoosting(ruta_csv="dataset_final_ml.csv")
     
-   
-    modelo.fit(X_train, y_train)
+    # Asignamos temporalmente el dataframe a procesar para el bot
+    bot.df = df
+    X_train_full = bot.df[bot.features]
+    y_train_full = bot.df['FTR']
+    
+    bot.entrenar(X_train_full, y_train_full)
+    
+    # Guardamos el modelo
+    bot.guardar_modelo("modelo_gbm.joblib")
 
-    print("Evaluando predicciones en los partidos de prueba...\n")
-    predicciones = modelo.predict(X_test)
+    print("\nEvaluando predicciones en los partidos de prueba...\n")
+    # Para evaluar reusamos el clasificador subyacente de la clase (calibrado)
+    predicciones = bot.modelo_calibrado.predict(X_test)
     
     precision = accuracy_score(y_test, predicciones)
     

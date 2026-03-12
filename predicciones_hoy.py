@@ -24,9 +24,11 @@ def predecir_jornada_actual() -> None:
         "xG_Contra_Visita",
     ]
 
-    X = bot.df[bot.features]
-    y = bot.df["FTR"]
-    bot.entrenar(X, y)
+    # En lugar de entrenar: bot.entrenar(X, y)
+    exito = bot.cargar_modelo("modelo_gbm.joblib")
+    if not exito:
+        print("\n⚠️ Error: No se encontró 'modelo_gbm.joblib'. Ejecuta 'py entrenar_modelo.py' primero.")
+        return
 
     try:
         hoy_df = pd.read_csv("partidos_hoy.csv")
